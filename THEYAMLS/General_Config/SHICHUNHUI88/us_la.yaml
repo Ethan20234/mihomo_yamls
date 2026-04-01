@@ -1,8 +1,3 @@
-port: 0
-socks-port: 0
-redir-port: 0
-tproxy-port: 0
-mixed-port: 0
 mode: rule
 redir-mode: tproxy
 log-level: warning
@@ -20,7 +15,7 @@ allow-lan: true
 keep-alive-idle: 300
 keep-alive-interval: 30
 bind-address: "*"
-authentication: ["meta:88888888"]
+authentication: ["meta:shi1993@#"]
 skip-auth-prefixes: ["127.0.0.1/8", "::1/128"]
 lan-allowed-ips: ["0.0.0.0/0", "::/0"]
 lan-disallowed-ips: []
@@ -64,6 +59,13 @@ tun:
   route-exclude-address-set: ["rule-set:cn-ip", "rule-set:private-ip"]
   route-exclude-cidr: ["192.168.0.0/16", "10.0.0.0/8", "172.16.0.0/12"]  
 
+geodata-mode: true
+geodata-loader: standard
+geosite-matcher: succinct
+geox-url: {geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat", geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat", mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-Country.mmdb", asn: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"}
+geo-auto-update: true
+geo-update-interval: 24
+
 dns-anchor:
   cn-dns: &cn-dns ["https://dns.alidns.com/dns-query", "https://doh.pub/dns-query"]
   global-dns: &global-dns ["https://1.1.1.1/dns-query", "https://dns.google/dns-query", "https://dns.quad9.net/dns-query", "tls://cloudflare-dns.com:853", "tls://dns.google:853"]
@@ -96,8 +98,6 @@ dns:
   direct-nameserver-follow-policy: true
   nameserver-policy:
     "rule-set:reject": ["https://dns.adguard.com/dns-query"]
-    "rule-set:abroad_dns_cdn": *global-dns
-    "rule-set:Google-zj": *global-dns
     "rule-set:OpenAI-zj": *global-dns
     "rule-set:Claude-zj": *global-dns
     "rule-set:Telegram-zj": *global-dns
@@ -106,13 +106,12 @@ dns:
     "rule-set:TikTok-zj": *global-dns
     "rule-set:PayPal": *global-dns
     "rule-set:YouTube": *global-dns
-    "rule-set:Google": *global-dns
     "rule-set:Facebook-zj": *global-dns
     "rule-set:Netflix": *global-dns
     "rule-set:WildRift-zj": *global-dns
-    "rule-set:category-games-!cn": *global-dns
+    "rule-set:games-!cn": *global-dns
     "rule-set:twitter": *global-dns
-    "rule-set:abroad_dns_cdn": *global-dns
+    "rule-set:Google-zj": *global-dns
     "rule-set:gfw": *global-dns
     "rule-set:greatfire": *global-dns
     "rule-set:geolocation-!cn": *global-dns
@@ -121,8 +120,7 @@ dns:
     "rule-set:douyin-zj": *cn-dns
     "rule-set:Alibaba": *cn-dns
     "rule-set:Tencent": *cn-dns
-    "rule-set:cn_dns_cdn": *cn-dns
-    "rule-set:category-games-cn": *cn-dns
+    "rule-set:games-cn": *cn-dns
     "rule-set:private": *cn-dns
     "rule-set:cn-domain": *cn-dns
 
@@ -132,9 +130,9 @@ sniffer:
   parse-pure-ip: true
   sniff: {HTTP: {ports: [80, 8080-8880], override-destination: true}, TLS: {ports: [443, 8443]}, QUIC: {ports: [443, 8443]}}
   force-domain: ["+.cloudflare.net","+.akamaized.net","+.akamai.net","+.fastly.net","+.cloudfront.net","+.googlevideo.com","+.googlecdn.com","+.ytimg.com","+.youtube.com","+.netflix.com","+.instagram.com","+.tiktokcdn.com","+.tiktokv.com","+.douyin.com","+.douyincdn.com","+.telegram.org","+.t.me","+.tdesktop.com","+.cdn-telegram.org","+.telegram-cdn.org","+.cdn.telegram.org"]  
-  skip-domain: ["localhost","+.lan","+.local","+.arpa","+.invalid","+.test","+.pvp.net","+.riotgames.com","openai.*","+.openai.*","rule-set:Alibaba","rule-set:Tencent","rule-set:cn-domain","rule-set:cn_dns_cdn","rule-set:private","rule-set:category-games-cn"]
+  skip-domain: ["localhost","+.lan","+.local","+.arpa","+.invalid","+.test","+.pvp.net","+.riotgames.com","openai.*","+.openai.*","rule-set:Alibaba","rule-set:Tencent","rule-set:cn-domain","rule-set:private","rule-set:games-cn"]
   skip-src-address: ["127.0.0.0/8","10.0.0.0/8","172.16.0.0/12","192.168.0.0/16","::1/128","fc00::/7","fe80::/10"]
-
+  
 proxies:
   - {name: "🇺🇸 VLESS_TCP/TLS_Vision", type: vless, server: la.shichunhui88.cc, port: 29986, uuid: b6114c5c-6f10-460b-a4df-1638563c0d72, udp: true, tls: true, network: tcp, client-fingerprint: chrome, flow: xtls-rprx-vision, servername: la.shichunhui88.cc, skip-cert-verify: false}
   - {name: "🇺🇸 VLESS_WS", type: vless, server: la.shichunhui88.cc, port: 20594, uuid: b6114c5c-6f10-460b-a4df-1638563c0d72, udp: true, tls: true, network: ws, client-fingerprint: chrome, servername: la.shichunhui88.cc, skip-cert-verify: false, ws-opts: {path: /kagmws, headers: {Host: la.shichunhui88.cc}}}
@@ -181,34 +179,31 @@ rules:
   - RULE-SET,douyin-zj,🎷抖音
   - RULE-SET,OpenAI-zj,🧠OpenAI
   - RULE-SET,Claude-zj,🧠OpenAI
-  - RULE-SET,Telegram-zj,💻Telegram
   - RULE-SET,TikTok-zj,🎬TikTok
   - RULE-SET,PayPal,💳PayPal
-  - RULE-SET,YouTube,🌐Google服务
-  - RULE-SET,Google-zj,🌐Google服务
-  - RULE-SET,Google,🌐Google服务
   - RULE-SET,Facebook-zj,📺国际流媒体
   - RULE-SET,Netflix,📺国际流媒体
   - RULE-SET,WildRift-zj,🎮国际游戏
-  - RULE-SET,category-games-!cn,🎮国际游戏
-  - RULE-SET,twitter,🌍全球加速
+  - RULE-SET,games-!cn,🎮国际游戏
+  - RULE-SET,Telegram-zj,💻Telegram
   - RULE-SET,telegram-ip,💻Telegram,no-resolve
+  - RULE-SET,YouTube,🌐Google服务
+  - RULE-SET,Google-zj,🌐Google服务
   - RULE-SET,google-ip,🌐Google服务,no-resolve
+  - RULE-SET,GitHub-zj,😊微软服务
+  - RULE-SET,Microsoft,😊微软服务
+  - RULE-SET,icloud,🍎苹果服务
+  - RULE-SET,Apple,🍎苹果服务
+  - RULE-SET,twitter,🌍全球加速
   - RULE-SET,cloudflare-ip,🌍全球加速,no-resolve
   - RULE-SET,cloudfront-ip,🌍全球加速,no-resolve
   - RULE-SET,fastly-ip,🌍全球加速,no-resolve
   - RULE-SET,greatfire,🌍全球加速
   - RULE-SET,gfw,🌍全球加速
-  - RULE-SET,abroad_dns_cdn,🌍全球加速
   - RULE-SET,geolocation-!cn,🌍全球加速
-  - RULE-SET,GitHub-zj,😊微软服务
-  - RULE-SET,Microsoft,😊微软服务
-  - RULE-SET,icloud,🍎苹果服务
-  - RULE-SET,Apple,🍎苹果服务
+  - RULE-SET,games-cn,🎯直连
   - RULE-SET,Alibaba,⛩️阿里腾讯
   - RULE-SET,Tencent,⛩️阿里腾讯
-  - RULE-SET,category-games-cn,🎯直连
-  - RULE-SET,cn_dns_cdn,🎯直连
   - RULE-SET,private,🎯直连
   - RULE-SET,cn-domain,🎯直连
   - RULE-SET,private-ip,🎯直连,no-resolve
@@ -221,42 +216,39 @@ rule-anchor:
   class-yaml: &class-yaml {type: http, behavior: classical, interval: 86400, format: yaml}
   
 rule-providers:
-  reject: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/category-ads-all.mrs"}
-  douyin-zj: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/douyin.yaml"}
-  TikTok-zj: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/TikTok.yaml"}
-  Telegram-zj: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/Telegram.yaml"}
-  OpenAI-zj: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/OpenAI.yaml"}
-  Facebook-zj: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/Facebook.yaml"}
-  Google-zj: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/Google.yaml"}
-  WildRift-zj: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/Wildrift.yaml"}
-  GitHub-zj: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/GitHub.yaml"}
-  Claude-zj: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/Claude.yaml"}
-  PayPal: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/paypal.mrs"}
-  YouTube: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/youtube.mrs"}
-  Google: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/google.mrs"}
-  Netflix: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/netflix.mrs"}
-  category-games-!cn: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/category-games-!cn.mrs"}
-  twitter: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/twitter.mrs"}
-  telegram-ip: {<<: *mrs-ipcidr, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geoip/telegram.mrs"}
-  google-ip: {<<: *mrs-ipcidr, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geoip/google.mrs"}
-  cloudflare-ip: {<<: *mrs-ipcidr, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geoip/cloudflare.mrs"}
-  cloudfront-ip: {<<: *mrs-ipcidr, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geoip/cloudfront.mrs"}
-  fastly-ip: {<<: *mrs-ipcidr, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geoip/fastly.mrs"}
-  icloud: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/icloud.mrs"}
-  Apple: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/apple.mrs"}
-  Microsoft: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/microsoft.mrs"}
-  gfw: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/gfw.mrs"}
-  greatfire: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/greatfire.mrs"}
-  geolocation-!cn: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/geolocation-!cn.mrs"}
-  abroad_dns_cdn: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/abroad_dns_cdn.yaml"}
-  category-games-cn: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/category-games-cn.mrs"}
-  Alibaba: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/alibaba.mrs"}
-  Tencent: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/tencent.mrs"}
-  private: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/private.mrs"} 
-  cn-domain: {<<: *mrs-domain, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geosite/cn.mrs"}
-  private-ip: {<<: *mrs-ipcidr, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geoip/private.mrs"}
-  cn-ip: {<<: *mrs-ipcidr, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/rules@main/geo/geoip/cn.mrs"}
-  cn_dns_cdn: {<<: *class-yaml, url: "https://cdn.jsdelivr.net/gh/SHICHUNHUI88/vps-net-optimize@main/clash/cn_dns_cdn.yaml"}
+  reject: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/category-ads-all.mrs"}
+  douyin-zj: {<<: *class-yaml, url: "https://gh.669588.xyz/rules/geo/geosite/douyin.yaml"}
+  TikTok-zj: {<<: *class-yaml, url: "https://gh.669588.xyz/rules/geo/geosite/tiktok.yaml"}
+  Telegram-zj: {<<: *class-yaml, url: "https://gh.669588.xyz/rules/geo/geosite/telegram.yaml"}
+  OpenAI-zj: {<<: *class-yaml, url: "https://gh.669588.xyz/rules/geo/geosite/openai.yaml"}
+  Facebook-zj: {<<: *class-yaml, url: "https://gh.669588.xyz/rules/geo/geosite/facebook.yaml"}
+  Google-zj: {<<: *class-yaml, url: "https://gh.669588.xyz/rules/geo/geosite/google.yaml"}
+  WildRift-zj: {<<: *class-yaml, url: "https://gh.669588.xyz/rules/geo/geosite/wildrift.yaml"}
+  GitHub-zj: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/github.mrs"}
+  Claude-zj: {<<: *class-yaml, url: "https://gh.669588.xyz/rules/geo/geosite/claude.yaml"}
+  PayPal: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/paypal.mrs"}
+  YouTube: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/youtube.mrs"}
+  Netflix: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/netflix.mrs"}
+  games-!cn: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/category-games-!cn.mrs"}
+  twitter: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/twitter.mrs"}
+  telegram-ip: {<<: *mrs-ipcidr, url: "https://gh.669588.xyz/rules/geo/geoip/telegram.mrs"}
+  google-ip: {<<: *mrs-ipcidr, url: "https://gh.669588.xyz/rules/geo/geoip/google.mrs"}
+  cloudflare-ip: {<<: *mrs-ipcidr, url: "https://gh.669588.xyz/rules/geo/geoip/cloudflare.mrs"}
+  cloudfront-ip: {<<: *mrs-ipcidr, url: "https://gh.669588.xyz/rules/geo/geoip/cloudfront.mrs"}
+  fastly-ip: {<<: *mrs-ipcidr, url: "https://gh.669588.xyz/rules/geo/geoip/fastly.mrs"}
+  icloud: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/icloud.mrs"}
+  Apple: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/apple.mrs"}
+  Microsoft: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/microsoft.mrs"}
+  gfw: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/gfw.mrs"}
+  greatfire: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/greatfire.mrs"}
+  geolocation-!cn: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/geolocation-!cn.mrs"}
+  games-cn: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/category-games-cn.mrs"}
+  Alibaba: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/alibaba.mrs"}
+  Tencent: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/tencent.mrs"}
+  private: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/private.mrs"}
+  cn-domain: {<<: *mrs-domain, url: "https://gh.669588.xyz/rules/geo/geosite/cn.mrs"}
+  private-ip: {<<: *mrs-ipcidr, url: "https://gh.669588.xyz/rules/geo/geoip/private.mrs"}
+  cn-ip: {<<: *mrs-ipcidr, url: "https://gh.669588.xyz/rules/geo/geoip/cn.mrs"}
     
 global-interval: 300   
 health-check:
