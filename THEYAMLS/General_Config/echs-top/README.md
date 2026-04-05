@@ -7,20 +7,20 @@
 ## 📄 配置详情
 
 #### 📝 mihomo.yaml
-- **路径**: `mihomo.yaml` | **大小**: 13.9 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/echs-top/mihomo.yaml)
+- **路径**: `mihomo.yaml` | **大小**: 13.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/echs-top/mihomo.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
-<summary>🔍 策略组 (20个)</summary>
+<summary>🔍 策略组 (21个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
 | 👆 代理连接 | `select` |
 | 👆 直接连接 | `select` |
 | 👆 代理DNS | `select` |
-| 👆 FCM推送 | `select` |
+| 👆 国外AI | `select` |
 | 👆 TELEGRAM | `select` |
 | 👆 GITHUB | `select` |
-| 👆 国外AI | `select` |
+| 👆 国外媒体 | `select` |
 | 👆 GOOGLE | `select` |
 | ♻️ 最低延迟 | `url-test` |
 | 🔧 香港&#124;故障转移 | `fallback` |
@@ -34,4 +34,5 @@
 | 🔧 英国&#124;故障转移 | `fallback` |
 | 🔧 法国&#124;故障转移 | `fallback` |
 | 🔧 荷兰&#124;故障转移 | `fallback` |
+| ... | 还有 1 个 |
 </details>
