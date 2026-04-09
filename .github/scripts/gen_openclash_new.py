@@ -15,172 +15,211 @@ def get_current_date():
     return datetime.now().strftime("%Y-%m-%d")
 
 
-def indent_block(text: str, spaces: int = 2) -> str:
-    """给多行文本整体加缩进"""
-    pad = " " * spaces
-    return "\n".join(pad + line if line.strip() else line for line in text.splitlines())
+def to_yaml_str(obj) -> str:
+    """将 Python 对象序列化为 YAML 字符串，去除末尾空行"""
+    return yaml.dump(obj, allow_unicode=True, default_flow_style=False, indent=2).rstrip()
 
 
-def comment_block(text: str) -> str:
-    """给多行文本每行加 # 注释前缀"""
+def comment_lines(text: str, prefix: str = "# ") -> str:
+    """给每行加注释前缀，空行只加 #"""
     result = []
     for line in text.splitlines():
         result.append(("# " + line) if line.strip() else "#")
     return "\n".join(result)
 
 
-def provider_to_yaml_lines(name: str, config: dict) -> str:
-    """
-    把单个 provider 的配置序列化为 YAML 文本（不带顶层键名，用于嵌入 proxy-providers* set 块）。
-    返回已缩进的多行字符串。
-    """
-    raw = yaml.dump({name: config}, allow_unicode=True, default_flow_style=False, indent=2)
-    return raw.rstrip()
+def section(title: str, body_lines: list) -> str:
+    """生成一个带标题和分隔线的注释段落"""
+    bar = "# " + "=" * 58
+    lines = [bar, f"# {title}", bar]
+    lines.extend(body_lines)
+    return "\n".join(lines)
 
 
-def build_yaml_block(providers: dict) -> str:
+def build_yaml_block(data: dict, raw_url: str, filename: str) -> str:
     """
-    生成完整的 [YAML] 块内容。
+    生成完整的 [YAML] 块。
 
-    结构：
-      [YAML]
-      # （操作符参考 + 示例，全部注释）
-      # （proxy-providers 各条目，以 proxy-providers* 格式写好，注释状态，取消注释即生效）
+    按官方示例格式，每个操作符段落独立注释，取消注释即生效。
+    内容分三部分：
+      1. 操作符速查 + 常用示例（通用模板，全注释）
+      2. proxy-providers 从源文件直接提取，用 proxy-providers: 顶层键写入（注释）
+      3. 其他提取自源文件的内容（proxy-groups、rules、rule-providers 等，注释）
     """
-    lines = []
+    out = []
 
     # ── [YAML] 标记 ──────────────────────────────────────────
-    lines += [
-        "",
-        "# ============================================================",
-        "# [YAML] 是新版 OpenClash 覆写模块的识别标记，此行不可注释。",
-        "# 所有覆写内容均写在此标记之后。",
-        "# 注释状态的内容不会生效；取消注释后保存并重新加载模块即可生效。",
-        "# ============================================================",
-        "[YAML]",
-        "",
-    ]
+    out.append("# " + "=" * 58)
+    out.append("# [YAML] 是新版 OpenClash 覆写模块的识别标记")
+    out.append("# 此行本身不可注释，内容写在此标记之后")
+    out.append("# 注释状态不生效；取消注释后重载覆写模块即可生效")
+    out.append("# " + "=" * 58)
+    out.append("[YAML]")
+    out.append("")
 
     # ── 操作符速查 ────────────────────────────────────────────
-    lines += [
-        "# ============================================================",
-        "# 【操作符速查】",
-        "# ------------------------------------------------------------",
-        "#  key       默认合并：Hash 递归合并，其他类型直接覆盖",
-        "#  key!      强制覆盖：整个值全部替换，不做任何合并",
-        "#  key+      数组后置追加：在数组末尾加入新元素",
-        "#  +key      数组前置插入：在数组开头插入新元素（规则越靠前越优先）",
-        "#  key-      数组差集删除：移除数组中的指定元素；非数组则删除该键",
-        "#  key*      批量条件更新：配合 where/set，按条件匹配后批量修改",
-        "#  <key>后缀  同上，用于键名含特殊字符（. - /）的情况",
-        "#  +<key>    前置插入的 <> 写法",
-        "# ============================================================",
-        "",
-    ]
+    out.append("# " + "=" * 58)
+    out.append("# 操作符速查")
+    out.append("# " + "-" * 58)
+    out.append("#  key       默认合并：Hash 递归合并，其他类型直接覆盖原值")
+    out.append("#  key!      强制覆盖：整个值全部替换，不做任何合并")
+    out.append("#  key+      数组后置追加：在数组末尾加入新元素")
+    out.append("#  +key      数组前置插入：在数组开头插入（规则越靠前越优先匹配）")
+    out.append("#  key-      数组差集删除：从数组移除指定元素；非数组则删除该键")
+    out.append("#  key*      批量条件更新：配合 where/set，按条件匹配后批量修改")
+    out.append("# " + "=" * 58)
+    out.append("")
 
-    # ── 常用示例（全注释）────────────────────────────────────
-    lines += [
-        "# ============================================================",
-        "# 【示例一】在规则列表末尾追加规则（不影响原有规则顺序）",
-        "# ------------------------------------------------------------",
-        "# +rule-providers:",
-        "#   Steam:",
-        "#     type: http",
-        "#     behavior: domain",
-        "#     format: mrs",
-        '#     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"',
-        "#     interval: 86400",
-        "# +rules:",
-        "#   - RULE-SET,Steam,Proxy",
-        "# ============================================================",
-        "",
-        "# ============================================================",
-        "# 【示例二】在规则列表开头插入高优先级规则（最先匹配）",
-        "# ------------------------------------------------------------",
-        "# +rules:",
-        "#   - DOMAIN-SUFFIX,example.com,DIRECT",
-        "#   - IP-CIDR,192.168.0.0/16,DIRECT",
-        "# ============================================================",
-        "",
-        "# ============================================================",
-        "# 【示例三】强制替换整个 rules 数组",
-        "# ------------------------------------------------------------",
-        "# rules!:",
-        "#   - DOMAIN-SUFFIX,example.com,DIRECT",
-        "#   - MATCH,PROXY",
-        "# ============================================================",
-        "",
-        "# ============================================================",
-        "# 【示例四】修改 dns 配置（只改指定字段，其余字段保留）",
-        "# ------------------------------------------------------------",
-        "# dns:",
-        "#   enable: true",
-        "#   cache-algorithm: lru",
-        "# ============================================================",
-        "",
-        "# ============================================================",
-        "# 【示例五】给所有 url-test 类型策略组的 proxies 末尾追加节点",
-        "# ------------------------------------------------------------",
-        "# proxy-groups*:",
-        "#   where:",
-        "#     type: url-test",
-        "#   set:",
-        "#     proxies+:",
-        "#       - '节点名称'",
-        "# ============================================================",
-        "",
-        "# ============================================================",
-        "# 【示例六】用正则匹配名称含 HK 的策略组，开头插入节点",
-        "# ------------------------------------------------------------",
-        "# proxy-groups*:",
-        "#   where:",
-        "#     name: '/^HK/'",
-        "#   set:",
-        "#     +proxies:",
-        "#       - '香港专线'",
-        "# ============================================================",
-        "",
-    ]
+    # ── 示例一：追加 rule-provider + rule（官方示例格式）────
+    out.append("# " + "=" * 58)
+    out.append("# 示例：追加自定义 rule-provider 并在规则末尾加入对应规则")
+    out.append("# 取消注释后，Steam 流量将走 Proxy 策略组")
+    out.append("# " + "-" * 58)
+    out.append("# +rule-providers:")
+    out.append("#   Steam:")
+    out.append("#     type: http")
+    out.append("#     behavior: domain")
+    out.append("#     format: mrs")
+    out.append('#     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"')
+    out.append("#     interval: 86400")
+    out.append("# +rules:")
+    out.append("#   - RULE-SET,Steam,Proxy")
+    out.append("# " + "=" * 58)
+    out.append("")
 
-    # ── proxy-providers 内容（核心部分）─────────────────────
-    lines += [
-        "# ============================================================",
-        "# 【proxy-providers 订阅链接替换】",
-        "# ------------------------------------------------------------",
-        "# 以下每个 proxy-providers* 块对应源文件中的一个 provider，",
-        "# 原始配置已完整复制，全部处于注释状态，不会影响任何现有配置。",
-        "#",
-        "# 使用方法：",
-        "#   1. 找到你要替换订阅链接的 provider（看 name: 字段）",
-        "#   2. 将该块的 url: 后面的地址换成你自己的订阅链接",
-        "#   3. 删除该块所有行最前面的 # 号",
-        "#   4. 保存文件，在 OpenClash 中重新加载该覆写模块即可生效",
-        "# ============================================================",
-        "",
-    ]
+    # ── 示例二：前置插入高优先级规则 ─────────────────────────
+    out.append("# " + "=" * 58)
+    out.append("# 示例：在规则列表最前面插入高优先级规则（最先匹配）")
+    out.append("# " + "-" * 58)
+    out.append("# +rules:")
+    out.append("#   - DOMAIN-SUFFIX,example.com,DIRECT")
+    out.append("#   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve")
+    out.append("# " + "=" * 58)
+    out.append("")
 
-    for idx, (name, config) in enumerate(providers.items(), 1):
-        # 序号标注，方便用户快速定位
-        lines.append(f"# ── provider {idx}: {name} " + "─" * max(1, 44 - len(name)))
-        lines.append("#")
-        lines.append("# proxy-providers*:")
-        lines.append("#   where:")
-        lines.append(f"#     name: '{name}'")
-        lines.append("#   set:")
+    # ── 示例三：强制替换整个 rules ────────────────────────────
+    out.append("# " + "=" * 58)
+    out.append("# 示例：强制替换整个 rules 数组（原有规则全部丢弃）")
+    out.append("# " + "-" * 58)
+    out.append("# rules!:")
+    out.append("#   - DOMAIN-SUFFIX,example.com,DIRECT")
+    out.append("#   - MATCH,PROXY")
+    out.append("# " + "=" * 58)
+    out.append("")
 
-        # 把原始 provider 配置序列化，以 set: 的子级缩进形式输出，每行加 #
-        provider_raw = yaml.dump(config, allow_unicode=True, default_flow_style=False, indent=2)
-        for raw_line in provider_raw.rstrip().splitlines():
-            # set: 下面的字段需要缩进 4 格（set: 本身缩进 4，字段再缩进 4）
-            if raw_line.strip():
-                lines.append("#     " + raw_line)
-            else:
-                lines.append("#")
+    # ── 示例四：修改 dns 部分字段（其余字段保留）─────────────
+    out.append("# " + "=" * 58)
+    out.append("# 示例：修改 dns 配置中的部分字段，其余字段保持不变")
+    out.append("# " + "-" * 58)
+    out.append("# dns:")
+    out.append("#   enable: true")
+    out.append("#   cache-algorithm: lru")
+    out.append("# " + "=" * 58)
+    out.append("")
 
-        lines.append("#")
-        lines.append("")
+    # ── 示例五：给策略组追加节点 ─────────────────────────────
+    out.append("# " + "=" * 58)
+    out.append("# 示例：给所有 url-test 类型的策略组在 proxies 末尾追加节点")
+    out.append("# " + "-" * 58)
+    out.append("# proxy-groups*:")
+    out.append("#   where:")
+    out.append("#     type: url-test")
+    out.append("#   set:")
+    out.append("#     proxies+:")
+    out.append("#       - '节点名称'")
+    out.append("# " + "=" * 58)
+    out.append("")
 
-    return "\n".join(lines)
+    # ================================================================
+    # proxy-providers：从源文件提取，直接以正确的顶层键格式写出（注释）
+    # ================================================================
+    providers = data.get('proxy-providers', {})
+    if providers:
+        out.append("# " + "=" * 58)
+        out.append("# proxy-providers（从源文件直接提取）")
+        out.append("# " + "-" * 58)
+        out.append("# 以下内容原样复制自源 YAML 的 proxy-providers 块。")
+        out.append("# 使用方法：")
+        out.append("#   1. 将需要替换的 provider 的 url: 改为你自己的订阅链接")
+        out.append("#   2. 删除这整块前面的 # 号，保存后重载覆写模块即可")
+        out.append("# " + "=" * 58)
+        out.append("#")
+        # 用 proxy-providers: 顶层键格式输出，这是正确的 [YAML] 块写法
+        providers_yaml = to_yaml_str({'proxy-providers': providers})
+        out.append(comment_lines(providers_yaml))
+        out.append("")
+
+    # ================================================================
+    # proxy-groups：从源文件提取（注释）
+    # ================================================================
+    proxy_groups = data.get('proxy-groups', [])
+    if proxy_groups:
+        out.append("# " + "=" * 58)
+        out.append("# proxy-groups（从源文件直接提取）")
+        out.append("# " + "-" * 58)
+        out.append("# 原始策略组配置，默认注释不启用。")
+        out.append("# 如需覆写策略组，可取消注释后修改，或参考上方示例使用 proxy-groups* 条件更新。")
+        out.append("# 直接取消注释将强制替换整个 proxy-groups（等同于 proxy-groups! 操作）。")
+        out.append("# " + "=" * 58)
+        out.append("#")
+        groups_yaml = to_yaml_str({'proxy-groups': proxy_groups})
+        out.append(comment_lines(groups_yaml))
+        out.append("")
+
+    # ================================================================
+    # rule-providers：从源文件提取（注释）
+    # ================================================================
+    rule_providers = data.get('rule-providers', {})
+    if rule_providers:
+        out.append("# " + "=" * 58)
+        out.append("# rule-providers（从源文件直接提取）")
+        out.append("# " + "-" * 58)
+        out.append("# 原始规则集配置，默认注释不启用。")
+        out.append("# 如需追加新的 rule-provider，参考上方示例一使用 +rule-providers: 操作符。")
+        out.append("# " + "=" * 58)
+        out.append("#")
+        rp_yaml = to_yaml_str({'rule-providers': rule_providers})
+        out.append(comment_lines(rp_yaml))
+        out.append("")
+
+    # ================================================================
+    # rules：从源文件提取（注释）
+    # ================================================================
+    rules = data.get('rules', [])
+    if rules:
+        out.append("# " + "=" * 58)
+        out.append("# rules（从源文件直接提取）")
+        out.append("# " + "-" * 58)
+        out.append("# 原始规则列表，默认注释不启用。")
+        out.append("# 常用操作：")
+        out.append("#   +rules: [...]   在规则列表开头插入（优先匹配）")
+        out.append("#   rules+: [...]   在规则列表末尾追加")
+        out.append("#   rules!: [...]   强制替换整个规则列表（丢弃原有规则）")
+        out.append("# 参考上方示例，通常不需要取消注释整个 rules，而是用 +rules/rules+ 追加即可。")
+        out.append("# " + "=" * 58)
+        out.append("#")
+        rules_yaml = to_yaml_str({'rules': rules})
+        out.append(comment_lines(rules_yaml))
+        out.append("")
+
+    # ================================================================
+    # dns：从源文件提取（注释）
+    # ================================================================
+    dns = data.get('dns', {})
+    if dns:
+        out.append("# " + "=" * 58)
+        out.append("# dns（从源文件直接提取）")
+        out.append("# " + "-" * 58)
+        out.append("# 原始 DNS 配置，默认注释不启用。")
+        out.append("# 如只需修改部分字段，直接写需要修改的键值即可（默认合并，不影响其他字段）。")
+        out.append("# 如需完整替换 DNS 配置，使用 dns!: 操作符。")
+        out.append("# " + "=" * 58)
+        out.append("#")
+        dns_yaml = to_yaml_str({'dns': dns})
+        out.append(comment_lines(dns_yaml))
+        out.append("")
+
+    return "\n".join(out)
 
 
 def gen_openclash_new():
@@ -200,9 +239,13 @@ def gen_openclash_new():
             full_path = os.path.join(root, file)
             try:
                 with open(full_path, 'r', encoding='utf-8') as f:
-                    data = yaml.safe_load(f)
+                    raw_text = f.read()
+                    data = yaml.safe_load(raw_text)
 
-                providers = data.get('proxy-providers', {}) if isinstance(data, dict) else {}
+                if not isinstance(data, dict):
+                    continue
+
+                providers = data.get('proxy-providers', {})
                 if not providers:
                     continue
 
@@ -215,16 +258,18 @@ def gen_openclash_new():
                 out_file = os.path.join(out_dir, out_name)
                 provider_keys = list(providers.keys())
 
-                content = "\n".join([
+                header = "\n".join([
                     f"# OpenClash 覆写模块 - {file}",
                     f"# 生成日期：{get_current_date()}",
                     f"# 源文件：{raw_url}",
                     "# 格式：新版 OpenClash [YAML] 块覆写",
                     "#",
                     "# 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。",
-                    "# proxy-providers 内容已原样复制并注释，其余示例均为参考，默认不启用。",
-                    build_yaml_block(providers),
+                    "# 所有内容默认注释，不影响现有配置；取消注释对应段落即可启用该覆写。",
+                    "",
                 ])
+
+                content = header + build_yaml_block(data, raw_url, file)
 
                 with open(out_file, 'w', encoding='utf-8') as f:
                     f.write(content)
@@ -239,7 +284,7 @@ def gen_openclash_new():
                 })
 
                 total_count += 1
-                print(f"  ✅ 生成: {out_file}  ({len(provider_keys)} 个 provider)")
+                print(f"  ✅ 生成: {out_file}  (providers: {', '.join(provider_keys)})")
 
             except Exception as e:
                 print(f"  ⚠️ 处理出错 {file}: {e}")
@@ -250,8 +295,7 @@ def gen_openclash_new():
         readme_lines = [
             f"# 📁 {cat}",
             "",
-            "新版 OpenClash 覆写模块（[YAML] 块格式）。",
-            "所有内容默认注释，不影响现有配置，取消注释即启用。",
+            "新版 OpenClash 覆写模块（[YAML] 块格式）。所有内容默认注释，不影响现有配置。",
             "",
             "| 文件名 | proxy-providers | Raw 链接 |",
             "| :--- | :--- | :--- |",
@@ -271,11 +315,17 @@ def gen_openclash_new():
         "",
         "基于新版 OpenClash `[YAML]` 块覆写格式自动生成。",
         "",
+        "**设计原则：**",
+        "- 所有覆写内容默认全部注释，加载后对现有配置零影响",
+        "- `proxy-providers` / `proxy-groups` / `rules` / `rule-providers` / `dns`",
+        "  均从源文件直接提取并以正确格式写入，对照修改后取消注释即可启用",
+        "- 内置常用操作符示例（追加规则、插入节点等），参考后按需取消注释",
+        "",
         "| | 旧版 `.conf` | 新版 `.yaml` |",
         "| :--- | :--- | :--- |",
-        "| url 替换 | `ruby_map_edit` + `$EN_KEY` 环境变量 | `proxy-providers*` 条件更新，直接写链接 |",
+        "| url 替换 | `ruby_map_edit` + `$EN_KEY` 环境变量 | 直接修改 `proxy-providers:` 块中的 `url:` 字段 |",
         "| 修改能力 | 仅能替换指定路径的值 | 合并 / 强制覆盖 / 追加 / 删除 / 批量条件更新 |",
-        "| 默认行为 | 启用后立即覆写 | 全部注释，零影响，按需取消注释 |",
+        "| 默认行为 | 启用后立即覆写 | 全部注释，零影响，取消注释即启用 |",
         "",
         "## 📂 目录",
         "",
@@ -291,9 +341,9 @@ def gen_openclash_new():
         "",
         "1. 复制对应 `.yaml` 文件的 Raw URL",
         "2. OpenClash → 覆写设置 → 覆写模块 → 添加 URL",
-        "3. 打开文件，找到对应 provider 的 `proxy-providers*` 块",
-        "4. 将 `url:` 换成自己的订阅链接，删除该块前面的 `#` 号",
-        "5. 重新加载覆写模块生效",
+        "3. 打开文件，找到 `proxy-providers:` 段落",
+        "4. 将对应 provider 的 `url:` 值改为你的订阅链接",
+        "5. 删除该段落前面所有行的 `# ` 前缀，保存后重载模块生效",
         "",
         "[🏠 返回主页](../../README.md)",
     ]
