@@ -6,20 +6,20 @@
 
 ## ⚔️ 配置横向对比
 
-| 特性 | `MihomoAIO.yaml` | `MihomoProPlus.yaml` | `MihomoProMax.yaml` |
+| 特性 | `MihomoAIO.yaml` | `MihomoProMax.yaml` | `MihomoProPlus.yaml` |
 | :--- | :--- | :--- | :--- |
-| **大小** | 30.1 KB | 27.9 KB | 27.4 KB |
+| **大小** | 30.1 KB | 27.4 KB | 27.9 KB |
 | **混合端口** | 7893 | 7893 | 7893 |
 | **面板地址** | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 |
 | **运行模式** | rule | rule | rule |
 | **TUN** | 🚫 | 🚫 | 🚫 |
 | **策略组** | **61** | **54** | **54** |
-| **规则数** | **52** | **44** | **45** |
+| **规则数** | **52** | **45** | **44** |
 
 ## 📄 配置详情
 
 #### 📝 MihomoAIO.yaml
-- **路径**: `MihomoAIO.yaml` | **大小**: 30.1 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoAIO.yaml)
+- **路径**: `MihomoAIO.yaml` | **大小**: 30.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoAIO.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (61个)</summary>
@@ -49,8 +49,8 @@
 | ... | 还有 41 个 |
 </details>
 
-#### 📝 MihomoProPlus.yaml
-- **路径**: `MihomoProPlus.yaml` | **大小**: 27.9 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoProPlus.yaml)
+#### 📝 MihomoProMax.yaml
+- **路径**: `MihomoProMax.yaml` | **大小**: 27.4 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoProMax.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (54个)</summary>
@@ -80,8 +80,8 @@
 | ... | 还有 34 个 |
 </details>
 
-#### 📝 MihomoProMax.yaml
-- **路径**: `MihomoProMax.yaml` | **大小**: 27.4 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoProMax.yaml)
+#### 📝 MihomoProPlus.yaml
+- **路径**: `MihomoProPlus.yaml` | **大小**: 27.9 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoProPlus.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (54个)</summary>
