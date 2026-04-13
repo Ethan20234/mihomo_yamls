@@ -137,7 +137,7 @@ jobs:
             -x "*/.github*"
 
       - name: Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: "backup-${{ env.TIMESTAMP }}"
           name: "📅 Auto Backup: ${{ env.TIMESTAMP }}"
