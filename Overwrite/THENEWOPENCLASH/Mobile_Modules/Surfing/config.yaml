@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - config.yaml
-# 生成日期：2026-04-09
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/Mobile_Modules/Surfing/config.yaml
+# 生成日期：2026-04-14
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/Mobile_Modules/Surfing/config.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -290,10 +290,10 @@
 # - icon: https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@main/app/icon/No-ads-all.svg
 #   name: 广告拦截
 #   proxies:
+#   - PASS
+#   - REJECT-DROP
 #   - ⛔️ 禁止·拒绝连接
 #   - 🌐 DNS_Hijack
-#   - REJECT-DROP
-#   - PASS
 #   type: select
 # - icon: https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@main/app/icon/WebRTC.svg
 #   name: WebRTC
@@ -495,7 +495,7 @@
 #     interval: 86400
 #     path: ./rules/No-ads-all.mrs
 #     type: http
-#     url: https://anti-ad.net/mihomo.mrs
+#     url: https://cdn.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs
 #   OpenAI_域:
 #     behavior: domain
 #     format: mrs
@@ -664,7 +664,6 @@
 #   - RULE-SET:GoogleFCM_域
 #   - RULE-SET:自定义规则
 #   fake-ip-range: 198.18.0.0/16
-#   fake-ip-range6: fdfe:dcba:9876::/48
 #   ipv6: true
 #   listen: 0.0.0.0:1053
 #   nameserver:
