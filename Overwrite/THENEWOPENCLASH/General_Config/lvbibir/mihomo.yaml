@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - mihomo.yaml
-# 生成日期：2026-04-09
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/General_Config/lvbibir/mihomo.yaml
+# 生成日期：2026-04-17
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/General_Config/lvbibir/mihomo.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -89,8 +89,6 @@
 #       interval: 300
 #       url: https://www.gstatic.com/generate_204
 #     interval: 86400
-#     override:
-#       additional-prefix: '1. '
 #     path: ./proxy-providers/providers-1.yaml
 #     proxy: DIRECT
 #     type: http
@@ -535,7 +533,6 @@
 #
 # rules:
 # - IP-CIDR,169.254.169.254/32,REJECT,no-resolve
-# - DST-PORT,11434,REJECT
 # - DOMAIN,t-ring-fdv2.msedge.net,REJECT,no-resolve
 # - IP-CIDR,223.5.5.5/32,直连,no-resolve
 # - IP-CIDR,223.6.6.6/32,直连,no-resolve

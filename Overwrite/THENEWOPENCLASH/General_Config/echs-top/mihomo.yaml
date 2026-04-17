@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - mihomo.yaml
-# 生成日期：2026-04-09
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/General_Config/echs-top/mihomo.yaml
+# 生成日期：2026-04-17
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/General_Config/echs-top/mihomo.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -91,7 +91,7 @@
 #     health-check: &id002
 #       enable: true
 #       expected-status: 204
-#       interval: 600
+#       interval: 900
 #       lazy: false
 #       max-failed-times: 2
 #       timeout: 3000
@@ -154,6 +154,7 @@
 #   name: 直接连接
 #   proxies:
 #   - DIRECT
+#   - 禁用UDP
 #   - IPV4优先
 #   - IPV6优先
 #   - 仅IPV4
@@ -177,6 +178,13 @@
 #   - 英国|故障转移
 #   - 法国|故障转移
 #   - 荷兰|故障转移
+#   - PASS
+#   - REJECT
+#   type: select
+# - icon: https://mihomo.echs.top/img/icon/CloudFlare.webp
+#   include-all-providers: true
+#   name: 人机验证
+#   proxies: *id001
 #   type: select
 # - icon: https://mihomo.echs.top/img/icon/AI.webp
 #   include-all-providers: true
@@ -201,6 +209,11 @@
 # - icon: https://mihomo.echs.top/img/icon/Google.webp
 #   include-all-providers: true
 #   name: GOOGLE
+#   proxies: *id001
+#   type: select
+# - icon: https://mihomo.echs.top/img/icon/Download_2.webp
+#   include-all-providers: true
+#   name: TRACKER
 #   proxies: *id001
 #   type: select
 # - hidden: true
@@ -297,11 +310,13 @@
 #   - 代理连接
 #   - 直接连接
 #   - 代理DNS
+#   - 人机验证
 #   - 国外AI
 #   - TELEGRAM
 #   - GITHUB
 #   - 国外媒体
 #   - GOOGLE
+#   - TRACKER
 #   type: select
 
 # ==========================================================
@@ -336,6 +351,14 @@
 #     proxy: GITHUB
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/apple-cn.mrs
+#   captcha:
+#     behavior: domain
+#     format: mrs
+#     interval: 86400
+#     path: ./rules/captcha.mrs
+#     proxy: GITHUB
+#     type: http
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/captcha_domain.mrs
 #   cn:
 #     behavior: domain
 #     format: mrs
@@ -504,6 +527,14 @@
 #     proxy: GITHUB
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/telegram_ip.mrs
+#   trackerslist:
+#     behavior: domain
+#     format: mrs
+#     interval: 86400
+#     path: ./rules/trackerslist.mrs
+#     proxy: GITHUB
+#     type: http
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/trackerslist.mrs
 
 # ==========================================================
 # rules（从源文件直接提取）
@@ -518,15 +549,18 @@
 #
 # rules:
 # - DST-PORT,5228-5230,直接连接
+# - DST-PORT,1337/2710/6881-6999/7777,TRACKER
 # - RULE-SET,private_ip,直接连接,no-resolve
 # - RULE-SET,AWAvenue-Ads,REJECT
 # - RULE-SET,private,直接连接
 # - RULE-SET,fcm,直接连接
+# - RULE-SET,captcha,人机验证
 # - RULE-SET,ai,国外AI
 # - RULE-SET,telegram,TELEGRAM
 # - RULE-SET,github,GITHUB
 # - RULE-SET,media,国外媒体
 # - RULE-SET,google,GOOGLE
+# - RULE-SET,trackerslist,TRACKER
 # - RULE-SET,apple-cn,直接连接
 # - RULE-SET,microsoft-cn,直接连接
 # - RULE-SET,games-cn,直接连接
@@ -541,6 +575,7 @@
 # - RULE-SET,proxy_ip,代理连接
 # - RULE-SET,direct_ip,直接连接
 # - RULE-SET,cn_ip,直接连接
+# - DST-PORT,10000-65535,TRACKER
 # - MATCH,代理连接
 
 # ==========================================================
@@ -563,11 +598,13 @@
 #   - RULE-SET,AWAvenue-Ads,fake-ip
 #   - RULE-SET,private,real-ip
 #   - RULE-SET,fcm,real-ip
+#   - RULE-SET,captcha,fake-ip
 #   - RULE-SET,ai,fake-ip
 #   - RULE-SET,telegram,fake-ip
 #   - RULE-SET,github,fake-ip
 #   - RULE-SET,media,fake-ip
 #   - RULE-SET,google,fake-ip
+#   - RULE-SET,trackerslist,fake-ip
 #   - RULE-SET,apple-cn,real-ip
 #   - RULE-SET,microsoft-cn,real-ip
 #   - RULE-SET,games-cn,real-ip
@@ -588,6 +625,7 @@
 #     - rcode://name_error
 #     rule-set:ai: *id001
 #     rule-set:apple-cn: *id002
+#     rule-set:captcha: *id001
 #     rule-set:cn: *id002
 #     rule-set:direct_domain: *id002
 #     rule-set:dnsmasq-china-add: *id002
@@ -602,6 +640,7 @@
 #     rule-set:proxy: *id001
 #     rule-set:proxy_domain: *id001
 #     rule-set:telegram: *id001
+#     rule-set:trackerslist: *id001
 #   prefer-h3: true
 #   proxy-server-nameserver: *id002
 #   respect-rules: false
