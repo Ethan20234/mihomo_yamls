@@ -8,20 +8,20 @@
 
 | 特性 | `mihomo_multi.yaml` | `mihomo_single.yaml` | `config.yaml` | `configfull.yaml` | `configfull_NoAd.yaml` | `configfull_lite.yaml` | `clash-fallback.yaml` | `clash-fallback-dialer.yaml` | `clash-fallback-std.yaml` | `clash-fallback-all.yaml` | `clash-all-fallback.yaml` | `config.yaml` | `ConfigForClash.yaml` | `Clash_Sample.yaml` | `backup.yaml` | `AIO.yaml` | `AIB.yaml` | `config.yaml` | `config.yaml` | `MihomoPro_Config.yaml` | `OneTouch_Config.yaml` | `config.yaml` | `MihomoAIO.yaml` | `MihomoProMax.yaml` | `MihomoProPlus.yaml` | `mihomo.yaml` | `Clash.yaml` | `mihomo.yaml` | `config_lite.yaml` | `config.yaml` | `Seven1_fallback_Geo.yaml` | `Seven1_fallback_Rule-Set.yaml` | `us_la.yaml` | `Clash-Airport.yaml` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **大小** | 12.7 KB | 12.4 KB | 32.7 KB | 34.6 KB | 34.1 KB | 17.7 KB | 15.9 KB | 16.3 KB | 17.3 KB | 18.6 KB | 17.2 KB | 13.8 KB | 49.3 KB | 8.4 KB | 12.5 KB | 10.8 KB | 11.0 KB | 12.8 KB | 18.7 KB | 22.6 KB | 12.4 KB | 28.5 KB | 30.1 KB | 27.4 KB | 27.9 KB | 15.8 KB | 27.3 KB | 14.2 KB | 3.0 KB | 8.2 KB | 19.5 KB | 22.1 KB | 18.5 KB | 17.5 KB |
+| **大小** | 12.7 KB | 12.4 KB | 32.7 KB | 34.6 KB | 34.1 KB | 17.7 KB | 15.9 KB | 16.3 KB | 17.3 KB | 18.6 KB | 17.2 KB | 13.8 KB | 49.3 KB | 8.4 KB | 12.5 KB | 10.8 KB | 11.0 KB | 12.8 KB | 18.7 KB | 22.6 KB | 12.4 KB | 28.5 KB | 30.1 KB | 27.4 KB | 27.9 KB | 15.8 KB | 27.3 KB | 15.1 KB | 3.0 KB | 8.2 KB | 19.5 KB | 22.1 KB | 18.5 KB | 17.5 KB |
 | **混合端口** | 7897 | 7897 | 7890 | 7890 | 7890 | 7890 | 7893 | 7893 | 7893 | 7893 | 7893 | 7890 | 7892 | 7892 | 7892 | 7890 | 7890 | 7890 | 7892 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7890 | 7890 | 0 | 7893 | 7893 | 7893 | 7893 | - | - |
 | **面板地址** | - | - | 127.0.0.1:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | :9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | - | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 0.0.0.0:9090 | :9090 | - | - | - | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9092 | 127.0.0.1:9092 |
 | **运行模式** | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | Rule | rule | rule | rule | rule | rule | rule | rule |
 | **TUN** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🚫 | 🚫 | ✅ | ✅ | ✅ | ✅ | ✅ | 🚫 | 🚫 | 🚫 | ✅ | 🚫 | 🚫 | 🚫 | ✅ | 🚫 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **策略组** | **33** | **33** | **115** | **62** | **59** | **47** | **34** | **35** | **36** | **61** | **53** | **29** | **62** | **15** | **22** | **23** | **24** | **26** | **13** | **52** | **15** | **25** | **61** | **54** | **54** | **29** | **27** | **23** | **1** | **18** | **40** | **40** | **15** | **23** |
-| **规则数** | **22** | **22** | **29** | **98** | **97** | **38** | **43** | **43** | **43** | **53** | **42** | **33** | **62** | **11** | **25** | **34** | **34** | **23** | **37** | **40** | **23** | **35** | **52** | **45** | **44** | **27** | **68** | **29** | **16** | **26** | **27** | **27** | **34** | **36** |
+| **策略组** | **33** | **33** | **115** | **62** | **59** | **47** | **34** | **35** | **36** | **61** | **53** | **29** | **62** | **15** | **22** | **23** | **24** | **26** | **13** | **52** | **15** | **25** | **61** | **54** | **54** | **29** | **27** | **25** | **1** | **18** | **40** | **40** | **15** | **23** |
+| **规则数** | **22** | **22** | **29** | **98** | **97** | **38** | **43** | **43** | **43** | **53** | **42** | **33** | **62** | **11** | **25** | **34** | **34** | **23** | **37** | **40** | **23** | **35** | **52** | **45** | **44** | **27** | **68** | **44** | **16** | **26** | **27** | **27** | **34** | **36** |
 
 ## 📄 配置详情
 
 ### 👤 666OS
 
 #### 📝 MihomoPro_Config.yaml
-- **路径**: `666OS/MihomoPro_Config.yaml` | **大小**: 22.6 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/MihomoPro_Config.yaml)
+- **路径**: `666OS/MihomoPro_Config.yaml` | **大小**: 22.6 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/666OS/MihomoPro_Config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (52个)</summary>
@@ -52,7 +52,7 @@
 </details>
 
 #### 📝 OneTouch_Config.yaml
-- **路径**: `666OS/OneTouch_Config.yaml` | **大小**: 12.4 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/OneTouch_Config.yaml)
+- **路径**: `666OS/OneTouch_Config.yaml` | **大小**: 12.4 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/666OS/OneTouch_Config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (15个)</summary>
@@ -80,7 +80,7 @@
 ### 👤 ClashConnectRules
 
 #### 📝 Clash.yaml
-- **路径**: `ClashConnectRules/Clash.yaml` | **大小**: 27.3 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/ClashConnectRules/Clash.yaml)
+- **路径**: `ClashConnectRules/Clash.yaml` | **大小**: 27.3 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/ClashConnectRules/Clash.yaml)
 - **模式**: Rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (27个)</summary>
@@ -114,7 +114,7 @@
 ### 👤 HenryChiao
 
 #### 📝 MihomoAIO.yaml
-- **路径**: `HenryChiao/MihomoAIO.yaml` | **大小**: 30.1 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoAIO.yaml)
+- **路径**: `HenryChiao/MihomoAIO.yaml` | **大小**: 30.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoAIO.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (61个)</summary>
@@ -145,7 +145,7 @@
 </details>
 
 #### 📝 MihomoProMax.yaml
-- **路径**: `HenryChiao/MihomoProMax.yaml` | **大小**: 27.4 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoProMax.yaml)
+- **路径**: `HenryChiao/MihomoProMax.yaml` | **大小**: 27.4 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoProMax.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (54个)</summary>
@@ -176,7 +176,7 @@
 </details>
 
 #### 📝 MihomoProPlus.yaml
-- **路径**: `HenryChiao/MihomoProPlus.yaml` | **大小**: 27.9 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoProPlus.yaml)
+- **路径**: `HenryChiao/MihomoProPlus.yaml` | **大小**: 27.9 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/HenryChiao/MihomoProPlus.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (54个)</summary>
@@ -210,7 +210,7 @@
 ### 👤 JohnsonRan
 
 #### 📝 AIO.yaml
-- **路径**: `JohnsonRan/AIO.yaml` | **大小**: 10.8 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/JohnsonRan/AIO.yaml)
+- **路径**: `JohnsonRan/AIO.yaml` | **大小**: 10.8 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/JohnsonRan/AIO.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (23个)</summary>
@@ -241,7 +241,7 @@
 </details>
 
 #### 📝 AIB.yaml
-- **路径**: `JohnsonRan/AIB.yaml` | **大小**: 11.0 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/JohnsonRan/AIB.yaml)
+- **路径**: `JohnsonRan/AIB.yaml` | **大小**: 11.0 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/JohnsonRan/AIB.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (24个)</summary>
@@ -275,7 +275,7 @@
 ### 👤 Kerronex
 
 #### 📝 config.yaml
-- **路径**: `Kerronex/config.yaml` | **大小**: 18.7 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Kerronex/config.yaml)
+- **路径**: `Kerronex/config.yaml` | **大小**: 18.7 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Kerronex/config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (13个)</summary>
@@ -301,7 +301,7 @@
 ### 👤 Lanlan13-14
 
 #### 📝 configfull.yaml
-- **路径**: `Lanlan13-14/configfull.yaml` | **大小**: 34.6 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Lanlan13-14/configfull.yaml)
+- **路径**: `Lanlan13-14/configfull.yaml` | **大小**: 34.6 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Lanlan13-14/configfull.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (62个)</summary>
@@ -332,7 +332,7 @@
 </details>
 
 #### 📝 configfull_NoAd.yaml
-- **路径**: `Lanlan13-14/configfull_NoAd.yaml` | **大小**: 34.1 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Lanlan13-14/configfull_NoAd.yaml)
+- **路径**: `Lanlan13-14/configfull_NoAd.yaml` | **大小**: 34.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Lanlan13-14/configfull_NoAd.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (59个)</summary>
@@ -363,7 +363,7 @@
 </details>
 
 #### 📝 configfull_lite.yaml
-- **路径**: `Lanlan13-14/configfull_lite.yaml` | **大小**: 17.7 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Lanlan13-14/configfull_lite.yaml)
+- **路径**: `Lanlan13-14/configfull_lite.yaml` | **大小**: 17.7 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Lanlan13-14/configfull_lite.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (47个)</summary>
@@ -397,7 +397,7 @@
 ### 👤 Mitchell
 
 #### 📝 config.yaml
-- **路径**: `Mitchell/config.yaml` | **大小**: 28.5 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Mitchell/config.yaml)
+- **路径**: `Mitchell/config.yaml` | **大小**: 28.5 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Mitchell/config.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (25个)</summary>
@@ -431,7 +431,7 @@
 ### 👤 Repcz
 
 #### 📝 config_lite.yaml
-- **路径**: `Repcz/config_lite.yaml` | **大小**: 3.0 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Repcz/config_lite.yaml)
+- **路径**: `Repcz/config_lite.yaml` | **大小**: 3.0 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Repcz/config_lite.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (1个)</summary>
@@ -442,7 +442,7 @@
 </details>
 
 #### 📝 config.yaml
-- **路径**: `Repcz/config.yaml` | **大小**: 8.2 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Repcz/config.yaml)
+- **路径**: `Repcz/config.yaml` | **大小**: 8.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Repcz/config.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (18个)</summary>
@@ -473,7 +473,7 @@
 ### 👤 SHICHUNHUI88
 
 #### 📝 us_la.yaml
-- **路径**: `SHICHUNHUI88/us_la.yaml` | **大小**: 18.5 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/SHICHUNHUI88/us_la.yaml)
+- **路径**: `SHICHUNHUI88/us_la.yaml` | **大小**: 18.5 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/SHICHUNHUI88/us_la.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (15个)</summary>
@@ -498,7 +498,7 @@
 </details>
 
 #### 📝 Clash-Airport.yaml
-- **路径**: `SHICHUNHUI88/Clash-Airport.yaml` | **大小**: 17.5 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/SHICHUNHUI88/Clash-Airport.yaml)
+- **路径**: `SHICHUNHUI88/Clash-Airport.yaml` | **大小**: 17.5 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/SHICHUNHUI88/Clash-Airport.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (23个)</summary>
@@ -532,7 +532,7 @@
 ### 👤 Seven1echo
 
 #### 📝 Seven1_fallback_Geo.yaml
-- **路径**: `Seven1echo/Seven1_fallback_Geo.yaml` | **大小**: 19.5 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Seven1echo/Seven1_fallback_Geo.yaml)
+- **路径**: `Seven1echo/Seven1_fallback_Geo.yaml` | **大小**: 19.5 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Seven1echo/Seven1_fallback_Geo.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (40个)</summary>
@@ -563,7 +563,7 @@
 </details>
 
 #### 📝 Seven1_fallback_Rule-Set.yaml
-- **路径**: `Seven1echo/Seven1_fallback_Rule-Set.yaml` | **大小**: 22.1 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Seven1echo/Seven1_fallback_Rule-Set.yaml)
+- **路径**: `Seven1echo/Seven1_fallback_Rule-Set.yaml` | **大小**: 22.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Seven1echo/Seven1_fallback_Rule-Set.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (40个)</summary>
@@ -597,16 +597,18 @@
 ### 👤 echs-top
 
 #### 📝 mihomo.yaml
-- **路径**: `echs-top/mihomo.yaml` | **大小**: 14.2 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/echs-top/mihomo.yaml)
+- **路径**: `echs-top/mihomo.yaml` | **大小**: 15.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/echs-top/mihomo.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
-<summary>🔍 策略组 (23个)</summary>
+<summary>🔍 策略组 (25个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
 | 👆 代理连接 | `select` |
+| 👆 代理UDP | `select` |
 | 👆 直接连接 | `select` |
 | 👆 代理DNS | `select` |
+| 👆 FCM服务 | `select` |
 | 👆 人机验证 | `select` |
 | 👆 国外AI | `select` |
 | 👆 TELEGRAM | `select` |
@@ -622,16 +624,14 @@
 | 🔧 韩国&#124;故障转移 | `fallback` |
 | 🔧 美国&#124;故障转移 | `fallback` |
 | 🔧 加拿大&#124;故障转移 | `fallback` |
-| 🔧 德国&#124;故障转移 | `fallback` |
-| 🔧 英国&#124;故障转移 | `fallback` |
-| ... | 还有 3 个 |
+| ... | 还有 5 个 |
 </details>
 
 ---
 ### 👤 fufu
 
 #### 📝 ConfigForClash.yaml
-- **路径**: `fufu/ConfigForClash.yaml` | **大小**: 49.3 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/fufu/ConfigForClash.yaml)
+- **路径**: `fufu/ConfigForClash.yaml` | **大小**: 49.3 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/fufu/ConfigForClash.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (62个)</summary>
@@ -665,7 +665,7 @@
 ### 👤 iKeLee
 
 #### 📝 Clash_Sample.yaml
-- **路径**: `iKeLee/Clash_Sample.yaml` | **大小**: 8.4 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/iKeLee/Clash_Sample.yaml)
+- **路径**: `iKeLee/Clash_Sample.yaml` | **大小**: 8.4 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/iKeLee/Clash_Sample.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (15个)</summary>
@@ -690,7 +690,7 @@
 </details>
 
 #### 📝 backup.yaml
-- **路径**: `iKeLee/backup.yaml` | **大小**: 12.5 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/iKeLee/backup.yaml)
+- **路径**: `iKeLee/backup.yaml` | **大小**: 12.5 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/iKeLee/backup.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (22个)</summary>
@@ -724,7 +724,7 @@
 ### 👤 liandu2024
 
 #### 📝 clash-fallback.yaml
-- **路径**: `liandu2024/clash-fallback.yaml` | **大小**: 15.9 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/liandu2024/clash-fallback.yaml)
+- **路径**: `liandu2024/clash-fallback.yaml` | **大小**: 15.9 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/liandu2024/clash-fallback.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (34个)</summary>
@@ -755,7 +755,7 @@
 </details>
 
 #### 📝 clash-fallback-dialer.yaml
-- **路径**: `liandu2024/clash-fallback-dialer.yaml` | **大小**: 16.3 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/liandu2024/clash-fallback-dialer.yaml)
+- **路径**: `liandu2024/clash-fallback-dialer.yaml` | **大小**: 16.3 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/liandu2024/clash-fallback-dialer.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (35个)</summary>
@@ -786,7 +786,7 @@
 </details>
 
 #### 📝 clash-fallback-std.yaml
-- **路径**: `liandu2024/clash-fallback-std.yaml` | **大小**: 17.3 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/liandu2024/clash-fallback-std.yaml)
+- **路径**: `liandu2024/clash-fallback-std.yaml` | **大小**: 17.3 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/liandu2024/clash-fallback-std.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (36个)</summary>
@@ -817,7 +817,7 @@
 </details>
 
 #### 📝 clash-fallback-all.yaml
-- **路径**: `liandu2024/clash-fallback-all.yaml` | **大小**: 18.6 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/liandu2024/clash-fallback-all.yaml)
+- **路径**: `liandu2024/clash-fallback-all.yaml` | **大小**: 18.6 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/liandu2024/clash-fallback-all.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (61个)</summary>
@@ -848,7 +848,7 @@
 </details>
 
 #### 📝 clash-all-fallback.yaml
-- **路径**: `liandu2024/clash-all-fallback.yaml` | **大小**: 17.2 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/liandu2024/clash-all-fallback.yaml)
+- **路径**: `liandu2024/clash-all-fallback.yaml` | **大小**: 17.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/liandu2024/clash-all-fallback.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (53个)</summary>
@@ -882,7 +882,7 @@
 ### 👤 liuran001
 
 #### 📝 config.yaml
-- **路径**: `liuran001/config.yaml` | **大小**: 13.8 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/liuran001/config.yaml)
+- **路径**: `liuran001/config.yaml` | **大小**: 13.8 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/liuran001/config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (29个)</summary>
@@ -916,7 +916,7 @@
 ### 👤 lvbibir
 
 #### 📝 mihomo.yaml
-- **路径**: `lvbibir/mihomo.yaml` | **大小**: 15.8 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/lvbibir/mihomo.yaml)
+- **路径**: `lvbibir/mihomo.yaml` | **大小**: 15.8 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/lvbibir/mihomo.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (29个)</summary>
@@ -950,7 +950,7 @@
 ### 👤 qichiyuhub
 
 #### 📝 config.yaml
-- **路径**: `qichiyuhub/config.yaml` | **大小**: 12.8 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/qichiyuhub/config.yaml)
+- **路径**: `qichiyuhub/config.yaml` | **大小**: 12.8 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/qichiyuhub/config.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (26个)</summary>
@@ -984,7 +984,7 @@
 ### 👤 wanswu
 
 #### 📝 config.yaml
-- **路径**: `wanswu/config.yaml` | **大小**: 32.7 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/wanswu/config.yaml)
+- **路径**: `wanswu/config.yaml` | **大小**: 32.7 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/wanswu/config.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (115个)</summary>
@@ -1018,7 +1018,7 @@
 ### 👤 yyhhyyyyyy
 
 #### 📝 mihomo_multi.yaml
-- **路径**: `yyhhyyyyyy/mihomo_multi.yaml` | **大小**: 12.7 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/yyhhyyyyyy/mihomo_multi.yaml)
+- **路径**: `yyhhyyyyyy/mihomo_multi.yaml` | **大小**: 12.7 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/yyhhyyyyyy/mihomo_multi.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (33个)</summary>
@@ -1049,7 +1049,7 @@
 </details>
 
 #### 📝 mihomo_single.yaml
-- **路径**: `yyhhyyyyyy/mihomo_single.yaml` | **大小**: 12.4 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/yyhhyyyyyy/mihomo_single.yaml)
+- **路径**: `yyhhyyyyyy/mihomo_single.yaml` | **大小**: 12.4 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/yyhhyyyyyy/mihomo_single.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (33个)</summary>
