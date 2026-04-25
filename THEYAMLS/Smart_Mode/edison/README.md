@@ -7,10 +7,10 @@
 ## 📄 配置详情
 
 #### 📝 OneSmartProMCX.yaml
-- **路径**: `OneSmartProMCX.yaml` | **大小**: 42.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/edison/OneSmartProMCX.yaml)
+- **路径**: `OneSmartProMCX.yaml` | **大小**: 43.4 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/edison/OneSmartProMCX.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
-<summary>🔍 策略组 (36个)</summary>
+<summary>🔍 策略组 (37个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
@@ -22,6 +22,7 @@
 | 👆 Microsoft | `select` |
 | 👆 TikTok | `select` |
 | 👆 Crypto | `select` |
+| 👆 PayPal | `select` |
 | 👆 漏网之鱼 | `select` |
 | 👆 Emby | `select` |
 | 👆 Tracker | `select` |
@@ -33,6 +34,5 @@
 | 🔧 日本-故转 | `fallback` |
 | 🔧 狮城-故转 | `fallback` |
 | 🔧 美国-故转 | `fallback` |
-| 🔧 低倍率-故转 | `fallback` |
-| ... | 还有 16 个 |
+| ... | 还有 17 个 |
 </details>
