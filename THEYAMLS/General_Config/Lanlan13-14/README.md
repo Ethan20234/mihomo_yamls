@@ -6,48 +6,17 @@
 
 ## ⚔️ 配置横向对比
 
-| 特性 | `configfull.yaml` | `configfull_NoAd.yaml` | `configfull_lite.yaml` |
+| 特性 | `configfull_NoAd.yaml` | `configfull.yaml` | `configfull_lite.yaml` |
 | :--- | :--- | :--- | :--- |
-| **大小** | 34.6 KB | 34.1 KB | 17.7 KB |
+| **大小** | 34.1 KB | 34.6 KB | 17.7 KB |
 | **混合端口** | 7890 | 7890 | 7890 |
 | **面板地址** | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 |
 | **运行模式** | rule | rule | rule |
 | **TUN** | ✅ | ✅ | ✅ |
-| **策略组** | **62** | **59** | **47** |
-| **规则数** | **98** | **97** | **38** |
+| **策略组** | **59** | **62** | **47** |
+| **规则数** | **97** | **98** | **38** |
 
 ## 📄 配置详情
-
-#### 📝 configfull.yaml
-- **路径**: `configfull.yaml` | **大小**: 34.6 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Lanlan13-14/configfull.yaml)
-- **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
-<details>
-<summary>🔍 策略组 (62个)</summary>
-
-| 名称 | 类型 |
-| :--- | :--- |
-| 👆 节点选择 | `select` |
-| 👆 YouTube | `select` |
-| 👆 FCM | `select` |
-| 👆 GoogleVPN | `select` |
-| 👆 Google | `select` |
-| 👆 Meta | `select` |
-| 👆 AI | `select` |
-| 👆 GitHub | `select` |
-| 👆 OneDrive | `select` |
-| 👆 Microsoft | `select` |
-| 👆 Telegram | `select` |
-| 👆 Discord | `select` |
-| 👆 Talkatone | `select` |
-| 👆 LINE | `select` |
-| 👆 Signal | `select` |
-| 👆 TikTok | `select` |
-| 👆 NETFLIX | `select` |
-| 👆 DisneyPlus | `select` |
-| 👆 HBO | `select` |
-| 👆 Primevideo | `select` |
-| ... | 还有 42 个 |
-</details>
 
 #### 📝 configfull_NoAd.yaml
 - **路径**: `configfull_NoAd.yaml` | **大小**: 34.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Lanlan13-14/configfull_NoAd.yaml)
@@ -78,6 +47,37 @@
 | 👆 HBO | `select` |
 | 👆 Primevideo | `select` |
 | ... | 还有 39 个 |
+</details>
+
+#### 📝 configfull.yaml
+- **路径**: `configfull.yaml` | **大小**: 34.6 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Lanlan13-14/configfull.yaml)
+- **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
+<details>
+<summary>🔍 策略组 (62个)</summary>
+
+| 名称 | 类型 |
+| :--- | :--- |
+| 👆 节点选择 | `select` |
+| 👆 YouTube | `select` |
+| 👆 FCM | `select` |
+| 👆 GoogleVPN | `select` |
+| 👆 Google | `select` |
+| 👆 Meta | `select` |
+| 👆 AI | `select` |
+| 👆 GitHub | `select` |
+| 👆 OneDrive | `select` |
+| 👆 Microsoft | `select` |
+| 👆 Telegram | `select` |
+| 👆 Discord | `select` |
+| 👆 Talkatone | `select` |
+| 👆 LINE | `select` |
+| 👆 Signal | `select` |
+| 👆 TikTok | `select` |
+| 👆 NETFLIX | `select` |
+| 👆 DisneyPlus | `select` |
+| 👆 HBO | `select` |
+| 👆 Primevideo | `select` |
+| ... | 还有 42 个 |
 </details>
 
 #### 📝 configfull_lite.yaml

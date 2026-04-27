@@ -7,7 +7,7 @@
 ## 📄 配置详情
 
 #### 📝 mihomo_smart.yaml
-- **路径**: `mihomo_smart.yaml` | **大小**: 15.8 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/echs-top/mihomo_smart.yaml)
+- **路径**: `mihomo_smart.yaml` | **大小**: 16.0 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/echs-top/mihomo_smart.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (23个)</summary>
@@ -16,7 +16,7 @@
 | :--- | :--- |
 | 👆 代理连接 | `select` |
 | 👆 直接连接 | `select` |
-| 👆 代理UDP | `select` |
+| 👆 代理QUIC | `select` |
 | 👆 代理DNS | `select` |
 | 👆 人机验证 | `select` |
 | 👆 国外AI | `select` |
