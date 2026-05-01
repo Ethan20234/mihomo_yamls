@@ -7,7 +7,7 @@
 ## 📄 配置详情
 
 #### 📝 OneSmartProMCX.yaml
-- **路径**: `OneSmartProMCX.yaml` | **大小**: 40.6 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/edison/OneSmartProMCX.yaml)
+- **路径**: `OneSmartProMCX.yaml` | **大小**: 40.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/edison/OneSmartProMCX.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (37个)</summary>
@@ -21,12 +21,12 @@
 | 👆 Google | `select` |
 | 👆 Microsoft | `select` |
 | 👆 TikTok | `select` |
-| 👆 Crypto | `select` |
-| 👆 PayPal | `select` |
-| 👆 漏网之鱼 | `select` |
 | 👆 Emby | `select` |
-| 👆 Tracker | `select` |
+| 👆 PayPal | `select` |
+| 👆 Crypto | `select` |
 | 👆 Apple | `select` |
+| 👆 漏网之鱼 | `select` |
+| 👆 Tracker | `select` |
 | 👆 国内直连 | `select` |
 | ⚖️ 中转服务 | `load-balance` |
 | 🔧 香港-故转 | `fallback` |
