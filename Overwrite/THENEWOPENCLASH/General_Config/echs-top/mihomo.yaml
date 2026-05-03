@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - mihomo.yaml
-# 生成日期：2026-04-09
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/General_Config/echs-top/mihomo.yaml
+# 生成日期：2026-05-03
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/General_Config/echs-top/mihomo.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -91,7 +91,7 @@
 #     health-check: &id002
 #       enable: true
 #       expected-status: 204
-#       interval: 600
+#       interval: 900
 #       lazy: false
 #       max-failed-times: 2
 #       timeout: 3000
@@ -159,6 +159,12 @@
 #   - 仅IPV4
 #   - 仅IPV6
 #   type: select
+# - icon: https://mihomo.echs.top/img/icon/Forbidden.webp
+#   name: 代理QUIC
+#   proxies:
+#   - PASS
+#   - REJECT
+#   type: select
 # - icon: https://mihomo.echs.top/img/icon/Server.webp
 #   include-all-providers: true
 #   name: 代理DNS
@@ -177,6 +183,13 @@
 #   - 英国|故障转移
 #   - 法国|故障转移
 #   - 荷兰|故障转移
+#   - PASS
+#   - REJECT
+#   type: select
+# - icon: https://mihomo.echs.top/img/icon/CloudFlare.webp
+#   include-all-providers: true
+#   name: 人机验证
+#   proxies: *id001
 #   type: select
 # - icon: https://mihomo.echs.top/img/icon/AI.webp
 #   include-all-providers: true
@@ -188,11 +201,6 @@
 #   name: TELEGRAM
 #   proxies: *id001
 #   type: select
-# - icon: https://mihomo.echs.top/img/icon/GitHub.webp
-#   include-all-providers: true
-#   name: GITHUB
-#   proxies: *id001
-#   type: select
 # - icon: https://mihomo.echs.top/img/icon/Emby.webp
 #   include-all-providers: true
 #   name: 国外媒体
@@ -201,6 +209,11 @@
 # - icon: https://mihomo.echs.top/img/icon/Google.webp
 #   include-all-providers: true
 #   name: GOOGLE
+#   proxies: *id001
+#   type: select
+# - icon: https://mihomo.echs.top/img/icon/Download_2.webp
+#   include-all-providers: true
+#   name: TRACKER
 #   proxies: *id001
 #   type: select
 # - hidden: true
@@ -296,12 +309,14 @@
 #   - 荷兰|故障转移
 #   - 代理连接
 #   - 直接连接
+#   - 代理QUIC
 #   - 代理DNS
+#   - 人机验证
 #   - 国外AI
 #   - TELEGRAM
-#   - GITHUB
 #   - 国外媒体
 #   - GOOGLE
+#   - TRACKER
 #   type: select
 
 # ==========================================================
@@ -317,7 +332,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/AWAvenue-Ads.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/AWAvenue-Ads_domain.mrs
 #   ai:
@@ -325,7 +340,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/ai.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/ai.mrs
 #   apple-cn:
@@ -333,15 +348,23 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/apple-cn.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/apple-cn.mrs
+#   captcha:
+#     behavior: domain
+#     format: mrs
+#     interval: 86400
+#     path: ./rules/captcha.mrs
+#     proxy: 代理连接
+#     type: http
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/captcha_domain.mrs
 #   cn:
 #     behavior: domain
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/cn.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/cn_domain.mrs
 #   cn_ip:
@@ -349,7 +372,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/cn_ip.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/cn_ip.mrs
 #   direct_domain:
@@ -357,7 +380,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/direct_domain.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/direct_domain.mrs
 #   direct_ip:
@@ -365,7 +388,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/direct_ip.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/direct_ip.mrs
 #   dnsmasq-china-add:
@@ -373,7 +396,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/dnsmasq-china-add.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/dnsmasq-china-add_domain.mrs
 #   enhanced-FaaS-in-China_ip:
@@ -381,7 +404,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/enhanced-FaaS-in-China_ip.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/enhanced-FaaS-in-China_ip.mrs
 #   fcm:
@@ -389,15 +412,15 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/fcm.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/fcm_domain.mrs
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/googlefcm.mrs
 #   games-cn:
 #     behavior: domain
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/games-cn.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/games-cn.mrs
 #   github:
@@ -405,7 +428,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/github.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/github.mrs
 #   google:
@@ -413,15 +436,23 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/google.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/google.mrs
+#   google-cn:
+#     behavior: domain
+#     format: mrs
+#     interval: 86400
+#     path: ./rules/google-cn.mrs
+#     proxy: 代理连接
+#     type: http
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/google-cn_domain.mrs
 #   google_ip:
 #     behavior: ipcidr
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/google_ip.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/google_ip.mrs
 #   media:
@@ -429,7 +460,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/media.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/media.mrs
 #   media_ip:
@@ -437,7 +468,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/media_ip.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/media_ip.mrs
 #   microsoft-cn:
@@ -445,7 +476,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/microsoft-cn.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/microsoft-cn.mrs
 #   private:
@@ -453,7 +484,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/private.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/private.mrs
 #   private_ip:
@@ -461,7 +492,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/private_ip.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/private_ip.mrs
 #   proxy:
@@ -469,7 +500,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/proxy.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/proxy.mrs
 #   proxy_domain:
@@ -477,7 +508,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/proxy_domain.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/proxy_domain.mrs
 #   proxy_ip:
@@ -485,7 +516,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/proxy_ip.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/proxy_ip.mrs
 #   telegram:
@@ -493,7 +524,7 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/telegram.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/telegram.mrs
 #   telegram_ip:
@@ -501,9 +532,17 @@
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/telegram_ip.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
 #     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/telegram_ip.mrs
+#   trackerslist:
+#     behavior: domain
+#     format: mrs
+#     interval: 86400
+#     path: ./rules/trackerslist.mrs
+#     proxy: 代理连接
+#     type: http
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/trackerslist.mrs
 
 # ==========================================================
 # rules（从源文件直接提取）
@@ -517,30 +556,36 @@
 # ==========================================================
 #
 # rules:
-# - DST-PORT,5228-5230,直接连接
+# - SUB-RULE,(DST-PORT,5228-5230),fcm_rules
+# - DST-PORT,1337/2710/6881-6999/7777,TRACKER
 # - RULE-SET,private_ip,直接连接,no-resolve
-# - RULE-SET,AWAvenue-Ads,REJECT
 # - RULE-SET,private,直接连接
-# - RULE-SET,fcm,直接连接
-# - RULE-SET,ai,国外AI
-# - RULE-SET,telegram,TELEGRAM
-# - RULE-SET,github,GITHUB
-# - RULE-SET,media,国外媒体
-# - RULE-SET,google,GOOGLE
+# - RULE-SET,AWAvenue-Ads,REJECT
+# - SUB-RULE,(RULE-SET,fcm),fcm_rules
+# - SUB-RULE,(RULE-SET,captcha),captcha_rules
+# - SUB-RULE,(RULE-SET,ai),ai_rules
+# - SUB-RULE,(RULE-SET,telegram),telegram_rules
+# - SUB-RULE,(RULE-SET,media),media_rules
+# - RULE-SET,google-cn,直接连接
+# - SUB-RULE,(RULE-SET,google),google_rules
+# - SUB-RULE,(RULE-SET,trackerslist),trackerslist_rules
 # - RULE-SET,apple-cn,直接连接
 # - RULE-SET,microsoft-cn,直接连接
 # - RULE-SET,games-cn,直接连接
-# - RULE-SET,proxy_domain,代理连接
+# - SUB-RULE,(RULE-SET,proxy_domain),proxy_rules
 # - RULE-SET,direct_domain,直接连接
-# - RULE-SET,proxy,代理连接
+# - SUB-RULE,(RULE-SET,github),proxy_rules
+# - SUB-RULE,(RULE-SET,proxy),proxy_rules
 # - RULE-SET,cn,直接连接
-# - RULE-SET,telegram_ip,TELEGRAM
-# - RULE-SET,media_ip,国外媒体
-# - RULE-SET,google_ip,GOOGLE
+# - SUB-RULE,(RULE-SET,telegram_ip),telegram_rules
+# - SUB-RULE,(RULE-SET,media_ip),media_rules
+# - SUB-RULE,(RULE-SET,google_ip),google_rules
+# - SUB-RULE,(RULE-SET,proxy_ip),proxy_rules
 # - RULE-SET,enhanced-FaaS-in-China_ip,直接连接
-# - RULE-SET,proxy_ip,代理连接
 # - RULE-SET,direct_ip,直接连接
 # - RULE-SET,cn_ip,直接连接
+# - AND,((NETWORK,UDP),(DST-PORT,443)),代理QUIC
+# - DST-PORT,10000-65535,TRACKER
 # - MATCH,代理连接
 
 # ==========================================================
@@ -560,19 +605,22 @@
 #   enable: true
 #   enhanced-mode: fake-ip
 #   fake-ip-filter:
-#   - RULE-SET,AWAvenue-Ads,fake-ip
 #   - RULE-SET,private,real-ip
+#   - RULE-SET,AWAvenue-Ads,fake-ip
 #   - RULE-SET,fcm,real-ip
+#   - RULE-SET,captcha,fake-ip
 #   - RULE-SET,ai,fake-ip
 #   - RULE-SET,telegram,fake-ip
-#   - RULE-SET,github,fake-ip
 #   - RULE-SET,media,fake-ip
+#   - RULE-SET,google-cn,real-ip
 #   - RULE-SET,google,fake-ip
+#   - RULE-SET,trackerslist,fake-ip
 #   - RULE-SET,apple-cn,real-ip
 #   - RULE-SET,microsoft-cn,real-ip
 #   - RULE-SET,games-cn,real-ip
 #   - RULE-SET,proxy_domain,fake-ip
 #   - RULE-SET,direct_domain,real-ip
+#   - RULE-SET,github,fake-ip
 #   - RULE-SET,proxy,fake-ip
 #   - RULE-SET,cn,real-ip
 #   - MATCH,fake-ip
@@ -588,22 +636,28 @@
 #     - rcode://name_error
 #     rule-set:ai: *id001
 #     rule-set:apple-cn: *id002
-#     rule-set:cn: *id002
+#     rule-set:captcha: *id002
+#     rule-set:cn: &id003
+#     - 119.29.29.29
+#     - 223.5.5.5
+#     - '2402:4e00::'
+#     - 2400:3200::1
 #     rule-set:direct_domain: *id002
-#     rule-set:dnsmasq-china-add: *id002
-#     rule-set:fcm:
-#     - https://dns.echs.top/dns-query#直接连接
+#     rule-set:dnsmasq-china-add: *id003
+#     rule-set:fcm: *id002
 #     rule-set:games-cn: *id002
 #     rule-set:github: *id001
 #     rule-set:google: *id001
+#     rule-set:google-cn: *id002
 #     rule-set:media: *id001
 #     rule-set:microsoft-cn: *id002
-#     rule-set:private: *id002
+#     rule-set:private: *id003
 #     rule-set:proxy: *id001
 #     rule-set:proxy_domain: *id001
 #     rule-set:telegram: *id001
+#     rule-set:trackerslist: *id001
 #   prefer-h3: true
 #   proxy-server-nameserver: *id002
 #   respect-rules: false
 #   use-hosts: true
-#   use-system-hosts: true
+#   use-system-hosts: false

@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - config.yaml
-# 生成日期：2026-04-09
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/General_Config/wanswu/config.yaml
+# 生成日期：2026-05-03
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/General_Config/wanswu/config.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -84,7 +84,7 @@
 #
 # proxy-providers:
 #   back:
-#     exclude-filter: Expire|到期|剩余|Traffic|网址|官网|过期|会员ID
+#     exclude-filter: Expire|到期|剩余|Traffic|网址|官网|过期|地址
 #     health-check:
 #       enable: true
 #       interval: 300
@@ -96,7 +96,12 @@
 #     path: proxy_provider/back.yaml
 #     type: file
 #   main:
-#     exclude-filter: Expire|到期|剩余|Traffic|网址|官网|过期|会员ID
+#     exclude-filter: Expire|到期|剩余|Traffic|网址|官网|过期|地址
+#     header:
+#       User-Agent:
+#       - Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+#       token:
+#       - '*********'
 #     health-check:
 #       enable: true
 #       interval: 300
@@ -107,7 +112,7 @@
 #       udp: true
 #     path: ./proxy_provider/main.yaml
 #     type: http
-#     url: https://al121.cc/#/register?code=R7vdKxbE
+#     url: https://anyland.club/#/register?code=R7vdKxbE
 
 # ==========================================================
 # proxy-groups（从源文件直接提取）
@@ -122,114 +127,179 @@
 #   include-all: true
 #   name: 手动选择
 #   proxies:
-#   - 香港
-#   - 台湾
-#   - 澳门
-#   - 狮城
-#   - 日本
-#   - 韩国
-#   - 美国
-#   - 英国
-#   - 德国
-#   - 法国
-#   - 印度
-#   - 越南
-#   - 印尼
-#   - 泰国
-#   - 澳洲
-#   - 巴西
-#   - 荷兰
-#   - 土耳其
-#   - 阿根廷
-#   - 冷门节点
-#   - DIRECT
-#   - REJECT
+#   - 香港自动
+#   - 香港-回退
+#   - 香港均衡-散列
+#   - 香港均衡-轮询
+#   - 台湾自动
+#   - 台湾-回退
+#   - 台湾均衡-散列
+#   - 台湾均衡-轮询
+#   - 澳门自动
+#   - 澳门-回退
+#   - 澳门均衡-散列
+#   - 澳门均衡-轮询
+#   - 狮城自动
+#   - 狮城-回退
+#   - 狮城均衡-散列
+#   - 狮城均衡-轮询
+#   - 日本自动
+#   - 日本-回退
+#   - 日本均衡-散列
+#   - 日本均衡-轮询
+#   - 韩国自动
+#   - 韩国-回退
+#   - 韩国均衡-散列
+#   - 韩国均衡-轮询
+#   - 美国自动
+#   - 美国-回退
+#   - 美国均衡-散列
+#   - 美国均衡-轮询
+#   - 英国自动
+#   - 英国-回退
+#   - 英国均衡-散列
+#   - 英国均衡-轮询
+#   - 德国自动
+#   - 德国-回退
+#   - 德国均衡-散列
+#   - 德国均衡-轮询
+#   - 法国自动
+#   - 法国-回退
+#   - 法国均衡-散列
+#   - 法国均衡-轮询
+#   - 印度自动
+#   - 印度-回退
+#   - 印度均衡-散列
+#   - 印度均衡-轮询
+#   - 印尼自动
+#   - 印尼-回退
+#   - 印尼均衡-散列
+#   - 印尼均衡-轮询
+#   - 越南自动
+#   - 越南-回退
+#   - 越南均衡-散列
+#   - 越南均衡-轮询
+#   - 泰国自动
+#   - 泰国-回退
+#   - 泰国均衡-散列
+#   - 泰国均衡-轮询
+#   - 澳洲自动
+#   - 澳洲-回退
+#   - 澳洲均衡-散列
+#   - 澳洲均衡-轮询
+#   - 巴西自动
+#   - 巴西-回退
+#   - 巴西均衡-散列
+#   - 巴西均衡-轮询
+#   - 荷兰自动
+#   - 荷兰-回退
+#   - 荷兰均衡-散列
+#   - 荷兰均衡-轮询
+#   - 土耳其自动
+#   - 土耳其-回退
+#   - 土耳其均衡-散列
+#   - 土耳其均衡-轮询
+#   - 阿根廷自动
+#   - 阿根廷-回退
+#   - 阿根廷均衡-散列
+#   - 阿根廷均衡-轮询
 #   type: select
 # - icon: https://fastly.jsdelivr.net/gh/lobehub/lobe-icons@master/packages/static-png/light/claude-color.png
 #   name: Claude
 #   proxies: &id001
 #   - 手动选择
-#   - 香港
-#   - 台湾
-#   - 澳门
-#   - 狮城
-#   - 日本
-#   - 韩国
-#   - 美国
-#   - 英国
-#   - 德国
-#   - 法国
-#   - 印度
-#   - 越南
-#   - 印尼
-#   - 泰国
-#   - 澳洲
-#   - 巴西
-#   - 荷兰
-#   - 土耳其
-#   - 阿根廷
-#   - 冷门节点
+#   - 香港自动
+#   - 香港-回退
+#   - 香港均衡-散列
+#   - 香港均衡-轮询
+#   - 台湾自动
+#   - 台湾-回退
+#   - 台湾均衡-散列
+#   - 台湾均衡-轮询
+#   - 澳门自动
+#   - 澳门-回退
+#   - 澳门均衡-散列
+#   - 澳门均衡-轮询
+#   - 狮城自动
+#   - 狮城-回退
+#   - 狮城均衡-散列
+#   - 狮城均衡-轮询
+#   - 日本自动
+#   - 日本-回退
+#   - 日本均衡-散列
+#   - 日本均衡-轮询
+#   - 韩国自动
+#   - 韩国-回退
+#   - 韩国均衡-散列
+#   - 韩国均衡-轮询
+#   - 美国自动
+#   - 美国-回退
+#   - 美国均衡-散列
+#   - 美国均衡-轮询
+#   - 英国自动
+#   - 英国-回退
+#   - 英国均衡-散列
+#   - 英国均衡-轮询
+#   - 德国自动
+#   - 德国-回退
+#   - 德国均衡-散列
+#   - 德国均衡-轮询
+#   - 法国自动
+#   - 法国-回退
+#   - 法国均衡-散列
+#   - 法国均衡-轮询
+#   - 印度自动
+#   - 印度-回退
+#   - 印度均衡-散列
+#   - 印度均衡-轮询
+#   - 印尼自动
+#   - 印尼-回退
+#   - 印尼均衡-散列
+#   - 印尼均衡-轮询
+#   - 越南自动
+#   - 越南-回退
+#   - 越南均衡-散列
+#   - 越南均衡-轮询
+#   - 泰国自动
+#   - 泰国-回退
+#   - 泰国均衡-散列
+#   - 泰国均衡-轮询
+#   - 澳洲自动
+#   - 澳洲-回退
+#   - 澳洲均衡-散列
+#   - 澳洲均衡-轮询
+#   - 巴西自动
+#   - 巴西-回退
+#   - 巴西均衡-散列
+#   - 巴西均衡-轮询
+#   - 荷兰自动
+#   - 荷兰-回退
+#   - 荷兰均衡-散列
+#   - 荷兰均衡-轮询
+#   - 土耳其自动
+#   - 土耳其-回退
+#   - 土耳其均衡-散列
+#   - 土耳其均衡-轮询
+#   - 阿根廷自动
+#   - 阿根廷-回退
+#   - 阿根廷均衡-散列
+#   - 阿根廷均衡-轮询
 #   - DIRECT
-#   - REJECT
 #   type: select
 # - icon: https://fastly.jsdelivr.net/gh/lobehub/lobe-icons@master/packages/static-png/light/gemini-color.png
 #   name: Gemini
-#   proxies:
-#   - 狮城
-#   - 美国
-#   - 香港
-#   - 台湾
-#   - 澳门
-#   - 日本
-#   - 韩国
-#   - 英国
-#   - 德国
-#   - 法国
-#   - 印度
-#   - 越南
-#   - 印尼
-#   - 泰国
-#   - 澳洲
-#   - 巴西
-#   - 荷兰
-#   - 土耳其
-#   - 阿根廷
-#   - 冷门节点
-#   - DIRECT
-#   - REJECT
-#   - 手动选择
+#   proxies: *id001
 #   type: select
+#   url: https://www.google.com/generate_204
 # - icon: https://fastly.jsdelivr.net/gh/lobehub/lobe-icons@master/packages/static-png/light/openai.png
 #   name: OpenAI
-#   proxies:
-#   - 美国
-#   - 香港
-#   - 台湾
-#   - 澳门
-#   - 狮城
-#   - 日本
-#   - 韩国
-#   - 英国
-#   - 德国
-#   - 法国
-#   - 印度
-#   - 越南
-#   - 印尼
-#   - 泰国
-#   - 澳洲
-#   - 巴西
-#   - 荷兰
-#   - 土耳其
-#   - 阿根廷
-#   - 冷门节点
-#   - DIRECT
-#   - REJECT
-#   - 手动选择
+#   proxies: *id001
 #   type: select
 # - icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Apple.png
 #   name: Apple
 #   proxies: *id001
 #   type: select
+#   url: https://www.apple.com/library/test/success.html
 # - icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Disney.png
 #   name: Disney
 #   proxies: *id001
@@ -244,35 +314,13 @@
 #   type: select
 # - icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/TikTok.png
 #   name: TikTok
-#   proxies:
-#   - 台湾
-#   - 香港
-#   - 澳门
-#   - 狮城
-#   - 日本
-#   - 韩国
-#   - 美国
-#   - 英国
-#   - 德国
-#   - 法国
-#   - 印度
-#   - 越南
-#   - 印尼
-#   - 泰国
-#   - 澳洲
-#   - 巴西
-#   - 荷兰
-#   - 土耳其
-#   - 阿根廷
-#   - 冷门节点
-#   - DIRECT
-#   - REJECT
-#   - 手动选择
+#   proxies: *id001
 #   type: select
 # - icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/YouTube.png
 #   name: YouTube
 #   proxies: *id001
 #   type: select
+#   url: https://www.youtube.com/generate_204
 # - icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Emby.png
 #   name: Emby
 #   proxies: *id001
@@ -285,6 +333,7 @@
 #   name: Google
 #   proxies: *id001
 #   type: select
+#   url: https://www.google.com/generate_204
 # - icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Microsoft.png
 #   name: Microsoft
 #   proxies: *id001
@@ -313,249 +362,10 @@
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Hong_Kong.png
 #   include-all: true
-#   lazy: true
-#   name: 香港
-#   proxies:
-#   - 香港自动
-#   - 香港-回退
-#   - 香港均衡-散列
-#   - 香港均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇹🇼|台湾|台|TW|TWN|taiwan|taipei))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Taiwan.png
-#   include-all: true
-#   lazy: true
-#   name: 台湾
-#   proxies:
-#   - 台湾自动
-#   - 台湾-回退
-#   - 台湾均衡-散列
-#   - 台湾均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇲🇴|澳门|门|MO|macao))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Macao.png
-#   include-all: true
-#   lazy: true
-#   name: 澳门
-#   proxies:
-#   - 澳门自动
-#   - 澳门-回退
-#   - 澳门均衡-散列
-#   - 澳门均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇸🇬|新加坡|狮城|新|SG|SGP|singapore))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Singapore.png
-#   include-all: true
-#   lazy: true
-#   name: 狮城
-#   proxies:
-#   - 狮城自动
-#   - 狮城-回退
-#   - 狮城均衡-散列
-#   - 狮城均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇯🇵|日本|日|JP|JPN|japan|tokyo|osaka))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Japan.png
-#   include-all: true
-#   lazy: true
-#   name: 日本
-#   proxies:
-#   - 日本自动
-#   - 日本-回退
-#   - 日本均衡-散列
-#   - 日本均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇰🇷|韩国|韩|KR|KOR|korea|seoul))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Korea.png
-#   include-all: true
-#   lazy: true
-#   name: 韩国
-#   proxies:
-#   - 韩国自动
-#   - 韩国-回退
-#   - 韩国均衡-散列
-#   - 韩国均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇺🇸|美国|美|US|USA|united ?states|america|los angeles|san jose|silicon
-#     valley))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/United_States.png
-#   include-all: true
-#   lazy: true
-#   name: 美国
-#   proxies:
-#   - 美国自动
-#   - 美国-回退
-#   - 美国均衡-散列
-#   - 美国均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇬🇧|英国|英|GBR|UK|united ?kingdom|london))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/United_Kingdom.png
-#   include-all: true
-#   lazy: true
-#   name: 英国
-#   proxies:
-#   - 英国自动
-#   - 英国-回退
-#   - 英国均衡-散列
-#   - 英国均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇩🇪|德国|德|DE|DEU|germany|frankfurt))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Germany.png
-#   include-all: true
-#   lazy: true
-#   name: 德国
-#   proxies:
-#   - 德国自动
-#   - 德国-回退
-#   - 德国均衡-散列
-#   - 德国均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇫🇷|法国|法|FR|france|paris))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/France.png
-#   include-all: true
-#   lazy: true
-#   name: 法国
-#   proxies:
-#   - 法国自动
-#   - 法国-回退
-#   - 法国均衡-散列
-#   - 法国均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇮🇳|印度|IN|IND|india|mumbai))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/India.png
-#   include-all: true
-#   lazy: true
-#   name: 印度
-#   proxies:
-#   - 印度自动
-#   - 印度-回退
-#   - 印度均衡-散列
-#   - 印度均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇮🇩|印尼|印度尼西亚|ID|indonesia|jakarta))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Indonesia.webp
-#   include-all: true
-#   lazy: true
-#   name: 印尼
-#   proxies:
-#   - 印尼自动
-#   - 印尼-回退
-#   - 印尼均衡-散列
-#   - 印尼均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇻🇳|越南|VN|vietnam))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Vietnam.png
-#   include-all: true
-#   lazy: true
-#   name: 越南
-#   proxies:
-#   - 越南自动
-#   - 越南-回退
-#   - 越南均衡-散列
-#   - 越南均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇹🇭|泰国|TH|thailand|bangkok))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Thailand.png
-#   include-all: true
-#   lazy: true
-#   name: 泰国
-#   proxies:
-#   - 泰国自动
-#   - 泰国-回退
-#   - 泰国均衡-散列
-#   - 泰国均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇦🇺|澳洲|澳大利亚|AU|AUS|australia|sydney))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Australia.png
-#   include-all: true
-#   lazy: true
-#   name: 澳洲
-#   proxies:
-#   - 澳洲自动
-#   - 澳洲-回退
-#   - 澳洲均衡-散列
-#   - 澳洲均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇧🇷|巴西|BRA|brazil))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Brazil.png
-#   include-all: true
-#   lazy: true
-#   name: 巴西
-#   proxies:
-#   - 巴西自动
-#   - 巴西-回退
-#   - 巴西均衡-散列
-#   - 巴西均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇳🇱|荷兰|NL|NLD))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Netherlands.png
-#   include-all: true
-#   lazy: true
-#   name: 荷兰
-#   proxies:
-#   - 荷兰自动
-#   - 荷兰-回退
-#   - 荷兰均衡-散列
-#   - 荷兰均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇹🇷|土耳其|TUR|turkey))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Turkey.png
-#   include-all: true
-#   lazy: true
-#   name: 土耳其
-#   proxies:
-#   - 土耳其自动
-#   - 土耳其-回退
-#   - 土耳其均衡-散列
-#   - 土耳其均衡-轮询
-#   type: select
-# - filter: (?i)(?=.*(🇦🇷|阿根廷|ARG|argentina))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Argentina.png
-#   include-all: true
-#   lazy: true
-#   name: 阿根廷
-#   proxies:
-#   - 阿根廷自动
-#   - 阿根廷-回退
-#   - 阿根廷均衡-散列
-#   - 阿根廷均衡-轮询
-#   type: select
-# - filter: (?i)^(?!.*(香港|台湾|日本|韩国|新加坡|美国|英国|德国|法国|印度|泰国|越南|印度|澳大利亚|巴西|港|台|日|韩|新|美|英|德|法|印|泰|越|尼|澳|巴|hk|tw|jp|kr|sg|us|uk|de|fr|in|th|vn|id|au|br)).*
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Global.png
-#   include-all: true
-#   interval: 300
-#   lazy: true
-#   name: 冷门节点
-#   type: url-test
-#   url: https://www.gstatic.com/generate_204
-# - filter: (?i)(?=.*(🇭🇰|香港|港|hk|hkg|hong ?kong))
-#   hidden: true
-#   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Hong_Kong.png
-#   include-all: true
 #   interval: 300
 #   lazy: true
 #   name: 香港自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇼|台湾|台|TW|TWN|taiwan|taipei))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Taiwan.png
@@ -564,7 +374,6 @@
 #   lazy: true
 #   name: 台湾自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇲🇴|澳门|门|MO|macao))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Macao.png
@@ -573,7 +382,6 @@
 #   lazy: true
 #   name: 澳门自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇸🇬|新加坡|狮城|新|SG|SGP|singapore))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Singapore.png
@@ -582,7 +390,6 @@
 #   lazy: true
 #   name: 狮城自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇯🇵|日本|日|JP|JPN|japan|tokyo|osaka))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Japan.png
@@ -591,7 +398,6 @@
 #   lazy: true
 #   name: 日本自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇰🇷|韩国|韩|KR|KOR|korea|seoul))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Korea.png
@@ -600,7 +406,6 @@
 #   lazy: true
 #   name: 韩国自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇺🇸|美国|美|US|USA|united ?states|america|los angeles|san jose|silicon
 #     valley))
 #   hidden: true
@@ -610,7 +415,6 @@
 #   lazy: true
 #   name: 美国自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇬🇧|英国|英|GBR|UK|united ?kingdom|london))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/United_Kingdom.png
@@ -619,7 +423,6 @@
 #   lazy: true
 #   name: 英国自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇩🇪|德国|德|DE|DEU|germany|frankfurt))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Germany.png
@@ -628,7 +431,6 @@
 #   lazy: true
 #   name: 德国自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇫🇷|法国|法|FR|france|paris))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/France.png
@@ -637,7 +439,6 @@
 #   lazy: true
 #   name: 法国自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇮🇳|印度|IN|IND|india|mumbai))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/India.png
@@ -646,7 +447,6 @@
 #   lazy: true
 #   name: 印度自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇮🇩|印尼|印度尼西亚|ID|indonesia|jakarta))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Indonesia.png
@@ -655,7 +455,6 @@
 #   lazy: true
 #   name: 印尼自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇻🇳|越南|VN|vietnam))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Vietnam.png
@@ -664,7 +463,6 @@
 #   lazy: true
 #   name: 越南自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇭|泰国|TH|thailand|bangkok))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Thailand.png
@@ -673,7 +471,6 @@
 #   lazy: true
 #   name: 泰国自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇦🇺|澳洲|澳大利亚|AU|AUS|australia|sydney))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Australia.png
@@ -682,7 +479,6 @@
 #   lazy: true
 #   name: 澳洲自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇧🇷|巴西|BRA|brazil))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Brazil.png
@@ -691,7 +487,6 @@
 #   lazy: true
 #   name: 巴西自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇳🇱|荷兰|NL|NLD))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Netherlands.png
@@ -700,7 +495,6 @@
 #   lazy: true
 #   name: 荷兰自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇷|土耳其|TUR|turkey))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Turkey.png
@@ -709,7 +503,6 @@
 #   lazy: true
 #   name: 土耳其自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇦🇷|阿根廷|ARG|argentina))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Argentina.png
@@ -718,7 +511,6 @@
 #   lazy: true
 #   name: 阿根廷自动
 #   type: url-test
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇭🇰|香港|港|hk|hkg|hong ?kong))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Hong_Kong.png
@@ -727,7 +519,6 @@
 #   lazy: true
 #   name: 香港-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇼|台湾|台|TW|TWN|taiwan|taipei))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Taiwan.png
@@ -736,7 +527,6 @@
 #   lazy: true
 #   name: 台湾-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇲🇴|澳门|门|MO|macao))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Macao.png
@@ -745,7 +535,6 @@
 #   lazy: true
 #   name: 澳门-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇸🇬|新加坡|狮城|新|SG|SGP|singapore))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Singapore.png
@@ -754,7 +543,6 @@
 #   lazy: true
 #   name: 狮城-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇯🇵|日本|日|JP|JPN|japan|tokyo|osaka))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Japan.png
@@ -763,7 +551,6 @@
 #   lazy: true
 #   name: 日本-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇰🇷|韩国|韩|KR|KOR|korea|seoul))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Korea.png
@@ -772,7 +559,6 @@
 #   lazy: true
 #   name: 韩国-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇺🇸|美国|美|US|USA|united ?states|america|los angeles|san jose|silicon
 #     valley))
 #   hidden: true
@@ -782,7 +568,6 @@
 #   lazy: true
 #   name: 美国-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇬🇧|英国|英|GBR|UK|united ?kingdom|london))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/United_Kingdom.png
@@ -791,7 +576,6 @@
 #   lazy: true
 #   name: 英国-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇩🇪|德国|德|DE|DEU|germany|frankfurt))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Germany.png
@@ -800,7 +584,6 @@
 #   lazy: true
 #   name: 德国-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇫🇷|法国|法|FR|france|paris))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/France.png
@@ -809,7 +592,6 @@
 #   lazy: true
 #   name: 法国-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇮🇳|印度|IN|IND|india|mumbai))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/India.png
@@ -818,7 +600,6 @@
 #   lazy: true
 #   name: 印度-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇮🇩|印尼|印度尼西亚|ID|indonesia|jakarta))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Indonesia.png
@@ -827,7 +608,6 @@
 #   lazy: true
 #   name: 印尼-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇻🇳|越南|VN|vietnam))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Vietnam.png
@@ -836,7 +616,6 @@
 #   lazy: true
 #   name: 越南-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇭|泰国|TH|thailand|bangkok))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Thailand.png
@@ -845,7 +624,6 @@
 #   lazy: true
 #   name: 泰国-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇦🇺|澳洲|澳大利亚|AU|AUS|australia|sydney))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Australia.png
@@ -854,7 +632,6 @@
 #   lazy: true
 #   name: 澳洲-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇧🇷|巴西|BRA|brazil))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Brazil.png
@@ -863,7 +640,6 @@
 #   lazy: true
 #   name: 巴西-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇳🇱|荷兰|NL|NLD))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Netherlands.png
@@ -872,7 +648,6 @@
 #   lazy: true
 #   name: 荷兰-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇷|土耳其|TUR|turkey))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Turkey.png
@@ -881,7 +656,6 @@
 #   lazy: true
 #   name: 土耳其-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇦🇷|阿根廷|ARG|argentina))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Argentina.png
@@ -890,7 +664,6 @@
 #   lazy: true
 #   name: 阿根廷-回退
 #   type: fallback
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇭🇰|香港|港|hk|hkg|hong ?kong))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Hong_Kong.png
@@ -900,7 +673,6 @@
 #   name: 香港均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇼|台湾|台|TW|TWN|taiwan|taipei))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Taiwan.png
@@ -910,7 +682,6 @@
 #   name: 台湾均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇲🇴|澳门|门|MO|macao))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Macao.png
@@ -920,7 +691,6 @@
 #   name: 澳门均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇸🇬|新加坡|狮城|新|SG|SGP|singapore))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Singapore.png
@@ -930,7 +700,6 @@
 #   name: 狮城均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇯🇵|日本|日|JP|JPN|japan|tokyo|osaka))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Japan.png
@@ -940,7 +709,6 @@
 #   name: 日本均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇰🇷|韩国|韩|KR|KOR|korea|seoul))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Korea.png
@@ -950,7 +718,6 @@
 #   name: 韩国均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇺🇸|美国|美|US|USA|united ?states|america|los angeles|san jose|silicon
 #     valley))
 #   hidden: true
@@ -961,7 +728,6 @@
 #   name: 美国均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇬🇧|英国|英|GBR|UK|united ?kingdom|london))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/United_Kingdom.png
@@ -971,7 +737,6 @@
 #   name: 英国均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇩🇪|德国|德|DE|DEU|germany|frankfurt))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Germany.png
@@ -981,7 +746,6 @@
 #   name: 德国均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇫🇷|法国|法|FR|france|paris))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/France.png
@@ -991,7 +755,6 @@
 #   name: 法国均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇮🇳|印度|IN|IND|india|mumbai))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/India.png
@@ -1001,7 +764,6 @@
 #   name: 印度均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇮🇩|印尼|印度尼西亚|ID|indonesia|jakarta))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Indonesia.png
@@ -1011,7 +773,6 @@
 #   name: 印尼均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇻🇳|越南|VN|vietnam))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Vietnam.png
@@ -1021,7 +782,6 @@
 #   name: 越南均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇭|泰国|TH|thailand|bangkok))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Thailand.png
@@ -1031,7 +791,6 @@
 #   name: 泰国均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇦🇺|澳洲|澳大利亚|AU|AUS|australia|sydney))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Australia.png
@@ -1041,7 +800,6 @@
 #   name: 澳洲均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇧🇷|巴西|BRA|brazil))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Brazil.png
@@ -1051,7 +809,6 @@
 #   name: 巴西均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇳🇱|荷兰|NL|NLD))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Netherlands.png
@@ -1061,7 +818,6 @@
 #   name: 荷兰均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇷|土耳其|TUR|turkey))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Turkey.png
@@ -1071,7 +827,6 @@
 #   name: 土耳其均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇦🇷|阿根廷|ARG|argentina))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Argentina.png
@@ -1081,7 +836,6 @@
 #   name: 阿根廷均衡-散列
 #   strategy: consistent-hashing
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇭🇰|香港|港|hk|hkg|hong ?kong))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Hong_Kong.png
@@ -1091,7 +845,6 @@
 #   name: 香港均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇼|台湾|台|TW|TWN|taiwan|taipei))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Taiwan.png
@@ -1101,7 +854,6 @@
 #   name: 台湾均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇲🇴|澳门|门|MO|macao))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Macao.png
@@ -1111,7 +863,6 @@
 #   name: 澳门均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇸🇬|新加坡|狮城|新|SG|SGP|singapore))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Singapore.png
@@ -1121,7 +872,6 @@
 #   name: 狮城均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇯🇵|日本|日|JP|JPN|japan|tokyo|osaka))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Japan.png
@@ -1131,7 +881,6 @@
 #   name: 日本均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇰🇷|韩国|韩|KR|KOR|korea|seoul))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Korea.png
@@ -1141,7 +890,6 @@
 #   name: 韩国均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇺🇸|美国|美|US|USA|united ?states|america|los angeles|san jose|silicon
 #     valley))
 #   hidden: true
@@ -1152,7 +900,6 @@
 #   name: 美国均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇬🇧|英国|英|GBR|UK|united ?kingdom|london))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/United_Kingdom.png
@@ -1162,7 +909,6 @@
 #   name: 英国均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇩🇪|德国|德|DE|DEU|germany|frankfurt))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Germany.png
@@ -1172,7 +918,6 @@
 #   name: 德国均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇫🇷|法国|法|FR|france|paris))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/France.png
@@ -1182,7 +927,6 @@
 #   name: 法国均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇮🇳|印度|IN|IND|india|mumbai))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/India.png
@@ -1192,7 +936,6 @@
 #   name: 印度均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇮🇩|印尼|印度尼西亚|ID|indonesia|jakarta))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Indonesia.png
@@ -1202,7 +945,6 @@
 #   name: 印尼均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇻🇳|越南|VN|vietnam))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Vietnam.png
@@ -1212,7 +954,6 @@
 #   name: 越南均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇭|泰国|TH|thailand|bangkok))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Thailand.png
@@ -1222,7 +963,6 @@
 #   name: 泰国均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇦🇺|澳洲|澳大利亚|AU|AUS|australia|sydney))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Australia.png
@@ -1232,7 +972,6 @@
 #   name: 澳洲均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇧🇷|巴西|BRA|brazil))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Brazil.png
@@ -1242,7 +981,6 @@
 #   name: 巴西均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇳🇱|荷兰|NL|NLD))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Netherlands.png
@@ -1252,7 +990,6 @@
 #   name: 荷兰均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇹🇷|土耳其|TUR|turkey))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Turkey.png
@@ -1262,7 +999,6 @@
 #   name: 土耳其均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 # - filter: (?i)(?=.*(🇦🇷|阿根廷|ARG|argentina))
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Argentina.png
@@ -1272,7 +1008,6 @@
 #   name: 阿根廷均衡-轮询
 #   strategy: round-robin
 #   type: load-balance
-#   url: https://www.gstatic.com/generate_204
 
 # ==========================================================
 # rule-providers（从源文件直接提取）
@@ -1282,12 +1017,6 @@
 # ==========================================================
 #
 # rule-providers:
-#   Advertising:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     type: http
-#     url: https://fastly.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/adblockmihomolite.mrs
 #   Apple:
 #     behavior: domain
 #     format: mrs
@@ -1477,7 +1206,6 @@
 # rules:
 # - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((RULE-SET,ChinaIP))),(NOT,((RULE-SET,China)))),REJECT
 # - RULE-SET,ChinaAPP,DIRECT
-# - RULE-SET,Advertising,REJECT
 # - RULE-SET,category-ads-all,REJECT
 # - RULE-SET,Github,Github
 # - RULE-SET,OpenAI,OpenAI
@@ -1499,7 +1227,7 @@
 # - RULE-SET,Emby,Emby
 # - RULE-SET,Lan,DIRECT
 # - RULE-SET,China,DIRECT
-# - RULE-SET,LanIP,DIRECT
+# - RULE-SET,LanIP,DIRECT,no-resolve
 # - RULE-SET,ChinaIP,DIRECT,no-resolve
 # - RULE-SET,GoogleIP,Google,no-resolve
 # - RULE-SET,TelegramIP,Telegram,no-resolve
@@ -1517,10 +1245,7 @@
 # dns:
 #   default-nameserver:
 #   - tls://223.5.5.5
-#   - tls://223.6.6.6
-#   direct-nameserver:
-#   - https://doh.pub/dns-query#ecs=114.114.114.114/24&ecs-override=true
-#   - https://dns.alidns.com/dns-query#ecs=114.114.114.114/24&ecs-override=true
+#   - tls://119.29.29.29
 #   direct-nameserver-follow-policy: true
 #   enable: true
 #   enhanced-mode: fake-ip
@@ -1530,21 +1255,26 @@
 #   fake-ip-range: 198.18.0.1/16
 #   fake-ip-range6: fdfe:dcba:9876::/64
 #   fallback:
+#   - https://dns.adguard-dns.com/dns-query#ecs=1.1.1.1/24&ecs-override=true
 #   - https://dns.cloudflare.com/dns-query#ecs=1.1.1.1/24&ecs-override=true
 #   - https://dns.google/dns-query#ecs=1.1.1.1/24&ecs-override=true
 #   ipv6: true
 #   listen: 0.0.0.0:1053
 #   nameserver:
+#   - https://dns.adguard-dns.com/dns-query#ecs=1.1.1.1/24&ecs-override=true
 #   - https://dns.cloudflare.com/dns-query#ecs=1.1.1.1/24&ecs-override=true
 #   - https://dns.google/dns-query#ecs=1.1.1.1/24&ecs-override=true
 #   nameserver-policy:
 #     RULE-SET:China,Lan:
-#     - https://doh.pub/dns-query#ecs=114.114.114.114/24&ecs-override=true
-#     - https://dns.alidns.com/dns-query#ecs=114.114.114.114/24&ecs-override=true
+#     - https://dns.alidns.com/dns-query#ecs=223.5.5.5/24&ecs-override=true
+#     - https://doh.pub/dns-query#ecs=223.5.5.5/24&ecs-override=true
 #   prefer-h3: false
 #   proxy-server-nameserver:
-#   - https://doh.pub/dns-query#ecs=114.114.114.114/24&ecs-override=true
-#   - https://dns.alidns.com/dns-query#ecs=114.114.114.114/24&ecs-override=true
+#   - https://dns.alidns.com/dns-query#ecs=223.5.5.5/24&ecs-override=true
+#   - https://doh.pub/dns-query#ecs=223.5.5.5/24&ecs-override=true
+#   proxy-server-nameserver-policy:
+#     '*.digital-nvme.com':
+#     - 8.138.94.132:8053
 #   respect-rules: true
-#   use-hosts: false
-#   use-system-hosts: false
+#   use-hosts: true
+#   use-system-hosts: true

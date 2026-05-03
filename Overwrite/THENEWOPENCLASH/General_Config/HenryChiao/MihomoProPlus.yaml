@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - MihomoProPlus.yaml
-# 生成日期：2026-04-09
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/General_Config/HenryChiao/MihomoProPlus.yaml
+# 生成日期：2026-05-03
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/General_Config/HenryChiao/MihomoProPlus.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -891,3 +891,51 @@
 # - RULE-SET,ProxyIP,国外流量,no-resolve
 # - RULE-SET,ChinaIP,国内流量
 # - MATCH,兜底流量
+
+# ==========================================================
+# dns（从源文件直接提取）
+# ----------------------------------------------------------
+# 原始 DNS 配置，默认注释不启用。
+# 如只需修改部分字段，直接写需要修改的键值即可（默认合并，不影响其他字段）。
+# 如需完整替换 DNS 配置，使用 dns!: 操作符。
+# ==========================================================
+#
+# dns:
+#   default-nameserver:
+#   - tls://223.5.5.5
+#   - tls://223.6.6.6
+#   direct-nameserver:
+#   - https://dns.alidns.com/dns-query
+#   - https://doh.pub/dns-query
+#   enable: true
+#   enhanced-mode: fake-ip
+#   fake-ip-filter:
+#   - +.lan
+#   - +.local
+#   - time.*.com
+#   - ntp.*.com
+#   - +.market.xiaomi.com
+#   - +.pub.3gppnetwork.org
+#   - +.push.apple.com
+#   - +.bing.com
+#   - rule-set:Direct
+#   - rule-set:Private
+#   - rule-set:China
+#   fake-ip-range: 198.18.0.1/16
+#   ipv6: true
+#   nameserver:
+#   - https://cloudflare-dns.com/dns-query
+#   - https://dns.google/dns-query
+#   nameserver-policy:
+#     rule-set:Advertising,AWAvenueAds: rcode://success
+#     rule-set:Direct,Private,China:
+#     - https://dns.alidns.com/dns-query
+#     - https://doh.pub/dns-query
+#     ? rule-set:Speedtest,Twitter,Telegram,SocialMedia,NewsMedia,Games,Crypto,Emby,Netflix,YouTube,Streaming,Apple,Google,Microsoft,Proxy
+#     : - https://dns.google/dns-query
+#       - https://cloudflare-dns.com/dns-query
+#   proxy-server-nameserver:
+#   - https://dns.alidns.com/dns-query
+#   - https://doh.pub/dns-query
+#   respect-rules: true
+#   use-hosts: true
