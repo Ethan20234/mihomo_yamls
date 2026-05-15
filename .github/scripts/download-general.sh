@@ -44,6 +44,9 @@ https://raw.githubusercontent.com/Pililink/AirRules/refs/heads/main/clash/config
 https://raw.githubusercontent.com/Pililink/AirRules/refs/heads/main/clash/config/2-subscription-clash-rule-set.yaml|THEYAMLS/General_Config/Pililink/2-subscription-clash-rule-set.yaml
 https://raw.githubusercontent.com/Pililink/AirRules/refs/heads/main/clash/config/3-subscription-clash-rule-set.yaml|THEYAMLS/General_Config/Pililink/3-subscription-clash-rule-set.yaml
 https://raw.githubusercontent.com/ameyukisora/Clash-Rule/refs/heads/master/mihomo.yaml|THEYAMLS/General_Config/ameyukisora/mihomo.yaml
+https://gh.669588.xyz/gist/01f635bc410f3503a218e03e537cb135/raw/ClashMi.yaml|THEYAMLS/General_Config/bgpeer/Clashmi.yaml
+https://gist.github.com/bgpeer/cfd6fcf7bc40c166984b87ecf4fbf920/raw/Clashmi-fx.yaml|THEYAMLS/General_Config/bgpeer/Clashmi-fx.yaml
+https://raw.githubusercontent.com/AIsouler/MyClash/refs/heads/main/Config/mihomoConfig.yaml|THEYAMLS/General_Config/AIsouler/mihomoconfig.yaml
 EOF
 )
 
