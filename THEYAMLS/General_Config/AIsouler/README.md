@@ -7,7 +7,7 @@
 ## 📄 配置详情
 
 #### 📝 mihomoconfig.yaml
-- **路径**: `mihomoconfig.yaml` | **大小**: 19.8 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/AIsouler/mihomoconfig.yaml)
+- **路径**: `mihomoconfig.yaml` | **大小**: 19.6 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/AIsouler/mihomoconfig.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (34个)</summary>
