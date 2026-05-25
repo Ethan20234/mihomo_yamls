@@ -7,10 +7,10 @@
 ## 📄 配置详情
 
 #### 📝 mihomoconfig.yaml
-- **路径**: `mihomoconfig.yaml` | **大小**: 19.6 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/AIsouler/mihomoconfig.yaml)
+- **路径**: `mihomoconfig.yaml` | **大小**: 21.4 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/AIsouler/mihomoconfig.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
-<summary>🔍 策略组 (34个)</summary>
+<summary>🔍 策略组 (44个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
@@ -34,5 +34,5 @@
 | 👆 Netflix | `select` |
 | 👆 广告拦截 | `select` |
 | 👆 直连 | `select` |
-| ... | 还有 14 个 |
+| ... | 还有 24 个 |
 </details>
