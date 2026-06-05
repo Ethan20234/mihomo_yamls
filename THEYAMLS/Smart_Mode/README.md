@@ -8,20 +8,20 @@
 
 | 特性 | `OneSmartProMCX.yaml` | `MihomoSmartProPlus.yaml` | `MihomoSmartAIO.yaml` | `THESmart.yaml` | `MihomoSmartProMax.yaml` | `clash-all-fallback-smart.yaml` | `clash-all-smart.yaml` | `clash-fallback-smart-std.yaml` | `smart.yaml` | `mihomo_smart.yaml` | `OneSmart_Lite_Config.yaml` | `OneSmart_Config.yaml` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **大小** | 38.1 KB | 24.1 KB | 30.2 KB | 24.9 KB | 23.6 KB | 18.2 KB | 15.1 KB | 17.7 KB | 13.0 KB | 12.6 KB | 12.4 KB | 20.1 KB |
+| **大小** | 38.1 KB | 24.1 KB | 30.2 KB | 24.9 KB | 23.6 KB | 18.2 KB | 15.1 KB | 17.7 KB | 13.0 KB | 11.0 KB | 12.5 KB | 20.2 KB |
 | **混合端口** | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7890 | 0 | 7893 | 7893 |
 | **面板地址** | 0.0.0.0:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | - | - | 127.0.0.1:9090 | 127.0.0.1:9090 |
 | **运行模式** | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule |
 | **TUN** | ✅ | 🚫 | 🚫 | ✅ | 🚫 | ✅ | ✅ | ✅ | ✅ | ✅ | 🚫 | 🚫 |
-| **策略组** | **39** | **41** | **69** | **40** | **41** | **57** | **38** | **36** | **28** | **21** | **16** | **31** |
-| **规则数** | **90** | **44** | **52** | **43** | **45** | **48** | **43** | **42** | **23** | **22** | **21** | **36** |
+| **策略组** | **39** | **41** | **69** | **40** | **41** | **57** | **38** | **36** | **28** | **19** | **16** | **31** |
+| **规则数** | **90** | **44** | **52** | **43** | **45** | **48** | **43** | **42** | **23** | **13** | **21** | **36** |
 
 ## 📄 配置详情
 
 ### 👤 666OS
 
 #### 📝 OneSmart_Lite_Config.yaml
-- **路径**: `666OS/OneSmart_Lite_Config.yaml` | **大小**: 12.4 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/666OS/OneSmart_Lite_Config.yaml)
+- **路径**: `666OS/OneSmart_Lite_Config.yaml` | **大小**: 12.5 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/666OS/OneSmart_Lite_Config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (16个)</summary>
@@ -47,7 +47,7 @@
 </details>
 
 #### 📝 OneSmart_Config.yaml
-- **路径**: `666OS/OneSmart_Config.yaml` | **大小**: 20.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/666OS/OneSmart_Config.yaml)
+- **路径**: `666OS/OneSmart_Config.yaml` | **大小**: 20.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/666OS/OneSmart_Config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (31个)</summary>
@@ -208,21 +208,19 @@
 ### 👤 echs-top
 
 #### 📝 mihomo_smart.yaml
-- **路径**: `echs-top/mihomo_smart.yaml` | **大小**: 12.6 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/echs-top/mihomo_smart.yaml)
+- **路径**: `echs-top/mihomo_smart.yaml` | **大小**: 11.0 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/echs-top/mihomo_smart.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
-<summary>🔍 策略组 (21个)</summary>
+<summary>🔍 策略组 (19个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
 | 👆 代理连接 | `select` |
+| 👆 直接连接 | `select` |
 | 👆 代理DNS | `select` |
-| 👆 人机验证 | `select` |
+| 👆 代理QUIC | `select` |
 | 👆 国外AI | `select` |
 | 👆 TELEGRAM | `select` |
-| 👆 国外媒体 | `select` |
-| 👆 GOOGLE | `select` |
-| 👆 TRACKER | `select` |
 | ♻️ 最低延迟 | `url-test` |
 | 👆 香港&#124;智能选择 | `smart` |
 | 👆 台湾&#124;智能选择 | `smart` |
@@ -235,7 +233,7 @@
 | 👆 英国&#124;智能选择 | `smart` |
 | 👆 法国&#124;智能选择 | `smart` |
 | 👆 荷兰&#124;智能选择 | `smart` |
-| ... | 还有 1 个 |
+| 👆 GLOBAL | `select` |
 </details>
 
 ---

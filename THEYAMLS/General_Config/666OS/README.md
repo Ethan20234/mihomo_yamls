@@ -8,7 +8,7 @@
 
 | 特性 | `MihomoPro_Config.yaml` | `OneTouch_Config.yaml` |
 | :--- | :--- | :--- |
-| **大小** | 22.2 KB | 12.1 KB |
+| **大小** | 22.3 KB | 12.2 KB |
 | **混合端口** | 7893 | 7893 |
 | **面板地址** | 127.0.0.1:9090 | 127.0.0.1:9090 |
 | **运行模式** | rule | rule |
@@ -19,7 +19,7 @@
 ## 📄 配置详情
 
 #### 📝 MihomoPro_Config.yaml
-- **路径**: `MihomoPro_Config.yaml` | **大小**: 22.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/666OS/MihomoPro_Config.yaml)
+- **路径**: `MihomoPro_Config.yaml` | **大小**: 22.3 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/666OS/MihomoPro_Config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (51个)</summary>
@@ -50,7 +50,7 @@
 </details>
 
 #### 📝 OneTouch_Config.yaml
-- **路径**: `OneTouch_Config.yaml` | **大小**: 12.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/666OS/OneTouch_Config.yaml)
+- **路径**: `OneTouch_Config.yaml` | **大小**: 12.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/666OS/OneTouch_Config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (14个)</summary>

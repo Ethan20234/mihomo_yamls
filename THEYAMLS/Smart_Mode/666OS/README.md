@@ -8,7 +8,7 @@
 
 | 特性 | `OneSmart_Lite_Config.yaml` | `OneSmart_Config.yaml` |
 | :--- | :--- | :--- |
-| **大小** | 12.4 KB | 20.1 KB |
+| **大小** | 12.5 KB | 20.2 KB |
 | **混合端口** | 7893 | 7893 |
 | **面板地址** | 127.0.0.1:9090 | 127.0.0.1:9090 |
 | **运行模式** | rule | rule |
@@ -19,7 +19,7 @@
 ## 📄 配置详情
 
 #### 📝 OneSmart_Lite_Config.yaml
-- **路径**: `OneSmart_Lite_Config.yaml` | **大小**: 12.4 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/666OS/OneSmart_Lite_Config.yaml)
+- **路径**: `OneSmart_Lite_Config.yaml` | **大小**: 12.5 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/666OS/OneSmart_Lite_Config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (16个)</summary>
@@ -45,7 +45,7 @@
 </details>
 
 #### 📝 OneSmart_Config.yaml
-- **路径**: `OneSmart_Config.yaml` | **大小**: 20.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/666OS/OneSmart_Config.yaml)
+- **路径**: `OneSmart_Config.yaml` | **大小**: 20.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/Smart_Mode/666OS/OneSmart_Config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (31个)</summary>
