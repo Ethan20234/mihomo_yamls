@@ -54,6 +54,13 @@ https://raw.githubusercontent.com/Seven1echo/Yaml/refs/heads/main/Seven1_fallbac
 https://raw.githubusercontent.com/Ayanami0xL1l1th/Ayanami0-configs/refs/heads/main/Ayanami0's%20config.yaml|THEYAMLS/General_Config/Ayanami0-configs/Ayanami0_config.yaml
 https://raw.githubusercontent.com/Ayanami0xL1l1th/Ayanami0-configs/refs/heads/main/Ayanami0's%20config_full.yaml|THEYAMLS/General_Config/Ayanami0-configs/Ayanami0_config_full.yaml
 https://raw.githubusercontent.com/Ayanami0xL1l1th/Ayanami0-configs/refs/heads/main/Ayanami0's%20config_geo-lite.yaml|THEYAMLS/General_Config/Ayanami0-configs/Ayanami0_config_geo-lite.yaml
+https://raw.githubusercontent.com/Sgraqwq/Proxy-override/refs/heads/main/proxy-override.yaml|THEYAMLS/General_Config/Sgraqwq/Proxy-override.yaml
+https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-01.yaml|THEYAMLS/General_Config/Accademia/BlackList-01.yaml
+https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-02-Min.AntiAD.yaml|THEYAMLS/General_Config/Accademia/BlackList-02-Min.AntiAD.yaml
+https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/BlackList-03-Non.AntiAD.yaml|THEYAMLS/General_Config/Accademia/BlackList-03-Non.AntiAD.yaml
+https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-01.yaml|THEYAMLS/General_Config/Accademia/[Desktop]-WhiteList-01.yaml
+https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-02-Min.AntiAD.yaml|THEYAMLS/General_Config/Accademia/[Desktop]-WhiteList-02-Min.AntiAD.yaml
+https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/heads/main/[Desktop]-WhiteList-03-Non.AntiAD.yaml|THEYAMLS/General_Config/Accademia/[Desktop]-WhiteList-03-Non.AntiAD.yaml
 EOF
 )
 
