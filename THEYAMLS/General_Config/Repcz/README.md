@@ -6,31 +6,20 @@
 
 ## ⚔️ 配置横向对比
 
-| 特性 | `config_lite.yaml` | `config.yaml` |
+| 特性 | `config.yaml` | `config_lite.yaml` |
 | :--- | :--- | :--- |
-| **大小** | 2.9 KB | 8.1 KB |
+| **大小** | 8.0 KB | 2.9 KB |
 | **混合端口** | 7893 | 7893 |
 | **面板地址** | - | - |
 | **运行模式** | rule | rule |
 | **TUN** | ✅ | ✅ |
-| **策略组** | **1** | **18** |
-| **规则数** | **16** | **26** |
+| **策略组** | **18** | **1** |
+| **规则数** | **25** | **16** |
 
 ## 📄 配置详情
 
-#### 📝 config_lite.yaml
-- **路径**: `config_lite.yaml` | **大小**: 2.9 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Repcz/config_lite.yaml)
-- **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
-<details>
-<summary>🔍 策略组 (1个)</summary>
-
-| 名称 | 类型 |
-| :--- | :--- |
-| 👆 Proxy | `select` |
-</details>
-
 #### 📝 config.yaml
-- **路径**: `config.yaml` | **大小**: 8.1 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Repcz/config.yaml)
+- **路径**: `config.yaml` | **大小**: 8.0 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Repcz/config.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (18个)</summary>
@@ -55,4 +44,15 @@
 | ♻️ 狮城节点 | `url-test` |
 | ♻️ 日本节点 | `url-test` |
 | ♻️ 台湾节点 | `url-test` |
+</details>
+
+#### 📝 config_lite.yaml
+- **路径**: `config_lite.yaml` | **大小**: 2.9 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Repcz/config_lite.yaml)
+- **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
+<details>
+<summary>🔍 策略组 (1个)</summary>
+
+| 名称 | 类型 |
+| :--- | :--- |
+| 👆 Proxy | `select` |
 </details>
