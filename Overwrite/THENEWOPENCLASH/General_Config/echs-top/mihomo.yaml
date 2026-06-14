@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - mihomo.yaml
-# 生成日期：2026-04-09
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/General_Config/echs-top/mihomo.yaml
+# 生成日期：2026-06-14
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/General_Config/echs-top/mihomo.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -84,15 +84,15 @@
 #
 # proxy-providers:
 #   link1:
-#     exclude-filter: (?i)套餐|剩余|流量|到期|重置|频道|订阅|官网|禁止|客户端|有效|联系|测试|节点|日期|群组|加入|通知|维护|网址|地址|下载|更新|APP|登录|严禁|海外|恢复|处理|谢谢
+#     exclude-filter: (?i)套餐|剩余|流量|到期|重置|频道|订阅|官网|禁止|客户端|有效|联系|测试|节点|日期|群组|加入|通知|维护|网址|地址|下载|更新|APP|登录|严禁|恢复|处理|谢谢
 #     header: &id001
 #       User-Agent:
-#       - clash-verge/v2.4.7
+#       - clash-verge/v2.5.1
 #     health-check: &id002
 #       enable: true
 #       expected-status: 204
-#       interval: 600
-#       lazy: false
+#       interval: 900
+#       lazy: true
 #       max-failed-times: 2
 #       timeout: 3000
 #       url: https://dns.google/generate_204
@@ -104,7 +104,7 @@
 #     type: http
 #     url: 订阅链接1
 #   link2:
-#     exclude-filter: (?i)套餐|剩余|流量|到期|重置|频道|订阅|官网|禁止|客户端|有效|联系|测试|节点|日期|群组|加入|通知|维护|网址|地址|下载|更新|APP|登录|严禁|海外|恢复|处理|谢谢
+#     exclude-filter: (?i)套餐|剩余|流量|到期|重置|频道|订阅|官网|禁止|客户端|有效|联系|测试|节点|日期|群组|加入|通知|维护|网址|地址|下载|更新|APP|登录|严禁|恢复|处理|谢谢
 #     header: *id001
 #     health-check: *id002
 #     interval: 86400
@@ -114,7 +114,7 @@
 #     type: http
 #     url: 订阅链接2
 #   link3:
-#     exclude-filter: (?i)套餐|剩余|流量|到期|重置|频道|订阅|官网|禁止|客户端|有效|联系|测试|节点|日期|群组|加入|通知|维护|网址|地址|下载|更新|APP|登录|严禁|海外|恢复|处理|谢谢
+#     exclude-filter: (?i)套餐|剩余|流量|到期|重置|频道|订阅|官网|禁止|客户端|有效|联系|测试|节点|日期|群组|加入|通知|维护|网址|地址|下载|更新|APP|登录|严禁|恢复|处理|谢谢
 #     header: *id001
 #     health-check: *id002
 #     interval: 86400
@@ -178,6 +178,12 @@
 #   - 法国|故障转移
 #   - 荷兰|故障转移
 #   type: select
+# - icon: https://mihomo.echs.top/img/icon/Settings.webp
+#   name: 代理QUIC
+#   proxies:
+#   - PASS-RULE
+#   - REJECT
+#   type: select
 # - icon: https://mihomo.echs.top/img/icon/AI.webp
 #   include-all-providers: true
 #   name: 国外AI
@@ -188,22 +194,8 @@
 #   name: TELEGRAM
 #   proxies: *id001
 #   type: select
-# - icon: https://mihomo.echs.top/img/icon/GitHub.webp
-#   include-all-providers: true
-#   name: GITHUB
-#   proxies: *id001
-#   type: select
-# - icon: https://mihomo.echs.top/img/icon/Emby.webp
-#   include-all-providers: true
-#   name: 国外媒体
-#   proxies: *id001
-#   type: select
-# - icon: https://mihomo.echs.top/img/icon/Google.webp
-#   include-all-providers: true
-#   name: GOOGLE
-#   proxies: *id001
-#   type: select
-# - hidden: true
+# - empty-fallback: REJECT
+#   hidden: true
 #   icon: https://mihomo.echs.top/img/icon/Fast.webp
 #   name: 最低延迟
 #   tolerance: 30
@@ -211,67 +203,78 @@
 #   use: &id002
 #   - link1
 #   - link2
-# - filter: (?i)🇭🇰|香港|\bHK\b|\bhongkong\b|\bhong\s?kong\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇭🇰|香港|\\bHK\\b|\\bhongkong\\b|\\bhong\s?kong\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/hk.svg
 #   name: 香港|故障转移
 #   type: fallback
 #   use: *id002
-# - filter: (?i)🇹🇼|台湾|\bTW\b|\btaiwan\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇹🇼|台湾|\\bTW\\b|\\btaiwan\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/tw.svg
 #   name: 台湾|故障转移
 #   type: fallback
 #   use: *id002
-# - filter: (?i)🇸🇬|新加坡|狮城|\bSG\b|\bsingapore\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇸🇬|新加坡|狮城|\\bSG\\b|\\bsingapore\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/sg.svg
 #   name: 新加坡|故障转移
 #   type: fallback
 #   use: *id002
-# - filter: (?i)🇯🇵|日本|\bJP\b|\bjapan\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇯🇵|日本|\\bJP\\b|\\bjapan\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/jp.svg
 #   name: 日本|故障转移
 #   type: fallback
 #   use: *id002
-# - filter: (?i)🇰🇷|韩国|\bKR\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇰🇷|韩国|\\bKR\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/kr.svg
 #   name: 韩国|故障转移
 #   type: fallback
 #   use: *id002
-# - filter: (?i)🇺🇸|美国|\bUS\b|\bunitedstates\b|\bunited\s?states\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇺🇸|美国|\\bUS\\b|\\bunitedstates\\b|\\bunited\s?states\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/us.svg
 #   name: 美国|故障转移
 #   type: fallback
 #   use: *id002
-# - filter: (?i)🇨🇦|加拿大|\bCA\b|\bcanada\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇨🇦|加拿大|\\bCA\\b|\\bcanada\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/ca.svg
 #   name: 加拿大|故障转移
 #   type: fallback
 #   use: *id002
-# - filter: (?i)🇩🇪|德国|\bDE\b|\bgermany\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇩🇪|德国|\\bDE\\b|\\bgermany\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/de.svg
 #   name: 德国|故障转移
 #   type: fallback
 #   use: *id002
-# - filter: (?i)🇬🇧|英国|\bUK\b|\bGB\b|\bunitedkingdom\b|\bunited\s?kingdom\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇬🇧|英国|\\bUK\\b|\\bGB\\b|\\bunitedkingdom\\b|\\bunited\s?kingdom\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/gb.svg
 #   name: 英国|故障转移
 #   type: fallback
 #   use: *id002
-# - filter: (?i)🇫🇷|法国|\bFR\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇫🇷|法国|\\bFR\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/fr.svg
 #   name: 法国|故障转移
 #   type: fallback
 #   use: *id002
-# - filter: (?i)🇳🇱|荷兰|\bNL\b|\bnetherlands?\b
+# - empty-fallback: REJECT
+#   filter: (?i)🇳🇱|荷兰|\\bNL\\b|\\bnetherlands?\\b
 #   hidden: true
 #   icon: https://mihomo.echs.top/img/flags/nl.svg
 #   name: 荷兰|故障转移
@@ -297,11 +300,9 @@
 #   - 代理连接
 #   - 直接连接
 #   - 代理DNS
+#   - 代理QUIC
 #   - 国外AI
 #   - TELEGRAM
-#   - GITHUB
-#   - 国外媒体
-#   - GOOGLE
 #   type: select
 
 # ==========================================================
@@ -312,198 +313,70 @@
 # ==========================================================
 #
 # rule-providers:
-#   AWAvenue-Ads:
+#   ads:
 #     behavior: domain
 #     format: mrs
 #     interval: 86400
-#     path: ./rules/AWAvenue-Ads.mrs
-#     proxy: GITHUB
+#     path: ./rules/ads.mrs
+#     proxy: 代理连接
 #     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/AWAvenue-Ads_domain.mrs
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/mrs/domain/ads.mrs
 #   ai:
 #     behavior: domain
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/ai.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/ai.mrs
-#   apple-cn:
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/mrs/domain/ai.mrs
+#   direct-lite:
 #     behavior: domain
 #     format: mrs
 #     interval: 86400
-#     path: ./rules/apple-cn.mrs
-#     proxy: GITHUB
+#     path: ./rules/direct-lite.mrs
+#     proxy: 代理连接
 #     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/apple-cn.mrs
-#   cn:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/cn.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/cn_domain.mrs
-#   cn_ip:
-#     behavior: ipcidr
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/cn_ip.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/cn_ip.mrs
-#   direct_domain:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/direct_domain.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/direct_domain.mrs
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/mrs/domain/direct-lite.mrs
 #   direct_ip:
 #     behavior: ipcidr
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/direct_ip.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/direct_ip.mrs
-#   dnsmasq-china-add:
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/mrs/ip/direct.mrs
+#   dnsmasq-china-lite:
 #     behavior: domain
 #     format: mrs
 #     interval: 86400
-#     path: ./rules/dnsmasq-china-add.mrs
-#     proxy: GITHUB
+#     path: ./rules/dnsmasq-china-lite.mrs
+#     proxy: 代理连接
 #     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/dnsmasq-china-add_domain.mrs
-#   enhanced-FaaS-in-China_ip:
-#     behavior: ipcidr
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/enhanced-FaaS-in-China_ip.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/enhanced-FaaS-in-China_ip.mrs
-#   fcm:
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/mrs/domain/dnsmasq-china-lite.mrs
+#   proxy-lite:
 #     behavior: domain
 #     format: mrs
 #     interval: 86400
-#     path: ./rules/fcm.mrs
-#     proxy: GITHUB
+#     path: ./rules/proxy-lite.mrs
+#     proxy: 代理连接
 #     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/fcm_domain.mrs
-#   games-cn:
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/mrs/domain/proxy-lite.mrs
+#   proxy@direct:
 #     behavior: domain
 #     format: mrs
 #     interval: 86400
-#     path: ./rules/games-cn.mrs
-#     proxy: GITHUB
+#     path: ./rules/proxy@direct.mrs
+#     proxy: 代理连接
 #     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/games-cn.mrs
-#   github:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/github.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/github.mrs
-#   google:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/google.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/google.mrs
-#   google_ip:
-#     behavior: ipcidr
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/google_ip.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/google_ip.mrs
-#   media:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/media.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/media.mrs
-#   media_ip:
-#     behavior: ipcidr
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/media_ip.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/media_ip.mrs
-#   microsoft-cn:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/microsoft-cn.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/microsoft-cn.mrs
-#   private:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/private.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/private.mrs
-#   private_ip:
-#     behavior: ipcidr
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/private_ip.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/private_ip.mrs
-#   proxy:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/proxy.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/proxy.mrs
-#   proxy_domain:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/proxy_domain.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/proxy_domain.mrs
-#   proxy_ip:
-#     behavior: ipcidr
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/proxy_ip.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/proxy_ip.mrs
-#   telegram:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rules/telegram.mrs
-#     proxy: GITHUB
-#     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/telegram.mrs
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/mrs/domain/proxy@direct.mrs
 #   telegram_ip:
 #     behavior: ipcidr
 #     format: mrs
 #     interval: 86400
 #     path: ./rules/telegram_ip.mrs
-#     proxy: GITHUB
+#     proxy: 代理连接
 #     type: http
-#     url: https://raw.githubusercontent.com/echs-top/proxy/main/rules/mrs/telegram_ip.mrs
+#     url: https://raw.githubusercontent.com/echs-top/proxy/main/mrs/ip/telegram.mrs
 
 # ==========================================================
 # rules（从源文件直接提取）
@@ -518,29 +391,14 @@
 #
 # rules:
 # - DST-PORT,5228-5230,直接连接
-# - RULE-SET,private_ip,直接连接,no-resolve
-# - RULE-SET,AWAvenue-Ads,REJECT
-# - RULE-SET,private,直接连接
-# - RULE-SET,fcm,直接连接
-# - RULE-SET,ai,国外AI
-# - RULE-SET,telegram,TELEGRAM
-# - RULE-SET,github,GITHUB
-# - RULE-SET,media,国外媒体
-# - RULE-SET,google,GOOGLE
-# - RULE-SET,apple-cn,直接连接
-# - RULE-SET,microsoft-cn,直接连接
-# - RULE-SET,games-cn,直接连接
-# - RULE-SET,proxy_domain,代理连接
-# - RULE-SET,direct_domain,直接连接
-# - RULE-SET,proxy,代理连接
-# - RULE-SET,cn,直接连接
-# - RULE-SET,telegram_ip,TELEGRAM
-# - RULE-SET,media_ip,国外媒体
-# - RULE-SET,google_ip,GOOGLE
-# - RULE-SET,enhanced-FaaS-in-China_ip,直接连接
-# - RULE-SET,proxy_ip,代理连接
+# - SUB-RULE,(RULE-SET,telegram_ip,no-resolve),sub-telegram
+# - RULE-SET,ads,REJECT
+# - SUB-RULE,(RULE-SET,ai),sub-ai
+# - RULE-SET,proxy@direct,直接连接
+# - SUB-RULE,(RULE-SET,proxy-lite),sub-proxy
+# - RULE-SET,direct-lite,直接连接
 # - RULE-SET,direct_ip,直接连接
-# - RULE-SET,cn_ip,直接连接
+# - AND,((NETWORK,udp),(DST-PORT,443)),代理QUIC
 # - MATCH,代理连接
 
 # ==========================================================
@@ -553,57 +411,41 @@
 #
 # dns:
 #   cache-algorithm: arc
-#   direct-nameserver: &id002
-#   - https://dns.alidns.com/dns-query#直接连接
-#   - https://doh.pub/dns-query#直接连接&h3=false
+#   default-nameserver: &id001
+#   - 119.29.29.29#直接连接
+#   - 223.5.5.5#直接连接
+#   direct-nameserver: *id001
 #   direct-nameserver-follow-policy: true
 #   enable: true
 #   enhanced-mode: fake-ip
 #   fake-ip-filter:
-#   - RULE-SET,AWAvenue-Ads,fake-ip
-#   - RULE-SET,private,real-ip
-#   - RULE-SET,fcm,real-ip
+#   - RULE-SET,ads,fake-ip
 #   - RULE-SET,ai,fake-ip
-#   - RULE-SET,telegram,fake-ip
-#   - RULE-SET,github,fake-ip
-#   - RULE-SET,media,fake-ip
-#   - RULE-SET,google,fake-ip
-#   - RULE-SET,apple-cn,real-ip
-#   - RULE-SET,microsoft-cn,real-ip
-#   - RULE-SET,games-cn,real-ip
-#   - RULE-SET,proxy_domain,fake-ip
-#   - RULE-SET,direct_domain,real-ip
-#   - RULE-SET,proxy,fake-ip
-#   - RULE-SET,cn,real-ip
+#   - RULE-SET,proxy@direct,real-ip
+#   - RULE-SET,proxy-lite,fake-ip
+#   - RULE-SET,direct-lite,real-ip
 #   - MATCH,fake-ip
 #   fake-ip-filter-mode: rule
-#   fake-ip-range: 198.18.0.1/16
-#   fake-ip-range6: fd00:bada:55ed::1/64
+#   fake-ip-range: 198.18.0.0/15
+#   fake-ip-range6: fd00:dcba:9876::/64
 #   ipv6: true
-#   nameserver: &id001
-#   - https://dns.google/dns-query#代理DNS
-#   - https://dns.quad9.net/dns-query#代理DNS
+#   ipv6-timeout: 300
+#   nameserver:
+#   - 8.8.8.8#代理DNS
+#   - 9.9.9.9#代理DNS
 #   nameserver-policy:
-#     rule-set:AWAvenue-Ads:
+#     rule-set:ads:
 #     - rcode://name_error
-#     rule-set:ai: *id001
-#     rule-set:apple-cn: *id002
-#     rule-set:cn: *id002
-#     rule-set:direct_domain: *id002
-#     rule-set:dnsmasq-china-add: *id002
-#     rule-set:fcm:
-#     - https://dns.echs.top/dns-query#直接连接
-#     rule-set:games-cn: *id002
-#     rule-set:github: *id001
-#     rule-set:google: *id001
-#     rule-set:media: *id001
-#     rule-set:microsoft-cn: *id002
-#     rule-set:private: *id002
-#     rule-set:proxy: *id001
-#     rule-set:proxy_domain: *id001
-#     rule-set:telegram: *id001
+#     rule-set:ai: &id002
+#     - rcode://success
+#     rule-set:direct-lite: *id001
+#     rule-set:dnsmasq-china-lite: *id001
+#     rule-set:proxy-lite: *id002
+#     rule-set:proxy@direct: &id003
+#     - https://dns.alidns.com/dns-query#直接连接
+#     - https://doh.pub/dns-query#直接连接&h3=false
 #   prefer-h3: true
-#   proxy-server-nameserver: *id002
+#   proxy-server-nameserver: *id003
 #   respect-rules: false
 #   use-hosts: true
 #   use-system-hosts: true

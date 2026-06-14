@@ -1,0 +1,581 @@
+# OpenClash 覆写模块 - 3-subscription-clash-rule-set.yaml
+# 生成日期：2026-06-14
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/General_Config/Pililink/3-subscription-clash-rule-set.yaml
+# 格式：新版 OpenClash [YAML] 块覆写
+#
+# 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
+# 所有内容默认注释，不影响现有配置；取消注释对应段落即可启用该覆写。
+# ==========================================================
+# [YAML] 是新版 OpenClash 覆写模块的识别标记
+# 此行本身不可注释，内容写在此标记之后
+# 注释状态不生效；取消注释后重载覆写模块即可生效
+# ==========================================================
+[YAML]
+
+# ==========================================================
+# 操作符速查
+# ----------------------------------------------------------
+#  key       默认合并：Hash 递归合并，其他类型直接覆盖原值
+#  key!      强制覆盖：整个值全部替换，不做任何合并
+#  key+      数组后置追加：在数组末尾加入新元素
+#  +key      数组前置插入：在数组开头插入（规则越靠前越优先匹配）
+#  key-      数组差集删除：从数组移除指定元素；非数组则删除该键
+#  key*      批量条件更新：配合 where/set，按条件匹配后批量修改
+# ==========================================================
+
+# ==========================================================
+# 示例：追加自定义 rule-provider 并在规则末尾加入对应规则
+# 取消注释后，Steam 流量将走 Proxy 策略组
+# ----------------------------------------------------------
+# +rule-providers:
+#   Steam:
+#     type: http
+#     behavior: domain
+#     format: mrs
+#     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"
+#     interval: 86400
+# +rules:
+#   - RULE-SET,Steam,Proxy
+# ==========================================================
+
+# ==========================================================
+# 示例：在规则列表最前面插入高优先级规则（最先匹配）
+# ----------------------------------------------------------
+# +rules:
+#   - DOMAIN-SUFFIX,example.com,DIRECT
+#   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+# ==========================================================
+
+# ==========================================================
+# 示例：强制替换整个 rules 数组（原有规则全部丢弃）
+# ----------------------------------------------------------
+# rules!:
+#   - DOMAIN-SUFFIX,example.com,DIRECT
+#   - MATCH,PROXY
+# ==========================================================
+
+# ==========================================================
+# 示例：修改 dns 配置中的部分字段，其余字段保持不变
+# ----------------------------------------------------------
+# dns:
+#   enable: true
+#   cache-algorithm: lru
+# ==========================================================
+
+# ==========================================================
+# 示例：给所有 url-test 类型的策略组在 proxies 末尾追加节点
+# ----------------------------------------------------------
+# proxy-groups*:
+#   where:
+#     type: url-test
+#   set:
+#     proxies+:
+#       - '节点名称'
+# ==========================================================
+
+# ==========================================================
+# proxy-providers（从源文件直接提取）
+# ----------------------------------------------------------
+# 以下内容原样复制自源 YAML 的 proxy-providers 块。
+# 使用方法：
+#   1. 将需要替换的 provider 的 url: 改为你自己的订阅链接
+#   2. 删除这整块前面的 # 号，保存后重载覆写模块即可
+# ==========================================================
+#
+# proxy-providers:
+#   A机场:
+#     health-check:
+#       enable: true
+#       interval: 600
+#       url: https://www.gstatic.com/generate_204
+#     interval: 300
+#     path: ./proxy_provider/air1.yaml
+#     type: http
+#     url: ''
+#   B机场:
+#     health-check:
+#       enable: true
+#       interval: 600
+#       url: https://www.gstatic.com/generate_204
+#     interval: 300
+#     path: ./proxy_provider/air2.yaml
+#     type: http
+#     url: ''
+#   C机场:
+#     health-check:
+#       enable: true
+#       interval: 600
+#       url: https://www.gstatic.com/generate_204
+#     interval: 300
+#     path: ./proxy_provider/air3.yaml
+#     type: http
+#     url: ''
+
+# ==========================================================
+# proxy-groups（从源文件直接提取）
+# ----------------------------------------------------------
+# 原始策略组配置，默认注释不启用。
+# 如需覆写策略组，可取消注释后修改，或参考上方示例使用 proxy-groups* 条件更新。
+# 直接取消注释将强制替换整个 proxy-groups（等同于 proxy-groups! 操作）。
+# ==========================================================
+#
+# proxy-groups:
+# - name: 🚀 节点选择
+#   proxies:
+#   - A机场全线路自动优选
+#   - B机场全线路自动优选
+#   - C全线路优选
+#   - A机场常用
+#   - B机场常用
+#   - 🎯 全球直连
+#   type: select
+# - name: A机场常用
+#   proxies:
+#   - A-香港节点
+#   - A-日本节点
+#   - A-新加坡节点
+#   - A-美国节点
+#   - A-韩国节点
+#   - A-台湾节点
+#   - A-欧洲节点
+#   - A-其他地区
+#   type: select
+# - name: B机场常用
+#   proxies:
+#   - B-美国节点
+#   - B-新加坡节点
+#   - B-香港节点
+#   - B-日本节点
+#   - B-韩国节点
+#   - B-台湾节点
+#   - B-欧洲节点
+#   - B-其他地区
+#   type: select
+# - interval: 120
+#   name: A机场全线路自动优选
+#   proxies:
+#   - A-香港节点
+#   - A-日本节点
+#   - A-新加坡节点
+#   - A-美国节点
+#   - A-韩国节点
+#   - A-台湾节点
+#   - A-欧洲节点
+#   - A-其他地区
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+# - interval: 120
+#   name: B机场全线路自动优选
+#   proxies:
+#   - B-美国节点
+#   - B-新加坡节点
+#   - B-香港节点
+#   - B-日本节点
+#   - B-韩国节点
+#   - B-台湾节点
+#   - B-欧洲节点
+#   - B-其他地区
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+# - interval: 120
+#   name: C全线路优选
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - C机场
+# - interval: 120
+#   name: 🇺🇸 全线路美国优选
+#   proxies:
+#   - A-美国节点
+#   - B-美国节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+# - interval: 120
+#   name: 🇸🇬 全线路新加坡优选
+#   proxies:
+#   - A-新加坡节点
+#   - B-新加坡节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+# - name: 🤖 人工智能
+#   proxies:
+#   - C全线路优选
+#   - B-美国节点
+#   - 🇺🇸 全线路美国优选
+#   - B-新加坡节点
+#   - 🇸🇬 全线路新加坡优选
+#   - A-美国节点
+#   - 🚀 节点选择
+#   type: select
+# - name: 📲 电报消息
+#   proxies:
+#   - C全线路优选
+#   - 🇸🇬 全线路新加坡优选
+#   - A-新加坡节点
+#   - B-新加坡节点
+#   - A-香港节点
+#   - B-香港节点
+#   - 🚀 节点选择
+#   type: select
+# - name: 🎮 游戏服务
+#   proxies:
+#   - A-香港节点
+#   - A-日本节点
+#   - A-韩国节点
+#   - B-香港节点
+#   - B-日本节点
+#   - 🚀 节点选择
+#   - 🎯 全球直连
+#   type: select
+# - name: 📈 网络测试
+#   proxies:
+#   - A机场全线路自动优选
+#   - B机场全线路自动优选
+#   - 🇺🇸 全线路美国优选
+#   - 🇸🇬 全线路新加坡优选
+#   - A机场常用
+#   - B机场常用
+#   - 🚀 节点选择
+#   type: select
+# - name: 🪟 微软服务
+#   proxies:
+#   - 🎯 全球直连
+#   - A机场全线路自动优选
+#   - B机场全线路自动优选
+#   - A机场常用
+#   - B机场常用
+#   - 🇺🇸 全线路美国优选
+#   - 🚀 节点选择
+#   type: select
+# - name: 🇬 谷歌服务
+#   proxies:
+#   - A机场全线路自动优选
+#   - B机场全线路自动优选
+#   - A机场常用
+#   - B机场常用
+#   - 🇺🇸 全线路美国优选
+#   - 🇸🇬 全线路新加坡优选
+#   - 🚀 节点选择
+#   type: select
+# - name: 🍎 苹果服务
+#   proxies:
+#   - 🎯 全球直连
+#   - A机场全线路自动优选
+#   - B机场全线路自动优选
+#   - A机场常用
+#   - B机场常用
+#   - 🚀 节点选择
+#   type: select
+# - name: 🪜 代理域名
+#   proxies:
+#   - 🚀 节点选择
+#   - 🎯 全球直连
+#   type: select
+# - name: 🐟 漏网之鱼
+#   proxies:
+#   - 🚀 节点选择
+#   - 🎯 全球直连
+#   type: select
+# - name: 🎯 全球直连
+#   proxies:
+#   - DIRECT
+#   type: select
+# - name: 🛑 广告拦截
+#   proxies:
+#   - REJECT
+#   - DIRECT
+#   type: select
+# - name: 🔒 私有网络
+#   proxies:
+#   - DIRECT
+#   type: select
+# - name: 🇨🇳 直连域名
+#   proxies:
+#   - DIRECT
+#   type: select
+# - name: 🇨🇳 直连 IP
+#   proxies:
+#   - DIRECT
+#   type: select
+# - filter: (?i)(香港|HK|HKG|Hong Kong|HongKong)
+#   interval: 120
+#   name: A-香港节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - A机场
+# - filter: (?i)(日本|JP|Japan|东京|大阪)
+#   interval: 120
+#   name: A-日本节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - A机场
+# - filter: (?i)(韩国|韩|KR|Korea|首尔)
+#   interval: 120
+#   name: A-韩国节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - A机场
+# - filter: (?i)(新加坡|狮城|坡|SG|Singapore)
+#   interval: 120
+#   name: A-新加坡节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - A机场
+# - filter: (?i)(美国|美|US|USA|United States|America|洛杉矶|硅谷|圣何塞|西雅图|达拉斯|凤凰城|纽约|芝加哥)
+#   interval: 120
+#   name: A-美国节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - A机场
+# - filter: (?i)(台湾|TW|Taiwan|台北|新北)
+#   interval: 120
+#   name: A-台湾节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - A机场
+# - filter: (?i)(欧洲|EU|Europe|英国|UK|London|德国|DE|Germany|法国|FR|France|荷兰|NL|Netherlands)
+#   interval: 120
+#   name: A-欧洲节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - A机场
+# - exclude-filter: (?i)(香港|HK|HKG|Hong Kong|HongKong|日本|JP|Japan|东京|大阪|韩国|KR|Korea|首尔|新加坡|SG|Singapore|美国|美|US|USA|United
+#     States|America|台湾|TW|Taiwan|台北|欧洲|EU|Europe|英国|UK|London|德国|DE|Germany|法国|FR|France|荷兰|NL|Netherlands)
+#   interval: 120
+#   name: A-其他地区
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - A机场
+# - filter: (?i)(香港|HK|HKG|Hong Kong|HongKong)
+#   interval: 120
+#   name: B-香港节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - B机场
+# - filter: (?i)(日本|JP|Japan|东京|大阪)
+#   interval: 120
+#   name: B-日本节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - B机场
+# - filter: (?i)(韩国|韩|KR|Korea|首尔)
+#   interval: 120
+#   name: B-韩国节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - B机场
+# - filter: (?i)(新加坡|狮城|坡|SG|Singapore)
+#   interval: 120
+#   name: B-新加坡节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - B机场
+# - filter: (?i)(美国|美|US|USA|United States|America|洛杉矶|硅谷|圣何塞|西雅图|达拉斯|凤凰城|纽约|芝加哥)
+#   interval: 120
+#   name: B-美国节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - B机场
+# - filter: (?i)(台湾|TW|Taiwan|台北|新北)
+#   interval: 120
+#   name: B-台湾节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - B机场
+# - filter: (?i)(欧洲|EU|Europe|英国|UK|London|德国|DE|Germany|法国|FR|France|荷兰|NL|Netherlands)
+#   interval: 120
+#   name: B-欧洲节点
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - B机场
+# - exclude-filter: (?i)(香港|HK|HKG|Hong Kong|HongKong|日本|JP|Japan|东京|大阪|韩国|KR|Korea|首尔|新加坡|SG|Singapore|美国|美|US|USA|United
+#     States|America|台湾|TW|Taiwan|台北|欧洲|EU|Europe|英国|UK|London|德国|DE|Germany|法国|FR|France|荷兰|NL|Netherlands)
+#   interval: 120
+#   name: B-其他地区
+#   tolerance: 50
+#   type: url-test
+#   url: https://www.gstatic.com/generate_204
+#   use:
+#   - B机场
+
+# ==========================================================
+# rule-providers（从源文件直接提取）
+# ----------------------------------------------------------
+# 原始规则集配置，默认注释不启用。
+# 如需追加新的 rule-provider，参考上方示例一使用 +rule-providers: 操作符。
+# ==========================================================
+#
+# rule-providers:
+#   ads:
+#     behavior: domain
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/ads.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/ads.list
+#   ai:
+#     behavior: domain
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/ai.list
+#     type: http
+#     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list
+#   apple-cn:
+#     behavior: domain
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/apple-cn.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/apple-cn.list
+#   cn:
+#     behavior: domain
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/cn.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/cn.list
+#   cnip:
+#     behavior: ipcidr
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/cnip.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/cnip.list
+#   games-cn:
+#     behavior: domain
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/games-cn.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/games-cn.list
+#   google-cn:
+#     behavior: domain
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/google-cn.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/google-cn.list
+#   microsoft-cn:
+#     behavior: domain
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/microsoft-cn.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/microsoft-cn.list
+#   myignore:
+#     behavior: classical
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/myignore.list
+#     type: http
+#     url: https://raw.githubusercontent.com/Pililink/AirRules/refs/heads/main/clash/ruleset/ignore.list
+#   myproxy:
+#     behavior: classical
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/myproxy.list
+#     type: http
+#     url: https://raw.githubusercontent.com/Pililink/AirRules/refs/heads/main/clash/ruleset/proxy.list
+#   networktest:
+#     behavior: classical
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/networktest.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/networktest.list
+#   private:
+#     behavior: domain
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/private.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/private.list
+#   privateip:
+#     behavior: ipcidr
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/privateip.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/privateip.list
+#   proxy:
+#     behavior: domain
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/proxy.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/proxy.list
+#   telegramip:
+#     behavior: ipcidr
+#     format: text
+#     interval: 7200
+#     path: ./rule_provider/telegramip.list
+#     type: http
+#     url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/mihomo-ruleset/telegramip.list
+
+# ==========================================================
+# rules（从源文件直接提取）
+# ----------------------------------------------------------
+# 原始规则列表，默认注释不启用。
+# 常用操作：
+#   +rules: [...]   在规则列表开头插入（优先匹配）
+#   rules+: [...]   在规则列表末尾追加
+#   rules!: [...]   强制替换整个规则列表（丢弃原有规则）
+# 参考上方示例，通常不需要取消注释整个 rules，而是用 +rules/rules+ 追加即可。
+# ==========================================================
+#
+# rules:
+# - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+# - RULE-SET,myignore,DIRECT
+# - RULE-SET,ads,🛑 广告拦截
+# - RULE-SET,private,🔒 私有网络
+# - RULE-SET,myproxy,🪜 代理域名
+# - RULE-SET,microsoft-cn,🪟 微软服务
+# - RULE-SET,apple-cn,🍎 苹果服务
+# - RULE-SET,google-cn,🇬 谷歌服务
+# - RULE-SET,games-cn,🎮 游戏服务
+# - DOMAIN-SUFFIX,hf.co,🪜 代理域名
+# - DOMAIN-SUFFIX,hf.space,🪜 代理域名
+# - DOMAIN-SUFFIX,huggingface.co,🪜 代理域名
+# - RULE-SET,ai,🤖 人工智能
+# - RULE-SET,networktest,📈 网络测试
+# - RULE-SET,proxy,🪜 代理域名
+# - RULE-SET,cn,🇨🇳 直连域名
+# - RULE-SET,telegramip,📲 电报消息,no-resolve
+# - RULE-SET,privateip,🔒 私有网络,no-resolve
+# - RULE-SET,cnip,🇨🇳 直连 IP
+# - MATCH,🐟 漏网之鱼

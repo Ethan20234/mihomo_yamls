@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - OneSmart_Lite_Config.yaml
-# 生成日期：2026-04-09
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/Smart_Mode/666OS/OneSmart_Lite_Config.yaml
+# 生成日期：2026-06-14
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/Smart_Mode/666OS/OneSmart_Lite_Config.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -114,7 +114,8 @@
 # ==========================================================
 #
 # proxy-groups:
-# - icon: https://github.com/666OS/YYDS/raw/main/mihomo/image/mihomo.png
+# - empty-fallback: REJECT
+#   icon: https://github.com/666OS/YYDS/raw/main/mihomo/image/mihomo.png
 #   name: 一键智能
 #   proxies:
 #   - 香港智能
@@ -127,7 +128,8 @@
 #   - 手动选择
 #   - 直接连接
 #   type: select
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png
+# - empty-fallback: REJECT
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png
 #   name: 人工智能
 #   proxies: &id001
 #   - 一键智能
@@ -141,19 +143,23 @@
 #   - 手动选择
 #   - 直接连接
 #   type: select
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/PBS.png
+# - empty-fallback: REJECT
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/PBS.png
 #   name: 社交平台
 #   proxies: *id001
 #   type: select
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png
+# - empty-fallback: REJECT
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png
 #   name: 国际媒体
 #   proxies: *id001
 #   type: select
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png
+# - empty-fallback: REJECT
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png
 #   name: 国外流量
 #   proxies: *id001
 #   type: select
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png
+# - empty-fallback: REJECT
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png
 #   name: 国内流量
 #   proxies:
 #   - 直接连接
@@ -167,7 +173,8 @@
 #   - 欧洲智能
 #   - 手动选择
 #   type: select
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
+# - empty-fallback: REJECT
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
 #   name: 兜底流量
 #   proxies: *id001
 #   type: select
@@ -182,7 +189,8 @@
 #   proxies:
 #   - DIRECT
 #   type: select
-# - filter: ^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png
 #   include-all: true
@@ -193,7 +201,8 @@
 #   type: smart
 #   url: https://www.google.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png
 #   include-all: true
@@ -204,7 +213,8 @@
 #   type: smart
 #   url: https://www.google.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png
 #   include-all: true
@@ -215,7 +225,8 @@
 #   type: smart
 #   url: https://www.google.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png
 #   include-all: true
@@ -226,7 +237,8 @@
 #   type: smart
 #   url: https://www.google.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png
 #   include-all: true
@@ -237,7 +249,8 @@
 #   type: smart
 #   url: https://www.google.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png
 #   include-all: true
@@ -248,7 +261,8 @@
 #   type: smart
 #   url: https://www.google.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png
 #   include-all: true
@@ -395,7 +409,7 @@
 # ==========================================================
 #
 # rules:
-# - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN)))),REJECT
+# - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN,no-resolve)))),REJECT
 # - RULE-SET,Private,直接连接
 # - RULE-SET,Direct,直接连接
 # - RULE-SET,XPTV,直接连接
@@ -414,7 +428,7 @@
 # - RULE-SET,EmbyIP,国际媒体,no-resolve
 # - RULE-SET,StreamingIP,国际媒体,no-resolve
 # - RULE-SET,ProxyIP,国外流量,no-resolve
-# - RULE-SET,ChinaIP,国内流量
+# - RULE-SET,ChinaIP,国内流量,no-resolve
 # - MATCH,兜底流量
 
 # ==========================================================
@@ -441,7 +455,7 @@
 #   - +.market.xiaomi.com
 #   - +.push.apple.com
 #   fake-ip-range: 198.18.0.1/16
-#   ipv6: true
+#   ipv6: false
 #   nameserver:
 #   - https://dns.alidns.com/dns-query
 #   - https://doh.pub/dns-query

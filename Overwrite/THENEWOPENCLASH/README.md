@@ -19,19 +19,27 @@
 | 分类 | 文件数 |
 | :--- | :--- |
 | 📁 **[General_Config/666OS](./General_Config/666OS/README.md)** | 2 个 |
+| 📁 **[General_Config/AIsouler](./General_Config/AIsouler/README.md)** | 2 个 |
+| 📁 **[General_Config/Accademia](./General_Config/Accademia/README.md)** | 3 个 |
+| 📁 **[General_Config/Ayanami0-configs](./General_Config/Ayanami0-configs/README.md)** | 1 个 |
 | 📁 **[General_Config/ClashConnectRules](./General_Config/ClashConnectRules/README.md)** | 1 个 |
 | 📁 **[General_Config/HenryChiao](./General_Config/HenryChiao/README.md)** | 3 个 |
 | 📁 **[General_Config/Kerronex](./General_Config/Kerronex/README.md)** | 1 个 |
 | 📁 **[General_Config/Lanlan13-14](./General_Config/Lanlan13-14/README.md)** | 3 个 |
 | 📁 **[General_Config/Mitchell](./General_Config/Mitchell/README.md)** | 1 个 |
+| 📁 **[General_Config/Pililink](./General_Config/Pililink/README.md)** | 3 个 |
 | 📁 **[General_Config/Repcz](./General_Config/Repcz/README.md)** | 2 个 |
 | 📁 **[General_Config/SHICHUNHUI88](./General_Config/SHICHUNHUI88/README.md)** | 1 个 |
 | 📁 **[General_Config/Seven1echo](./General_Config/Seven1echo/README.md)** | 2 个 |
+| 📁 **[General_Config/Sgraqwq](./General_Config/Sgraqwq/README.md)** | 1 个 |
+| 📁 **[General_Config/ameyukisora](./General_Config/ameyukisora/README.md)** | 1 个 |
+| 📁 **[General_Config/bgpeer](./General_Config/bgpeer/README.md)** | 1 个 |
 | 📁 **[General_Config/echs-top](./General_Config/echs-top/README.md)** | 1 个 |
 | 📁 **[General_Config/fufu](./General_Config/fufu/README.md)** | 1 个 |
 | 📁 **[General_Config/iKeLee](./General_Config/iKeLee/README.md)** | 2 个 |
 | 📁 **[General_Config/liandu2024](./General_Config/liandu2024/README.md)** | 5 个 |
 | 📁 **[General_Config/liuran001](./General_Config/liuran001/README.md)** | 1 个 |
+| 📁 **[General_Config/loneshu7](./General_Config/loneshu7/README.md)** | 1 个 |
 | 📁 **[General_Config/lvbibir](./General_Config/lvbibir/README.md)** | 1 个 |
 | 📁 **[General_Config/qichiyuhub](./General_Config/qichiyuhub/README.md)** | 1 个 |
 | 📁 **[General_Config/wanswu](./General_Config/wanswu/README.md)** | 1 个 |

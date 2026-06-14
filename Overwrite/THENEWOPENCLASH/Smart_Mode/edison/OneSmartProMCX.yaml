@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - OneSmartProMCX.yaml
-# 生成日期：2026-04-09
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/Smart_Mode/edison/OneSmartProMCX.yaml
+# 生成日期：2026-06-14
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/Smart_Mode/edison/OneSmartProMCX.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -91,14 +91,14 @@
 #       - mihomo/1.9.22
 #     health-check: &id002
 #       enable: true
-#       interval: 300
+#       interval: 180
 #       url: https://cp.cloudflare.com/generate_204
 #     interval: 86400
 #     override:
 #       additional-suffix: ' [优]'
 #     proxy: 国内直连
 #     type: http
-#     url: 你的优质机场订阅链接
+#     url: 填写你的优质机场订阅链接
 #   备用服务商:
 #     exclude-filter: (?i)(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|剩余|重置|套餐|距离)
 #     header: *id001
@@ -108,7 +108,7 @@
 #       additional-suffix: ' [备]'
 #     proxy: 国内直连
 #     type: http
-#     url: 你的备用机场订阅链接
+#     url: 填写你的备用机场订阅链接
 #   次优服务商:
 #     exclude-filter: (?i)(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|剩余|重置|套餐|距离)
 #     header: *id001
@@ -118,7 +118,7 @@
 #       additional-suffix: ' [次]'
 #     proxy: 国内直连
 #     type: http
-#     url: 你的次优质机场订阅链接
+#     url: 填写你的次优质机场订阅链接
 #   落地服务商:
 #     exclude-filter: (?i)(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|剩余|重置|套餐|距离)
 #     header: *id001
@@ -129,7 +129,7 @@
 #       dialer-proxy: 中转服务
 #     proxy: 国内直连
 #     type: http
-#     url: 落地订阅源地址
+#     url: 填写你的落地订阅源地址
 
 # ==========================================================
 # proxy-groups（从源文件直接提取）
@@ -143,16 +143,16 @@
 # - icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Proxy.png
 #   name: Proxy
 #   proxies: &id001
-#   - 香港-智能
 #   - 香港-故转
-#   - 日本-智能
+#   - 香港-智能
 #   - 日本-故转
-#   - 狮城-智能
+#   - 日本-智能
 #   - 狮城-故转
-#   - 美国-智能
+#   - 狮城-智能
 #   - 美国-故转
-#   - 台湾-智能
+#   - 美国-智能
 #   - 台湾-故转
+#   - 台湾-智能
 #   - 低倍率-故转
 #   - 高倍率-手选
 #   - 冷门节点-手选
@@ -179,16 +179,16 @@
 #   name: Microsoft
 #   proxies: *id001
 #   type: select
+# - icon: https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/Large/Bing.png
+#   name: Bing
+#   proxies: *id001
+#   type: select
+# - icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Speedtest.png
+#   name: Speedtest
+#   proxies: *id001
+#   type: select
 # - icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/TikTok_1.png
 #   name: TikTok
-#   proxies: *id001
-#   type: select
-# - icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Cryptocurrency_3.png
-#   name: Crypto
-#   proxies: *id001
-#   type: select
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
-#   name: 漏网之鱼
 #   proxies: *id001
 #   type: select
 # - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Emby.png
@@ -198,14 +198,27 @@
 #   - 低倍率-故转
 #   - 全部节点-手选
 #   type: select
-# - icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Download.png
-#   name: Tracker
-#   proxies: *id002
+# - icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/PayPal.png
+#   name: PayPal
+#   proxies: *id001
+#   type: select
+# - icon: https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
+#   name: Crypto
+#   proxies: *id001
 #   type: select
 # - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png
 #   name: Apple
 #   proxies:
 #   - 国内直连
+#   - 全部节点-手选
+#   type: select
+# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
+#   name: 漏网之鱼
+#   proxies: *id001
+#   type: select
+# - icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Download.png
+#   name: Tracker
+#   proxies: *id002
 #   type: select
 # - hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png
@@ -223,7 +236,8 @@
 #   url: https://cp.cloudflare.com/generate_204
 #   use:
 #   - 优质服务商
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png
+# - hidden: true
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png
 #   interval: 60
 #   lazy: true
 #   name: 香港-故转
@@ -232,7 +246,8 @@
 #   - 香港-智能
 #   type: fallback
 #   url: https://cp.cloudflare.com/generate_204
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png
+# - hidden: true
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png
 #   interval: 60
 #   lazy: true
 #   name: 台湾-故转
@@ -241,7 +256,8 @@
 #   - 台湾-智能
 #   type: fallback
 #   url: https://cp.cloudflare.com/generate_204
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png
+# - hidden: true
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png
 #   interval: 60
 #   lazy: true
 #   name: 日本-故转
@@ -250,7 +266,8 @@
 #   - 日本-智能
 #   type: fallback
 #   url: https://cp.cloudflare.com/generate_204
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png
+# - hidden: true
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png
 #   interval: 60
 #   lazy: true
 #   name: 狮城-故转
@@ -259,7 +276,8 @@
 #   - 狮城-智能
 #   type: fallback
 #   url: https://cp.cloudflare.com/generate_204
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png
+# - hidden: true
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png
 #   interval: 60
 #   lazy: true
 #   name: 美国-故转
@@ -268,7 +286,8 @@
 #   - 美国-智能
 #   type: fallback
 #   url: https://cp.cloudflare.com/generate_204
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
+# - hidden: true
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
 #   interval: 60
 #   lazy: true
 #   name: 低倍率-故转
@@ -277,53 +296,7 @@
 #   - 低倍率-智能
 #   type: fallback
 #   url: https://cp.cloudflare.com/generate_204
-# - filter: ^(?i).*(港|🇭🇰|Hong|HKG|HK\d+|HK[-_ ]?\d*).*$
-#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png
-#   include-all: true
-#   name: 香港-手选
-#   type: select
-# - filter: ^(?i).*(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH).*$
-#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png
-#   include-all: true
-#   name: 台湾-手选
-#   type: select
-# - filter: ^(?i).*(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK).*$
-#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png
-#   include-all: true
-#   name: 日本-手选
-#   type: select
-# - filter: ^(?i).*(坡|🇸🇬|Sing|SIN|SG\d+|SG[-_ ]?\d*|XSP).*$
-#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png
-#   include-all: true
-#   name: 狮城-手选
-#   type: select
-# - filter: ^(?i).*(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD).*$
-#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png
-#   include-all: true
-#   name: 美国-手选
-#   type: select
-# - filter: (?=.*(?i)(0\.01|0\.1|0\.2|0\.3|0\.4|0\.5|0\.6|0\.7|0\.8|下载|实验)).*$
-#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
-#   include-all: true
-#   name: 低倍率-手选
-#   type: select
-# - filter: ^(?=.*(?i)(?<![0-9.])(x(1\.[5-9]\d*|([2-9]|[1-9]\d+)(\.\d+)?)|(1\.[5-9]\d*|([2-9]|[1-9]\d+)(\.\d+)?|高级)x)).*$
-#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png
-#   include-all: true
-#   name: 高倍率-手选
-#   type: select
-# - filter: ^(?is)(?!.*(🇭🇰|香港|hong\s?kong|\bHK\b|🇸🇬|新加坡|singapore|\bSG\b|🇯🇵|日本|japan|\bJP\b|🇹🇼|台湾|taiwan|TW\d+|TW[-_
-#     ]?\d*|🇺🇸|美国|united\s?states|usa|\bUS\b|剩余|重置|套餐|距离|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入)).*$
-#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png
-#   include-all: true
-#   name: 冷门节点-手选
-#   type: select
-# - filter: ^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)).*$
-#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png
-#   include-all: true
-#   name: 全部节点-手选
-#   type: select
-# - filter: ^(?i).*(港|🇭🇰|Hong|HKG|HK\d+|HK[-_ ]?\d*).*$
+# - filter: ^(?i).*(港|🇭🇰|Hong|HKG|HK[-_ ]?\d*).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png
 #   include-all: true
@@ -334,7 +307,7 @@
 #   type: smart
 #   url: https://cp.cloudflare.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?i).*(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH).*$
+# - filter: ^(?i)(?!.*(烟台|平台)).*(台|🇼🇸|🇹🇼|TW|TW[-_ ]?\d*|tai|TPE|TSA|KHH).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png
 #   include-all: true
@@ -345,7 +318,7 @@
 #   type: smart
 #   url: https://cp.cloudflare.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?i).*(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK).*$
+# - filter: ^(?i)(?!.*尼日).*(日|🇯🇵|JP|JP[-_ ]?\d*|Japan|NRT|HND|KIX|CTS|FUK).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png
 #   include-all: true
@@ -356,7 +329,7 @@
 #   type: smart
 #   url: https://cp.cloudflare.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?i).*(坡|🇸🇬|Sing|SIN|SG\d+|SG[-_ ]?\d*|XSP).*$
+# - filter: ^(?i).*(坡|🇸🇬|Sing|SIN|SG[-_ ]?\d*|XSP).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png
 #   include-all: true
@@ -367,7 +340,7 @@
 #   type: smart
 #   url: https://cp.cloudflare.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?i).*(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD).*$
+# - filter: ^(?i)(?!.*南美).*(美|🇺🇸|united\s?states|(?<![a-zA-Z])(US[-_ ]?\d*|USA)|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png
 #   include-all: true
@@ -378,8 +351,19 @@
 #   type: smart
 #   url: https://cp.cloudflare.com/generate_204
 #   uselightgbm: true
-# - filter: ^(?is)(?!.*(🇭🇰|香港|hong\s?kong|\bHK\b|🇸🇬|新加坡|singapore|\bSG\b|🇯🇵|日本|japan|\bJP\b|🇹🇼|台湾|taiwan|TW\d+|TW[-_
-#     ]?\d*|🇺🇸|美国|united\s?states|usa|\bUS\b|剩余|重置|套餐|距离|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入)).*$
+# - filter: ^(?i).*(0\.01|0\.[1-8]|下载|实验).*$
+#   hidden: true
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
+#   include-all: true
+#   interval: 60
+#   lazy: true
+#   name: 低倍率-智能
+#   policy-priority: 0.01:9;0.1:8;0.2:7;实验:7;0.3:6;0.4:5;0.5:4;0.6:3;0.7:2;0.8:1
+#   type: smart
+#   url: https://cp.cloudflare.com/generate_204
+#   uselightgbm: true
+# - filter: ^(?i)(?!.*(🇭🇰|香港|hong\s?kong|HK[-_ ]?\d*|🇸🇬|新加坡|singapore|SG[-_ ]?\d*|🇯🇵|日本|japan|JP[-_
+#     ]?\d*|🇹🇼|台湾|taiwan|TW[-_ ]?\d*|🇺🇸|美国|united\s?states|usa|US[-_ ]?\d*|剩余|重置|套餐|距离|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png
 #   include-all: true
@@ -390,17 +374,79 @@
 #   type: smart
 #   url: https://cp.cloudflare.com/generate_204
 #   uselightgbm: true
-# - filter: (?=.*(?i)(0\.01|0\.1|0\.2|0\.3|0\.4|0\.5|0\.6|0\.7|0\.8|下载|实验)).*$
-#   hidden: true
+# - filter: ^(?i).*(港|🇭🇰|Hong|HKG|HK[-_ ]?\d*).*$
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png
+#   include-all: true
+#   interval: 60
+#   lazy: true
+#   name: 香港-手选
+#   type: select
+#   url: https://cp.cloudflare.com/generate_204
+# - filter: ^(?i)(?!.*(烟台|平台)).*(台|🇼🇸|🇹🇼|TW|TW[-_ ]?\d*|tai|TPE|TSA|KHH).*$
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png
+#   include-all: true
+#   interval: 60
+#   lazy: true
+#   name: 台湾-手选
+#   type: select
+#   url: https://cp.cloudflare.com/generate_204
+# - filter: ^(?i)(?!.*尼日).*(日|🇯🇵|JP|JP[-_ ]?\d*|Japan|NRT|HND|KIX|CTS|FUK).*$
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png
+#   include-all: true
+#   interval: 60
+#   lazy: true
+#   name: 日本-手选
+#   type: select
+#   url: https://cp.cloudflare.com/generate_204
+# - filter: ^(?i).*(坡|🇸🇬|Sing|SIN|SG[-_ ]?\d*|XSP).*$
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png
+#   include-all: true
+#   interval: 60
+#   lazy: true
+#   name: 狮城-手选
+#   type: select
+#   url: https://cp.cloudflare.com/generate_204
+# - filter: ^(?i)(?!.*南美).*(美|🇺🇸|united\s?states|(?<![a-zA-Z])(US[-_ ]?\d*|USA)|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD).*$
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png
+#   include-all: true
+#   interval: 60
+#   lazy: true
+#   name: 美国-手选
+#   type: select
+#   url: https://cp.cloudflare.com/generate_204
+# - filter: ^(?i).*(0\.01|0\.[1-8]|下载|实验).*$
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
 #   include-all: true
 #   interval: 60
 #   lazy: true
-#   name: 低倍率-智能
-#   policy-priority: 0.01:8;0.1:7;0.2:6;实验:6;0.3:5;0.4:4;0.5:3;0.6:2;0.7:1;0.8:0.5
-#   type: smart
+#   name: 低倍率-手选
+#   type: select
 #   url: https://cp.cloudflare.com/generate_204
-#   uselightgbm: true
+# - filter: ^(?i).*(?<![0-9.])(x(1\.[5-9]\d*|[2-9](\.\d+)?|10(\.0+)?)|(1\.[5-9]\d*|[2-9](\.\d+)?|10(\.0+)?|高级)x).*$
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png
+#   include-all: true
+#   interval: 60
+#   lazy: true
+#   name: 高倍率-手选
+#   type: select
+#   url: https://cp.cloudflare.com/generate_204
+# - filter: ^(?i)(?!.*(🇭🇰|香港|hong\s?kong|HK[-_ ]?\d*|🇸🇬|新加坡|singapore|SG[-_ ]?\d*|🇯🇵|日本|japan|JP[-_
+#     ]?\d*|🇹🇼|台湾|taiwan|TW[-_ ]?\d*|🇺🇸|美国|united\s?states|usa|US[-_ ]?\d*|剩余|重置|套餐|距离|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入)).*$
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png
+#   include-all: true
+#   interval: 60
+#   lazy: true
+#   name: 冷门节点-手选
+#   type: select
+#   url: https://cp.cloudflare.com/generate_204
+# - filter: ^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)).*$
+#   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png
+#   include-all: true
+#   interval: 60
+#   lazy: true
+#   name: 全部节点-手选
+#   type: select
+#   url: https://cp.cloudflare.com/generate_204
 
 # ==========================================================
 # rule-providers（从源文件直接提取）
@@ -431,13 +477,6 @@
 #     path: ./ruleset/category-game-accelerator-cn.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-game-accelerator-cn.mrs
-#   Alibaba:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/alibaba.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/alibaba.mrs
 #   Apple:
 #     behavior: domain
 #     format: mrs
@@ -445,6 +484,13 @@
 #     path: ./ruleset/apple.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs
+#   Apple-CN:
+#     behavior: domain
+#     format: mrs
+#     interval: 86400
+#     path: ./ruleset/apple-cn.mrs
+#     type: http
+#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.mrs
 #   Apple-IP:
 #     behavior: ipcidr
 #     format: mrs
@@ -459,34 +505,6 @@
 #     path: ./ruleset/apple-tvplus.mrs
 #     type: http
 #     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-tvplus.mrs
-#   Baidu:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/baidu.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/baidu.mrs
-#   Bank-CN:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/category-bank-cn.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-bank-cn.mrs
-#   Bilibili:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/bilibili.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bilibili.mrs
-#   Bilibili2:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/bilibili2.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bilibili2.mrs
 #   Bing:
 #     behavior: domain
 #     format: mrs
@@ -501,6 +519,13 @@
 #     path: ./ruleset/blizzard.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/blizzard.mrs
+#   Category-DoH:
+#     behavior: domain
+#     format: mrs
+#     interval: 86400
+#     path: ./ruleset/category-doh.mrs
+#     type: http
+#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-doh.mrs
 #   China:
 #     behavior: domain
 #     format: mrs
@@ -529,6 +554,13 @@
 #     path: ./ruleset/category-cryptocurrency.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-cryptocurrency.mrs
+#   DNS-IP:
+#     behavior: ipcidr
+#     format: mrs
+#     interval: 86400
+#     path: ./ruleset/Encrypted_DNS_IP.mrs
+#     type: http
+#     url: https://gcore.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Encrypted_DNS_IP.mrs
 #   Disney:
 #     behavior: domain
 #     format: mrs
@@ -571,13 +603,6 @@
 #     path: ./ruleset/epicgames.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/epicgames.mrs
-#   EpicCN:
-#     behavior: classical
-#     format: yaml
-#     interval: 86400
-#     path: ./rule_provider/epicgames_cn.yaml
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/classical/epicgames%40cn.yaml
 #   Facebook-IP:
 #     behavior: ipcidr
 #     format: mrs
@@ -592,13 +617,6 @@
 #     path: ./rule_provider/gog.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gog.mrs
-#   GOGCN:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rule_provider/gog_cn.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gog@cn.mrs
 #   GameDownload:
 #     behavior: domain
 #     format: mrs
@@ -683,13 +701,6 @@
 #     path: ./ruleset/hulu.mrs
 #     type: http
 #     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/hulu.mrs
-#   JD:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/jd.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/jd.mrs
 #   MSN:
 #     behavior: domain
 #     format: mrs
@@ -697,13 +708,6 @@
 #     path: ./ruleset/msn.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/msn.mrs
-#   Media-CN:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/category-media-cn.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-media-cn.mrs
 #   Meta:
 #     behavior: domain
 #     format: mrs
@@ -725,20 +729,6 @@
 #     path: ./ruleset/microsoft-cn.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft@cn.mrs
-#   Netdisk-CN:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/category-netdisk-cn.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-netdisk-cn.mrs
-#   Netease:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/netease.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/netease.mrs
 #   Netflix:
 #     behavior: domain
 #     format: mrs
@@ -760,13 +750,6 @@
 #     path: ./ruleset/nintendo.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/nintendo.mrs
-#   NintendoCN:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rule_provider/nintendo_cn.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/nintendo@cn.mrs
 #   Origin:
 #     behavior: domain
 #     format: mrs
@@ -774,6 +757,13 @@
 #     path: ./rule_provider/origin.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/origin.mrs
+#   PayPal:
+#     behavior: domain
+#     format: mrs
+#     interval: 86400
+#     path: ./ruleset/paypal.mrs
+#     type: http
+#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/paypal.mrs
 #   Pixiv:
 #     behavior: domain
 #     format: mrs
@@ -830,13 +820,6 @@
 #     path: ./ruleset/category-scholar-!cn.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-scholar-!cn.mrs
-#   Social-CN:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/category-social-media-cn.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-social-media-cn.mrs
 #   SocialMedia:
 #     behavior: domain
 #     format: mrs
@@ -850,7 +833,7 @@
 #     interval: 86400
 #     path: ./ruleset/category-speedtest.mrs
 #     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-speedtest.mrs
+#     url: https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/meta/domain/speedtest.mrs
 #   Spotify:
 #     behavior: domain
 #     format: mrs
@@ -865,20 +848,6 @@
 #     path: ./ruleset/steam.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam.mrs
-#   SteamCN:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rule_provider/steam_cn.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam@cn.mrs
-#   Teams:
-#     behavior: classical
-#     format: yaml
-#     interval: 86400
-#     path: ./ruleset/blackmatrix/Teams.yaml
-#     type: http
-#     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Teams/Teams.yaml
 #   Telegram:
 #     behavior: domain
 #     format: mrs
@@ -893,41 +862,27 @@
 #     path: ./ruleset/telegram-ip.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs
-#   Tencent:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./ruleset/tencent.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tencent.mrs
-#   TikTok-MCX:
+#   TikTok:
 #     behavior: domain
 #     format: mrs
 #     interval: 86400
 #     path: ./ruleset/tiktok.mrs
 #     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tiktok.mrs
-#   TikTok-b7:
-#     behavior: classical
-#     format: yaml
-#     interval: 86400
-#     path: ./ruleset/TikTok.yaml
-#     type: http
-#     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
+#     url: https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/meta/domain/tiktok.mrs
 #   Trackers:
 #     behavior: domain
-#     format: yaml
+#     format: mrs
 #     interval: 86400
-#     path: ./ruleset/trackers_domain.yaml
+#     path: ./ruleset/trackers_domain.mrs
 #     type: http
-#     url: https://raw.githubusercontent.com/yhlh9982/clash-rules/master/trackers_domain.yaml
+#     url: https://github.com/yhlh9982/clash-rules/releases/download/tracker-rules/trackers_domain.mrs
 #   Trackers-IP:
-#     behavior: classical
-#     format: yaml
+#     behavior: ipcidr
+#     format: mrs
 #     interval: 86400
-#     path: ./ruleset/trackers_ip.yaml
+#     path: ./ruleset/trackers_ip.mrs
 #     type: http
-#     url: https://raw.githubusercontent.com/yhlh9982/clash-rules/master/trackers_ip.yaml
+#     url: https://github.com/yhlh9982/clash-rules/releases/download/tracker-rules/trackers_ip.mrs
 #   Tumblr:
 #     behavior: domain
 #     format: mrs
@@ -956,13 +911,6 @@
 #     path: ./ruleset/ubisoft.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/ubisoft.mrs
-#   UbisoftCN:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rule_provider/ubisoft_cn.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/ubisoft@cn.mrs
 #   Xbox:
 #     behavior: domain
 #     format: mrs
@@ -970,13 +918,6 @@
 #     path: ./ruleset/xbox.mrs
 #     type: http
 #     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xbox.mrs
-#   XboxCN:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     path: ./rule_provider/xbox_cn.mrs
-#     type: http
-#     url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xbox@cn.mrs
 #   Xunlei:
 #     behavior: domain
 #     format: mrs
@@ -1013,106 +954,90 @@
 # rules:
 # - AND,(DST-PORT,443),(NETWORK,UDP),(NOT,((RULE-SET,China))),REJECT
 # - AND,(DST-PORT,443),(NETWORK,UDP),(NOT,((RULE-SET,China-IP))),REJECT
+# - RULE-SET,DNS-IP,REJECT,no-resolve
+# - RULE-SET,Category-DoH,REJECT
+# - RULE-SET,HTTPDNS-CN,REJECT
 # - RULE-SET,Private,国内直连
 # - RULE-SET,Private-IP,国内直连,no-resolve
-# - RULE-SET,HTTPDNS-CN,国内直连
+# - DOMAIN,access.pikpakdrive.com,REJECT
 # - DOMAIN,access.mypikpak.com,REJECT
 # - DOMAIN,access.mypikpak.net,REJECT
 # - DOMAIN,access.pikpak.me,REJECT
-# - DOMAIN,access.pikpakdrive.com,REJECT
 # - DOMAIN-KEYWORD,dl-a10b-,国内直连
 # - DOMAIN-KEYWORD,dl-z01a-,国内直连
 # - DOMAIN-REGEX,^dl-[A-Za-z0-9-]+\.mypikpak\.com$,国内直连
+# - DOMAIN-KEYWORD,ipv6tracker,Tracker
 # - DOMAIN-KEYWORD,bittorrent,Tracker
 # - DOMAIN-KEYWORD,torrent,Tracker
 # - DOMAIN-KEYWORD,tracker,Tracker
-# - DOMAIN-KEYWORD,ipv6tracker,Tracker
-# - RULE-SET,Trackers,Tracker
-# - RULE-SET,Trackers-IP,Tracker,no-resolve
 # - RULE-SET,PublicTracker,Tracker
+# - RULE-SET,Trackers,Tracker
 # - RULE-SET,Xunlei,Tracker
-# - RULE-SET,SteamCN,国内直连
-# - RULE-SET,EpicCN,国内直连
-# - RULE-SET,UbisoftCN,国内直连
-# - RULE-SET,XboxCN,国内直连
-# - RULE-SET,NintendoCN,国内直连
-# - RULE-SET,GOGCN,国内直连
 # - RULE-SET,GameDownload,国内直连
 # - RULE-SET,Accelerator,国内直连
-# - RULE-SET,GamesCN,国内直连
-# - RULE-SET,Ubisoft,国内直连
 # - RULE-SET,Blizzard,国内直连
+# - RULE-SET,Ubisoft,国内直连
+# - RULE-SET,GamesCN,国内直连
+# - RULE-SET,PlayStation,ProxyGame
+# - RULE-SET,Nintendo,ProxyGame
+# - RULE-SET,Origin,ProxyGame
 # - RULE-SET,Steam,ProxyGame
 # - RULE-SET,Xbox,ProxyGame
-# - RULE-SET,PlayStation,ProxyGame
 # - RULE-SET,Epic,ProxyGame
-# - RULE-SET,Nintendo,ProxyGame
-# - RULE-SET,EA,ProxyGame
 # - RULE-SET,GOG,ProxyGame
-# - RULE-SET,Origin,ProxyGame
+# - RULE-SET,EA,ProxyGame
 # - RULE-SET,GamesGlobal,ProxyGame
 # - DOMAIN-SUFFIX,copilot.microsoft.com,AI
-# - DOMAIN-SUFFIX,copilot.azure.com,AI
-# - DOMAIN,sydney.bing.com,AI
-# - DOMAIN,edgeservices.bing.com,AI
-# - DOMAIN-SUFFIX,openai.azure.com,AI
 # - DOMAIN-SUFFIX,api.microsoftapp.net,AI
+# - DOMAIN-SUFFIX,copilot.azure.com,AI
+# - DOMAIN-SUFFIX,openai.azure.com,AI
+# - DOMAIN,edgeservices.bing.com,AI
+# - DOMAIN,sydney.bing.com,AI
 # - DOMAIN,img.bing.com,AI
-# - RULE-SET,Teams,国内直连
-# - RULE-SET,Bing,Proxy
-# - RULE-SET,MSN,Proxy
+# - RULE-SET,Bing,Bing
+# - RULE-SET,MSN,Bing
 # - RULE-SET,Crypto,Crypto
+# - RULE-SET,PayPal,PayPal
 # - RULE-SET,Emby,Emby
 # - RULE-SET,AI,AI
 # - RULE-SET,GlobalAI,AI
-# - RULE-SET,TikTok-MCX,TikTok
-# - RULE-SET,TikTok-b7,TikTok
-# - RULE-SET,AppleTV,Streaming
+# - RULE-SET,TikTok,TikTok
 # - RULE-SET,PrimeVideo,Streaming
-# - RULE-SET,HBO,Streaming
-# - RULE-SET,Hulu,Streaming
-# - RULE-SET,Netflix,Streaming
-# - RULE-SET,Netflix-IP,Streaming,no-resolve
-# - RULE-SET,Disney,Streaming
+# - RULE-SET,AppleTV,Streaming
 # - RULE-SET,Spotify,Streaming
 # - RULE-SET,YouTube,Streaming
-# - DOMAIN-SUFFIX,googleapis.cn,Google
+# - RULE-SET,Netflix,Streaming
+# - RULE-SET,Disney,Streaming
+# - RULE-SET,Hulu,Streaming
+# - RULE-SET,HBO,Streaming
 # - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Google
-# - RULE-SET,Google,Google
-# - RULE-SET,Google-IP,Google,no-resolve
+# - DOMAIN-SUFFIX,googleapis.cn,Google
 # - RULE-SET,GoogleFCM,Google
+# - RULE-SET,Google,Google
+# - RULE-SET,Speedtest,Speedtest
 # - RULE-SET,Telegram,Proxy
-# - RULE-SET,Telegram-IP,Proxy,no-resolve
 # - RULE-SET,Twitter,Proxy
-# - RULE-SET,Twitter-IP,Proxy,no-resolve
-# - RULE-SET,Meta,Proxy
-# - RULE-SET,Facebook-IP,Proxy,no-resolve
-# - RULE-SET,Tumblr,Proxy
 # - RULE-SET,Docker,Proxy
-# - RULE-SET,Pixiv,Proxy
+# - RULE-SET,Tumblr,Proxy
 # - RULE-SET,Reddit,Proxy
 # - RULE-SET,GitHub,Proxy
-# - RULE-SET,Speedtest,Proxy
+# - RULE-SET,Pixiv,Proxy
+# - RULE-SET,Meta,Proxy
 # - RULE-SET,Communication,Proxy
 # - RULE-SET,SocialMedia,Proxy
 # - RULE-SET,Ecommerce,Proxy
 # - RULE-SET,Scholar,Proxy
 # - RULE-SET,MicrosoftCN,国内直连
 # - RULE-SET,Microsoft,Microsoft
+# - RULE-SET,Apple-CN,国内直连
 # - RULE-SET,Apple,Apple
+# - RULE-SET,Netflix-IP,Streaming,no-resolve
+# - RULE-SET,Trackers-IP,Tracker,no-resolve
+# - RULE-SET,Facebook-IP,Proxy,no-resolve
+# - RULE-SET,Telegram-IP,Proxy,no-resolve
+# - RULE-SET,Twitter-IP,Proxy,no-resolve
+# - RULE-SET,Google-IP,Google,no-resolve
 # - RULE-SET,Apple-IP,Apple,no-resolve
-# - RULE-SET,AI-CN,国内直连
-# - RULE-SET,Netdisk-CN,国内直连
-# - RULE-SET,Bank-CN,国内直连
-# - RULE-SET,Social-CN,国内直连
-# - RULE-SET,Media-CN,国内直连
-# - RULE-SET,Netease,国内直连
-# - RULE-SET,Bilibili,国内直连
-# - RULE-SET,Bilibili2,国内直连
-# - RULE-SET,Baidu,国内直连
-# - RULE-SET,JD,国内直连
-# - RULE-SET,Alibaba,国内直连
-# - RULE-SET,Tencent,国内直连
 # - RULE-SET,Geo-!CN,Proxy
 # - RULE-SET,China,国内直连
 # - RULE-SET,China-IP,国内直连,no-resolve
@@ -1159,5 +1084,6 @@
 #   ipv6: true
 #   listen: 0.0.0.0:7874
 #   nameserver:
-#   - https://dns.alidns.com/dns-query#h3=true
+#   - https://dns.alidns.com/dns-query
+#   - https://doh.pub/dns-query
 #   respect-rules: false

@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - MihomoPro_Config.yaml
-# 生成日期：2026-04-09
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/General_Config/666OS/MihomoPro_Config.yaml
+# 生成日期：2026-06-14
+# 源文件：https://raw.githubusercontent.com/Ethan20234/mihomo_yamls/main/THEYAMLS/General_Config/666OS/MihomoPro_Config.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -117,7 +117,6 @@
 # - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Static.png
 #   name: 默认代理
 #   proxies:
-#   - 故障转移
 #   - 香港策略
 #   - 狮城策略
 #   - 日本策略
@@ -129,28 +128,10 @@
 #   - 全球手动
 #   - 直接连接
 #   type: select
-# - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png
-#   interval: 200
-#   lazy: true
-#   name: 故障转移
-#   proxies:
-#   - 香港策略
-#   - 狮城策略
-#   - 日本策略
-#   - 韩国策略
-#   - 美国策略
-#   - 台湾策略
-#   - 欧盟策略
-#   - 全球手动
-#   - 冷门自选
-#   - 直接连接
-#   type: fallback
-#   url: https://www.google.com/generate_204
 # - icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png
 #   name: 国外流量
 #   proxies: &id001
 #   - 默认代理
-#   - 故障转移
 #   - 香港策略
 #   - 狮城策略
 #   - 日本策略
@@ -167,7 +148,6 @@
 #   proxies:
 #   - 直接连接
 #   - 默认代理
-#   - 故障转移
 #   - 香港策略
 #   - 狮城策略
 #   - 日本策略
@@ -227,7 +207,6 @@
 #   proxies: &id002
 #   - 美国策略
 #   - 默认代理
-#   - 故障转移
 #   - 香港策略
 #   - 狮城策略
 #   - 日本策略
@@ -259,7 +238,6 @@
 #   proxies:
 #   - 狮城策略
 #   - 默认代理
-#   - 故障转移
 #   - 香港策略
 #   - 日本策略
 #   - 韩国策略
@@ -359,7 +337,8 @@
 #   include-all: true
 #   name: 全球手动
 #   type: select
-# - filter: ^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 #   include-all: true
@@ -368,7 +347,8 @@
 #   name: 香港自动
 #   type: url-test
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 #   include-all: true
@@ -377,7 +357,8 @@
 #   name: 台湾自动
 #   type: url-test
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 #   include-all: true
@@ -386,7 +367,8 @@
 #   name: 狮城自动
 #   type: url-test
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 #   include-all: true
@@ -395,7 +377,8 @@
 #   name: 日本自动
 #   type: url-test
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 #   include-all: true
@@ -404,7 +387,8 @@
 #   name: 韩国自动
 #   type: url-test
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 #   include-all: true
@@ -413,7 +397,8 @@
 #   name: 美国自动
 #   type: url-test
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 #   include-all: true
@@ -422,7 +407,8 @@
 #   name: 欧盟自动
 #   type: url-test
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
 #   include-all: true
@@ -432,7 +418,8 @@
 #   strategy: consistent-hashing
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
 #   include-all: true
@@ -442,7 +429,8 @@
 #   strategy: consistent-hashing
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
 #   include-all: true
@@ -452,7 +440,8 @@
 #   strategy: consistent-hashing
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
 #   include-all: true
@@ -462,7 +451,8 @@
 #   strategy: consistent-hashing
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
 #   include-all: true
@@ -472,7 +462,8 @@
 #   strategy: consistent-hashing
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
 #   include-all: true
@@ -482,7 +473,8 @@
 #   strategy: consistent-hashing
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png
 #   include-all: true
@@ -492,7 +484,8 @@
 #   strategy: consistent-hashing
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png
 #   include-all: true
@@ -502,7 +495,8 @@
 #   strategy: round-robin
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png
 #   include-all: true
@@ -512,7 +506,8 @@
 #   strategy: round-robin
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png
 #   include-all: true
@@ -522,7 +517,8 @@
 #   strategy: round-robin
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png
 #   include-all: true
@@ -532,7 +528,8 @@
 #   strategy: round-robin
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png
 #   include-all: true
@@ -542,7 +539,8 @@
 #   strategy: round-robin
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png
 #   include-all: true
@@ -552,7 +550,8 @@
 #   strategy: round-robin
 #   type: load-balance
 #   url: https://www.google.com/generate_204
-# - filter: ^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$
+# - empty-fallback: REJECT
+#   filter: ^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$
 #   hidden: true
 #   icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png
 #   include-all: true
@@ -820,7 +819,7 @@
 # rules:
 # - RULE-SET,Tracking,REJECT
 # - RULE-SET,Advertising,REJECT
-# - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN)))),REJECT
+# - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN,no-resolve)))),REJECT
 # - RULE-SET,LocationDKS,抖快书定位
 # - RULE-SET,Private,直接连接
 # - RULE-SET,Direct,直接连接
@@ -856,7 +855,7 @@
 # - RULE-SET,StreamingIP,国际媒体,no-resolve
 # - RULE-SET,GoogleIP,谷歌服务,no-resolve
 # - RULE-SET,ProxyIP,国外流量,no-resolve
-# - RULE-SET,ChinaIP,国内流量
+# - RULE-SET,ChinaIP,国内流量,no-resolve
 # - MATCH,兜底流量
 
 # ==========================================================
