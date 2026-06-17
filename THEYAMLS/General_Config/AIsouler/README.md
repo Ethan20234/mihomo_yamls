@@ -8,21 +8,21 @@
 
 | 特性 | `mihomoconfig.yaml` | `mihomoConfigLite.yaml` |
 | :--- | :--- | :--- |
-| **大小** | 24.6 KB | 14.3 KB |
+| **大小** | 24.5 KB | 14.3 KB |
 | **混合端口** | - | - |
 | **面板地址** | [::]:9090 | [::]:9090 |
 | **运行模式** | rule | rule |
 | **TUN** | ✅ | ✅ |
-| **策略组** | **46** | **22** |
-| **规则数** | **41** | **15** |
+| **策略组** | **47** | **23** |
+| **规则数** | **40** | **15** |
 
 ## 📄 配置详情
 
 #### 📝 mihomoconfig.yaml
-- **路径**: `mihomoconfig.yaml` | **大小**: 24.6 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/AIsouler/mihomoconfig.yaml)
+- **路径**: `mihomoconfig.yaml` | **大小**: 24.5 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/AIsouler/mihomoconfig.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
-<summary>🔍 策略组 (46个)</summary>
+<summary>🔍 策略组 (47个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
@@ -46,14 +46,14 @@
 | 👆 Spotify | `select` |
 | 👆 TikTok | `select` |
 | 👆 Netflix | `select` |
-| ... | 还有 26 个 |
+| ... | 还有 27 个 |
 </details>
 
 #### 📝 mihomoConfigLite.yaml
-- **路径**: `mihomoConfigLite.yaml` | **大小**: 14.3 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/AIsouler/mihomoConfigLite.yaml)
+- **路径**: `mihomoConfigLite.yaml` | **大小**: 14.3 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/AIsouler/mihomoConfigLite.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
-<summary>🔍 策略组 (22个)</summary>
+<summary>🔍 策略组 (23个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
@@ -63,6 +63,7 @@
 | 👆 Telegram | `select` |
 | 👆 广告拦截 | `select` |
 | 👆 直连 | `select` |
+| 👆 漏网之鱼 | `select` |
 | 👆 香港 | `select` |
 | ♻️ 香港-自动选择 | `url-test` |
 | 👆 日本 | `select` |
@@ -76,6 +77,5 @@
 | 👆 低倍率节点 | `select` |
 | ♻️ 低倍率节点-自动选择 | `url-test` |
 | 👆 高倍率节点 | `select` |
-| ♻️ 高倍率节点-自动选择 | `url-test` |
-| ... | 还有 2 个 |
+| ... | 还有 3 个 |
 </details>

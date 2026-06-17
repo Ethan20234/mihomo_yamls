@@ -19,7 +19,7 @@
 ## 📄 配置详情
 
 #### 📝 OneTouch_Config.yaml
-- **路径**: `OneTouch_Config.yaml` | **大小**: 12.2 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/OneTouch_Config.yaml)
+- **路径**: `OneTouch_Config.yaml` | **大小**: 12.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/666OS/OneTouch_Config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (14个)</summary>
@@ -43,7 +43,7 @@
 </details>
 
 #### 📝 MihomoPro_Config.yaml
-- **路径**: `MihomoPro_Config.yaml` | **大小**: 22.3 KB | [查看源码](https://github.com/HenryChiao/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/MihomoPro_Config.yaml)
+- **路径**: `MihomoPro_Config.yaml` | **大小**: 22.3 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/666OS/MihomoPro_Config.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (51个)</summary>
