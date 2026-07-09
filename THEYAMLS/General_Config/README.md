@@ -8,13 +8,13 @@
 
 | 特性 | `Clash_Sample.yaml` | `backup.yaml` | `AIB.yaml` | `AIO.yaml` | `mihomoconfig.yaml` | `mihomoConfigLite.yaml` | `Ayanami0_config_geo-lite.yaml` | `mihomo_multi.yaml` | `mihomo_single.yaml` | `2-subscription-clash-rule-set.yaml` | `base-clash-ruleset.yaml` | `3-subscription-clash-rule-set.yaml` | `Clashmi.yaml` | `Clashmi-fx.yaml` | `clash-fallback-all.yaml` | `clash-fallback-std.yaml` | `clash-fallback-dialer.yaml` | `clash-all-fallback.yaml` | `clash-fallback.yaml` | `config.yaml` | `us_la.yaml` | `Clash-Airport.yaml` | `OneTouch_Config.yaml` | `MihomoPro_Config.yaml` | `config.yaml` | `mihomo.yaml` | `mihomo.yaml` | `configfull_lite.yaml` | `configfull_NoAd.yaml` | `configfull.yaml` | `Proxy-override.yaml` | `Seven1_fallback_Geo.yaml` | `Seven1_fallback_Rule-Set.yaml` | `mihomo.yaml` | `mihomo.yaml` | `config.yaml` | `MihomoProMax.yaml` | `MihomoAIO.yaml` | `MihomoProPlus.yaml` | `Clash.yaml` | `config.yaml` | `config.yaml` | `config_lite.yaml` | `BlackList-01.yaml` | `BlackList-02-Min.AntiAD.yaml` | `BlackList-03-Non.AntiAD.yaml` | `config.yaml` | `ConfigForClash.yaml` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **大小** | 8.4 KB | 12.5 KB | 11.0 KB | 10.8 KB | 23.9 KB | 15.3 KB | 3.9 KB | 12.7 KB | 12.4 KB | 13.4 KB | 11.5 KB | 13.9 KB | 19.5 KB | 18.9 KB | 18.6 KB | 17.3 KB | 16.3 KB | 17.2 KB | 15.9 KB | 12.8 KB | 18.5 KB | 17.5 KB | 12.2 KB | 22.3 KB | 28.5 KB | 24.8 KB | 5.8 KB | 17.7 KB | 34.1 KB | 34.6 KB | 21.6 KB | 20.8 KB | 24.0 KB | 14.6 KB | 15.8 KB | 23.4 KB | 25.7 KB | 28.3 KB | 26.2 KB | 27.3 KB | 18.7 KB | 7.3 KB | 2.9 KB | 696.9 KB | 696.9 KB | 696.9 KB | 13.8 KB | 49.3 KB |
+| **大小** | 8.4 KB | 12.5 KB | 11.0 KB | 10.8 KB | 23.9 KB | 15.3 KB | 3.9 KB | 12.7 KB | 12.4 KB | 15.8 KB | 13.8 KB | 16.3 KB | 19.5 KB | 18.9 KB | 18.6 KB | 17.3 KB | 16.3 KB | 17.2 KB | 15.9 KB | 12.8 KB | 18.5 KB | 17.5 KB | 12.2 KB | 22.3 KB | 28.5 KB | 24.8 KB | 5.8 KB | 17.7 KB | 34.1 KB | 34.6 KB | 21.6 KB | 20.8 KB | 24.0 KB | 14.6 KB | 15.8 KB | 23.4 KB | 25.7 KB | 28.3 KB | 26.2 KB | 27.3 KB | 18.7 KB | 7.3 KB | 2.9 KB | 696.9 KB | 696.9 KB | 696.9 KB | 13.8 KB | 49.3 KB |
 | **混合端口** | 7892 | 7892 | 7890 | 7890 | - | - | 7890 | 7897 | 7897 | - | - | - | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7890 | - | - | 7893 | 7893 | 7893 | 7890 | 8899 | 7890 | 7890 | 7890 | 7890 | 7893 | 7893 | 0 | 7890 | 7890 | 7893 | 7893 | 7893 | 7890 | 7892 | 7893 | 7893 | 7890 | 7890 | 7890 | 7890 | 7892 |
 | **面板地址** | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | - | - | - | - | - | 127.0.0.1:9092 | 127.0.0.1:9092 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | - | 127.0.0.1:9092 | 127.0.0.1:9092 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 0.0.0.0:7891 | - | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | - | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | :9090 | 127.0.0.1:9090 | - | - | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | :9090 | 0.0.0.0:9090 |
 | **运行模式** | rule | rule | rule | rule | rule | rule | Rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | Rule | rule | rule | rule | rule | rule | rule | rule | rule |
 | **TUN** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🚫 | ✅ | ✅ | 🚫 | 🚫 | 🚫 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🚫 | 🚫 | ✅ | ✅ | 🚫 | ✅ | ✅ | ✅ | 🚫 | ✅ | ✅ | ✅ | ✅ | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | ✅ | ✅ | ✅ | ✅ | ✅ | 🚫 | 🚫 |
 | **策略组** | **15** | **22** | **24** | **23** | **43** | **24** | **1** | **33** | **33** | **37** | **27** | **38** | **30** | **30** | **61** | **36** | **35** | **53** | **34** | **26** | **15** | **23** | **14** | **51** | **25** | **68** | **9** | **47** | **59** | **62** | **16** | **43** | **43** | **35** | **29** | **49** | **54** | **61** | **54** | **27** | **13** | **17** | **1** | **145** | **144** | **143** | **29** | **62** |
-| **规则数** | **11** | **25** | **34** | **34** | **43** | **18** | **11** | **22** | **22** | **20** | **17** | **20** | **34** | **34** | **53** | **43** | **43** | **42** | **43** | **23** | **34** | **36** | **23** | **40** | **35** | **41** | **12** | **38** | **97** | **98** | **216** | **29** | **29** | **17** | **27** | **30** | **45** | **52** | **44** | **68** | **37** | **24** | **16** | **187** | **182** | **181** | **33** | **62** |
+| **规则数** | **11** | **25** | **34** | **34** | **43** | **18** | **11** | **22** | **22** | **25** | **25** | **25** | **34** | **34** | **53** | **43** | **43** | **42** | **43** | **23** | **34** | **36** | **23** | **40** | **35** | **41** | **12** | **38** | **97** | **98** | **216** | **29** | **29** | **17** | **27** | **30** | **45** | **52** | **44** | **68** | **37** | **24** | **16** | **187** | **182** | **181** | **33** | **62** |
 
 ## 📄 配置详情
 
@@ -605,7 +605,7 @@
 ### 👤 Pililink
 
 #### 📝 2-subscription-clash-rule-set.yaml
-- **路径**: `Pililink/2-subscription-clash-rule-set.yaml` | **大小**: 13.4 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Pililink/2-subscription-clash-rule-set.yaml)
+- **路径**: `Pililink/2-subscription-clash-rule-set.yaml` | **大小**: 15.8 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Pililink/2-subscription-clash-rule-set.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (37个)</summary>
@@ -636,17 +636,17 @@
 </details>
 
 #### 📝 base-clash-ruleset.yaml
-- **路径**: `Pililink/base-clash-ruleset.yaml` | **大小**: 11.5 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Pililink/base-clash-ruleset.yaml)
+- **路径**: `Pililink/base-clash-ruleset.yaml` | **大小**: 13.8 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Pililink/base-clash-ruleset.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (27个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
-| ♻️ 🚀 节点选择 | `url-test` |
+| 👆 🚀 节点选择 | `select` |
 | 👆 🤖 人工智能 | `select` |
 | 👆 📲 电报消息 | `select` |
-| ♻️ 🐟 漏网之鱼 | `url-test` |
+| 👆 🐟 漏网之鱼 | `select` |
 | 👆 🎯 全球直连 | `select` |
 | ♻️ 🇭🇰 香港节点 | `url-test` |
 | ♻️ 🇯🇵 日本节点 | `url-test` |
@@ -659,15 +659,15 @@
 | ♻️ 🇹🇷 土耳其节点 | `url-test` |
 | ♻️ 🇮🇳 印度节点 | `url-test` |
 | ♻️ 🇷🇺 俄罗斯节点 | `url-test` |
-| ♻️ 🌏 其他地区 | `url-test` |
+| 👆 🌏 其他地区 | `select` |
 | 👆 🎮 游戏服务 | `select` |
-| ♻️ 🪜 代理域名 | `url-test` |
+| 👆 🪜 代理域名 | `select` |
 | 👆 📈 网络测试 | `select` |
 | ... | 还有 7 个 |
 </details>
 
 #### 📝 3-subscription-clash-rule-set.yaml
-- **路径**: `Pililink/3-subscription-clash-rule-set.yaml` | **大小**: 13.9 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Pililink/3-subscription-clash-rule-set.yaml)
+- **路径**: `Pililink/3-subscription-clash-rule-set.yaml` | **大小**: 16.3 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Pililink/3-subscription-clash-rule-set.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (38个)</summary>
