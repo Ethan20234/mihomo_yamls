@@ -8,18 +8,18 @@
 
 | 特性 | `BlackList-03-Non.AntiAD.yaml` | `BlackList-02-Min.AntiAD.yaml` | `BlackList-01.yaml` |
 | :--- | :--- | :--- | :--- |
-| **大小** | 696.9 KB | 696.9 KB | 696.9 KB |
+| **大小** | 697.2 KB | 697.2 KB | 697.2 KB |
 | **混合端口** | 7890 | 7890 | 7890 |
 | **面板地址** | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 |
 | **运行模式** | rule | rule | rule |
 | **TUN** | ✅ | ✅ | ✅ |
 | **策略组** | **143** | **144** | **145** |
-| **规则数** | **181** | **182** | **187** |
+| **规则数** | **181** | **182** | **188** |
 
 ## 📄 配置详情
 
 #### 📝 BlackList-03-Non.AntiAD.yaml
-- **路径**: `BlackList-03-Non.AntiAD.yaml` | **大小**: 696.9 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Accademia/BlackList-03-Non.AntiAD.yaml)
+- **路径**: `BlackList-03-Non.AntiAD.yaml` | **大小**: 697.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Accademia/BlackList-03-Non.AntiAD.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (143个)</summary>
@@ -50,7 +50,7 @@
 </details>
 
 #### 📝 BlackList-02-Min.AntiAD.yaml
-- **路径**: `BlackList-02-Min.AntiAD.yaml` | **大小**: 696.9 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Accademia/BlackList-02-Min.AntiAD.yaml)
+- **路径**: `BlackList-02-Min.AntiAD.yaml` | **大小**: 697.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Accademia/BlackList-02-Min.AntiAD.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (144个)</summary>
@@ -81,7 +81,7 @@
 </details>
 
 #### 📝 BlackList-01.yaml
-- **路径**: `BlackList-01.yaml` | **大小**: 696.9 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Accademia/BlackList-01.yaml)
+- **路径**: `BlackList-01.yaml` | **大小**: 697.2 KB | [查看源码](https://github.com/Ethan20234/mihomo_yamls/blob/main/THEYAMLS/General_Config/Accademia/BlackList-01.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (145个)</summary>
